@@ -1,0 +1,32 @@
+\section{Hecke operators as double coset operators}
+
+Hecke operators act on both cusp forms and the divisor group of the modular curve. To compute them as a double coset operator, we need to compute the coset representatives $\Gamma_H \backslash \Gamma_H \alpha \Gamma_H$ for congruence subgroups $\Gamma_H$. A few key lemmas will give us a procedure to compute the coset representatives.
+
+\begin{lemma}{(\cite{Shurman} Lemmata 5.1.1, 5.1.2)}\label{lemma:coset_rep}
+Let $\Gamma, \Gamma_1, \Gamma_2$ be congruence subgroups and  $\alpha \in GL_2^+(\QQ)$. Then,
+
+\begin{enumerate}
+    \item $\alpha^{-1} \Gamma \alpha \cap SL_2(\ZZ) \leq SL_2(\ZZ)$ is a congruence subgroup.
+    \item There is a bijection:
+
+    \begin{align*}
+        (\alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2 )\backslash \Gamma_2 &\leftrightarrow \Gamma_1 \backslash \Gamma_1 \alpha \Gamma_2 \\
+         (\alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2 )\gamma_2 &\mapsto \Gamma_1 \alpha \gamma_2
+    \end{align*}
+
+    More concretely, $\{\gamma_{2,i}\}$ is a set of coset representatives for $(\alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2 )\backslash \Gamma_2$ if and only if $\{\alpha \gamma_{2,i}\}$ is a set of coset representatives of $\Gamma_1 \backslash \Gamma_1 \alpha \Gamma_2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{lemma}{(\cite{shimura} Lemma 3.29(5))} \label{lemma:shimura_coset}
+Let $\alpha \in M_2(\ZZ)$ be such that $\det(\alpha) = p$ and $\alpha \pmod{N} \in H$. If $\Gamma_H \alpha \Gamma_H = \bigcup_i \Gamma_H \alpha_i$ is a disjoint union, then $SL_2(\ZZ) \alpha SL_2(\ZZ) = \bigcup_i SL_2(\ZZ)\alpha_i$ is a disjoint union.
+\end{lemma}
+
+The procedure for computing the Hecke operator as a double coset operator is as follows:
+
+\begin{enumerate}
+    \item Find $\alpha \in M_2(\ZZ)$ satisfying $\det(\alpha) = p$, $\alpha \pmod{N} \in H$,
+    \item Find the coset representatives $\{\alpha_i\}$ in $(\alpha^{-1} SL_2(\ZZ) \alpha \cap  SL_2(\ZZ))\backslash SL_2(\ZZ)$. Usually, $\alpha$ be chosen such that $(\alpha^{-1} SL_2(\ZZ) \alpha \cap  SL_2(\ZZ))$ has a clear description. By Lemma \ref{lemma:coset_rep}, $SL_2(\ZZ)\backslash SL_2(\ZZ) \alpha SL_2(\ZZ)$ has coset representatives $\{\alpha \alpha_i\}$,
+    \item By Lemma \ref{lemma:shimura_coset}, for each $\alpha \alpha_i$, find $\beta_i \in SL_2(\ZZ)$ such that $\beta_i \alpha \alpha_i \in \Gamma_H$. Then $\{ \beta_i \alpha \alpha_i\}$ will be the desired coset representatives for $\Gamma_H \backslash \Gamma_H \alpha \Gamma_H$.
+\end{enumerate}
+

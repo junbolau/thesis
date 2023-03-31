@@ -1,0 +1,74 @@
+\section{Tiny integrals via complex number approximation}
+
+We present a method to compute tiny integrals by comparing Taylor coefficients of a system of equations and recovering them as algebraic number approximations from complex solutions.
+
+\begin{algorithm}Computing $\sum_{i=0}^{p}\int^Q_{Q_i} \omega$\label{alg:tiny_integral}
+
+\textbf{Input:}
+\begin{itemize}
+    \item $\tau_0 \in \HH$ such that $\Gamma\tau_0$ corresponds to a rational point $Q$ on $X$, and $q_0 := e^{2\pi i \tau_0/h}$ where $h$ is the width of the cusp.
+    \item A good prime $p$ which does not divide $j(Q)$ and $j(Q)-1728$. 
+    \item A cusp form $f\in \mathcal{S}_2(\Gamma)$ given by its $q$-expansion where $q = e^{2\pi i \tau/h}$. We denote the corresponding $1-$form by $\omega$.
+    
+
+
+
+\end{itemize}
+
+\textbf{Output:}
+\begin{itemize}
+    \item The sum of tiny Coleman integrals $\sum^p_{i=0}\int^Q_{Q_i} \omega \in \QQ_p$, where $T_p(Q) = \sum_{i=0}^p Q_i$.
+\end{itemize}
+
+\textbf{Steps:}
+\begin{enumerate}
+%\item Find $\tau_0\in \mathcal{H}^+$ such that the $\Gamma_0(N)\tau_0$ corresponds to the point $Q$, i.e., $(E,C)$. This $\tau_0$ can be found by first computing $\widetilde{\tau}_0$ such that $\slz\widetilde{\tau}_0$ corresponds to $E$ under \textcolor{red}{add later!!} and then iterate through coset representatives $\gamma_i$ of $\Gamma_0(N)/\slz$ to find $i$ such that $\gamma_i(\widetilde{\tau_0})$ satisfies: \[j(\gamma_i(\widetilde{\tau_0})) = j(N\gamma_i(\widetilde{\tau_0})) = j(E).\] We use $q_0$ to denote $e^{2\pi i\tau_0}$.
+\item[1.] \label{algstep:tiny_1} (Writing $\omega$ as a power series in terms of an uniformiser $u$) Fix a precision $n$. Find $x_i \in \QQ$ such that
+\begin{align} \label{eq:omega_j_exp}
+    \omega = (\sum_{i=0}^n x_i(u)^n + \mathcal{O}(u^{n+1}))d(u).
+\end{align}
+
+These $x_i$'s can be found using the following steps:
+\begin{enumerate}
+    \item[a.] Write $u$ and $\omega_i$ as power series expansions of $q-q_0$ by differentiating their $q$-expansions and evaluating at $q_0$:
+    \begin{align*}
+    & u = \sum_{i=1}^{C_1} a_i(q-q_0)^i + O((q-q_0)^{C_1+1}),\\
+    & \omega = \sum_{i=0}^{C_2} b_i(q-q_0)^i + O((q-q_0)^{C_2+1})dq,\\
+    & d(u) = (\sum_{i=1}^{C_1} ia_i(q-q_0)^{i-1} + O((q-q_0)^{C_1}))dq,
+\end{align*}
+    where $C_1,C_2$ are some fixed precision determined by $n$ and the norm of $q_0$. The coefficients $a_i,\,b_i$'s are in $\CC$.
+    \item[b.] Replace $\omega,\,u$ and $d(u)$ by their power series expansions in $q-q_0$ as in equation (\ref{eq:omega_j_exp}). Comparing the coefficients of $(q-q_0)^k$ on both sides gives us the following linear system:
+    \[
+\begin{pmatrix}
+    a_1       & 0 & 0 & \dots & 0 \\
+    2a_2       & a_1^2 & 0 & \dots & 0 \\
+    3a_3       & 3a_1a_2 & a_1^3 & \dots & 0\\
+    \vdots       & \vdots & \vdots & \ddots & \vdots    \\
+    (n+1)a_{n+1}      & \sum_{i=1}^{n}a_i(n+1-i)a_{n+1-i} &* & \dots & a_1^{n+1}
+\end{pmatrix} \cdot
+\begin{pmatrix}
+    x_0      \\
+    x_1      \\
+    x_2     \\
+    \vdots   \\
+    x_n
+\end{pmatrix} = 
+\begin{pmatrix}
+    b_0   \\
+    b_1     \\
+    b_2  \\
+    
+    \vdots   \\
+    b_n
+\end{pmatrix}
+\]
+\item[c.] Solve this system of equations and get complex approximations of $x_i$'s. These $x_i$'s can be recovered as elements in $\QQ$ using \texttt{algdep} from \texttt{PARI/GP}. This is likely to succeed given sufficient complex precision.
+
+\end{enumerate}
+
+
+\item[2.] \label{algstep:tiny_2} Calculate $u(Q_i)$ as algebraic numbers. In practice, we use the $j$-invariant function as an uniformiser. We calculate $j(Q_i)$ transcendentally by evaluating the $q$-expansion of the $j$-function on $\beta_i(\tau_0)$ and then obtain the algebraic approximation. On the other hand, the roots of the modular polynomial $\Phi_p(x,j(Q)) = 0$ are the $j$-invariants of elliptic curves that are $p$-isogeneous to $Q$. This gives another (algebraic) method to compute $j(Q_i)$.
+
+\item[3.] \label{algstep:tiny_3} Compute the sum of tiny integrals $\sum\limits_{i=0}^p\int_{Q}^{Q_i}\omega \approx \sum\limits_{i=0}^p \int^{u(Q_i)}_0 (\sum_{j=0}^n x_j u^j du)$ with its $p$-adic expansion.
+\end{enumerate}
+\end{algorithm}

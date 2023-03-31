@@ -1,0 +1,12 @@
+\section{Computing a basis of cusp forms}
+
+The spaces of cusp forms for the congruence subgroups $\Gamma(N), \Gamma_1(N)$ and $\Gamma_0(N)$ are available in software packages \cite{sagemath} and \cite{magma}. In \cite{Zywina2020ComputingAO}, the author gave a method to compute the action of $SL_2(\ZZ)$ and $GL_2(\ZZ/N\ZZ)$ on $\mathcal{S}_k(\Gamma(N))$ , which uses the properties that \cite{Brunault2020}:
+
+\begin{itemize}
+    \item There is an action of $SL_2(\ZZ/N\ZZ)$ induced from $SL_2(\ZZ)$ on the cusp forms,
+    \item $\begin{psmallmatrix} 1 & 0 \\ 0 & d \end{psmallmatrix}$ acts on the coefficients of the $q$-expansion by $\zeta_N \mapsto \zeta_N^d$, where $\zeta_N$ is a $N$-th root of unity. 
+\end{itemize}
+
+Furthermore, for $H \leq GL_2(\ZZ/N\ZZ)$ satisfying the conditions above, $\mathcal{S}_2(\Gamma(N))^H$, the space of weight $2$ cusp forms invariant under $H$ is isomorphic to $H^0(X_H,\Omega^1)$. 
+
+For congruence subgroups $\Gamma_0^+(N) := \Gamma_0(N)/w_N$ with an Atkin-Lehner involution, we modify Zywina's Magma implementation to compute our examples.

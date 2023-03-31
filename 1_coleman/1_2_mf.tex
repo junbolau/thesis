@@ -1,0 +1,106 @@
+\section{Background}
+
+\subsection{Modular forms}
+
+In this section, we give a brief introduction of modular forms, following \cite{Shurman}.
+
+Let $\HH := \{ \tau \in \CC: Im(\tau) > 0 \}$ be the upper half complex plane. The special linear group $SL_2(\ZZ)$ acts on $\HH$ via fractional linear transformations:
+
+\[
+\gamma \cdot \tau = \frac{a\tau + b}{c \tau + d}
+\] 
+
+where $\gamma = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix}, \tau \in \HH$. 
+
+\begin{defn}
+Let $f$ be function $f: \HH \rightarrow \CC$ and $k \in \ZZ$. 
+
+\begin{itemize}
+    \item The \textit{automorphy factor} is a function \begin{align*}j: GL_2^+(\RR) \times \HH &\rightarrow \CC \\ (\gamma,z) &\mapsto cz+d \end{align*}
+    where $\gamma = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix}$
+    \item The \textit{weight-$k$ slash operator} is defined as 
+    \begin{align*}
+( \ \cdot \ )|_k (\ \cdot \ ): \Hom(\HH,\CC) \times GL_2^+(\RR) &\rightarrow \Hom(\HH,\CC) \\
+(f(z),\gamma) &\mapsto (f|_k \gamma)(z) := (\Det \gamma)^{k-1} j(\gamma,z)^{-k} f(\gamma \cdot z)
+    \end{align*}
+    \end{itemize}
+\end{defn}
+
+The automorphy factory satisfies a cocycle relation $j(\gamma_1\gamma2,z) = j(\gamma_1,\gamma_2 z)j(\gamma_2,z)$ which implies that $GL_2^+(\RR)$ acts on $\Hom(\HH,\CC)$ via $f|_k\gamma_1\gamma_2 = (f|_k\gamma_1)|_k\gamma_2$.
+
+Consider the projection map $\pi: SL_2(\ZZ) \rightarrow SL_2(\ZZ/N\ZZ)$. We define congruence subgroups in the following way.
+
+\begin{example}\label{example:1_congsgp}
+Here are some common examples of preimages of $\pi$:
+
+\begin{itemize}
+    \item $\Gamma(N) = \pi^{-1} (\begin{psmallmatrix}
+        1 & 0 \\ 0 & 1
+    \end{psmallmatrix}) = \{ \begin{psmallmatrix}
+        a & b \\ c & d 
+    \end{psmallmatrix} \in SL_2(\ZZ): \begin{psmallmatrix}
+        a & b \\ c & d 
+    \end{psmallmatrix} \equiv \begin{psmallmatrix}
+        1 & 0 \\ 0 & 1 
+    \end{psmallmatrix} \pmod{N}\}$
+    \item $\Gamma_1(N) = \pi^{-1} (\{\begin{psmallmatrix}
+        1 & \ast \\ 0 & 1
+    \end{psmallmatrix}\}) = \{ \begin{psmallmatrix}
+        a & b \\ c & d 
+    \end{psmallmatrix} \in SL_2(\ZZ): \begin{psmallmatrix}
+        a & b \\ c & d 
+    \end{psmallmatrix} \equiv \begin{psmallmatrix}
+        1 & \ast \\ 0 & 1 
+    \end{psmallmatrix} \pmod{N}\}$
+    \item $\Gamma_0(N) = \pi^{-1} (\{\begin{psmallmatrix}
+        \ast & \ast \\ 0 & \ast
+    \end{psmallmatrix}\}) = \{ \begin{psmallmatrix}
+        a & b \\ c & d 
+    \end{psmallmatrix} \in SL_2(\ZZ): \begin{psmallmatrix}
+        a & b \\ c & d 
+    \end{psmallmatrix} \equiv \begin{psmallmatrix}
+        \ast & \ast \\ 0 & \ast 
+    \end{psmallmatrix} \pmod{N}\}$
+\end{itemize}
+\end{example}
+
+\begin{defn}
+$\Gamma \leq SL_2(\ZZ)$ is a \textit{congruence subgroup} if there exists an integer $N \geq 1$ such that $\Gamma(N) \leq \Gamma$. The minimal such $N$ is called the \textit{level} of $\Gamma$.
+
+It follows immediately that congruence subgroups of $SL_2(\ZZ)$ have finite index and correspond to subgroups of $SL_2(\ZZ/N\ZZ)$. The above examples are allcongruence subgroups of level $N$.
+\end{defn}
+
+\begin{defn}
+    Let $\Gamma \leq SL_2(\ZZ)$ be a congruence subgroup of level $N$, $k \geq 0$ an integer. We say a function $f: \HH \rightarrow \CC$ is a \textit{modular form of weight $k$ with level $\Gamma$} if
+
+    \begin{enumerate}
+        \item $f$ is holomorphic,
+        \item $f$ is weight-$k$ invariant under $\Gamma$, i.e., $f|_k\gamma = f$ for all $\gamma \in \Gamma$,
+        \item $f|_k\alpha $ is holomorphic at $\infty$ for all $\alpha \in SL_2(\ZZ)$, i.e., $(f|_k \alpha )(z)$ is bounded as $z \rightarrow i\infty$.
+    \end{enumerate}
+
+    If, in addition, $f|_k \alpha$ vanishes at infinity for all $\alpha \in SL_2(\ZZ)$, we say that $f$ is a \textit{cusp form}. We denote the set of weight-$k$ modular forms with respect to $\Gamma$ (resp. cusp forms) as $\mathcal{M}_k(\Gamma)$ (resp. $\mathcal{S}_k(\Gamma)$).
+\end{defn}
+
+Suppose $f$ is a modular form of weight $k$ with level $\Gamma$. Since $\Gamma$ is a congruence subgroup, $\begin{psmallmatrix}
+    1 & h \\ 0 & 1
+\end{psmallmatrix} \in \Gamma$ for some minimal integer $h\geq 1$, this integer is the \textit{width} of the cusp $\infty$. Since a modular form satisfies $f|_k \gamma = f$ for $\gamma \in \Gamma$, we have $(f|_k \begin{psmallmatrix}
+    1 & h \\ 0 & 1
+\end{psmallmatrix})(z) = f(z+h) = f(z) $, so $f(z)$ is $h\ZZ$-periodic and admits a Fourier expansion $f(\tau) = \sum_{n=0}^\infty a_n q_{h}^n$ where $q_h = exp(2\pi i\tau / h)$. The third condition of modular forms implies that the Fourier expansion begins at index $0$ and cusp forms satisfy $a_0 = 0$.
+
+\begin{example}
+Let $G_k(\tau) = \sum_{c,d) \not = (0,0)} 1/(c\tau + d)^k$. This is a modular form of weight $k$ for $SL_2(\ZZ)$ called \textit{Eisenstein series}. 
+
+    The \textit{$j$-invariant} is a modular form weight $0$, i.e., a modular function and an element of $\CC(X(\SL_2(\ZZ)))$, with $q$-expansion:
+
+    \begin{align*}
+        j: \HH \rightarrow \CC, j(\tau) = 1728 \frac{(60 G_4(\tau))^3}{(60 G_4(\tau))^3 - 27 (140 G_6(\tau))^2} = \frac{1}{q} + 744 + 196884q + \ldots.
+    \end{align*}
+\end{example}
+
+It is a standard result that $\mathcal{M}_k(\Gamma) \supseteq \mathcal{S}_k(\Gamma)$ are finite dimensional complex vector spaces. Modular forms and modular curves are related by the fact that there is an isomorphism between the space of weight $2$ cusp forms and the space of holomorphic differentials on the modular curve $X(\Gamma)$ (see next section). 
+
+\begin{align*}
+\mathcal{S}_2(\Gamma) &\xrightarrow{\cong} H^0(X(\Gamma),\Omega^1) \\
+f(\tau) &\mapsto f(\tau) d\tau
+\end{align*}

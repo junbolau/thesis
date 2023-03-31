@@ -1,0 +1,84 @@
+\subsection{Hecke operators}
+
+We begin with the definition of Hecke operators as operators on spaces of modular forms. These are used in conjunction with spectral theory to show that the inner product space of modular forms contains a basis of modular forms that are eigenvectors under the Hecke operators $\{T_p\}_p$. Hecke operators are defined on modular forms and modular curves. We use both the transcendental and algebraic/geometric definitions of Hecke operators in our algorithm.
+
+\begin{defn}
+Let $\Gamma_1, \Gamma_2$ be congruence subgroups of $SL_2(\ZZ)$ and $\alpha \in GL_2^+(\QQ)$. 
+
+\begin{itemize}
+    \item We define the \textit{double coset} $\Gamma_1 \alpha \Gamma_2$ as the set 
+
+\[
+\Gamma_1 \alpha \Gamma_2 := \{\gamma_1 \alpha \gamma_2 : \gamma_1 \in \Gamma_1, \gamma_2 \in \Gamma_2\}
+\]
+\item This gives rise to the \textit{double coset operators}:
+
+\begin{align*}
+(\ \cdot \ )|_k [\Gamma_1 \alpha \Gamma_2] : \mathcal{M}_k(\Gamma_1) &\rightarrow \mathcal{M}_k(\Gamma_2) \\
+f(\tau) &\mapsto f|_k \Gamma_1 \alpha \Gamma_2 := \sum_i f|_k \beta_i
+\end{align*}
+
+where $\Gamma_1 \alpha \Gamma_2 = \bigcup_i \Gamma_1 \beta_i$ is a (finite) disjoint coset decomposition that does not depend on the choice of decomposition. This map restricts to an operator on the space of cusp forms $(\ \cdot \ )|_k [\Gamma_1 \alpha \Gamma_2] : \mathcal{S}_k(\Gamma_1) \rightarrow \mathcal{S}_k(\Gamma_2)$.
+\end{itemize}
+\end{defn}
+
+We follow the approach \cite{Assaf2020} to define Hecke operators.
+
+\begin{defn}
+Fix a congruence subgroup $\Gamma$ with $\bar{\Gamma} \leq SL_2(\ZZ/N\ZZ)$.
+Let $\alpha \in M_2(\ZZ)$ such that $\det (\alpha) \in \det (\bar{\Gamma})$ and $\alpha \pmod{N} \in \bar{\Gamma}$. We define the Hecke operator as
+
+\[
+T_p = T_\alpha = ( \ \cdot \ )|_k [\Gamma \alpha \Gamma]
+\]
+\end{defn}
+
+\begin{example} (\cite{Shurman} Prop. 5.2.1)
+The theory of Hecke operators can be explicit for certain congruence subgroups. The Hecke operator $T_p = [ \Gamma_1(N) \begin{psmallmatrix} 1 & 0 \\ 0 & p \end{psmallmatrix} \Gamma_1(N)]_k $ on $\mathcal{M}_k(\Gamma_1(N))$ has the following formulae:
+
+\[T_p f =
+\begin{cases}
+\sum_{i = 0}^{p-1} f|_k \begin{psmallmatrix}
+    1 & j \\ 0 & p \end{psmallmatrix}, & \text{if $p | N$,} \\
+\sum_{i = 0}^{p-1} f|_k \begin{psmallmatrix}
+    1 & j \\ 0 & p \end{psmallmatrix} + f|_k (\begin{psmallmatrix} m & n \\ N & p \end{psmallmatrix} \begin{psmallmatrix}
+        p & 0 \\ 0 & 1
+    \end{psmallmatrix}), & \text{if $p\not | N$, where $mp - nN = 1$.} \\
+\end{cases} 
+\]
+\end{example}
+
+%Since we can view $\tau \in \HH$ as lattices $\Lambda_\tau$, modular forms can be viewed as functions on rank $1$ lattices. In particular, the Hecke operators above can be reinterpreted as 
+
+%\[T_p f (\Lambda) = p^{k-1} \sum_{\Lambda' \subseteq \Lambda, [\Lambda:\Lambda'] = p} f(\Lambda')\]
+
+There is also an algebraic/geometric interpretation of the double coset operator as a morphism of divisor groups. For $\Gamma_1, \Gamma_2$ congruence subgroups, $\alpha \in GL_2^+(\QQ) $, $\Gamma_3 := \alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2$ and $\Gamma_3' := \alpha \Gamma_3 \alpha^{-1}$. Since points on the modular curve $X(\Gamma)$ have the form $\Gamma \tau$, we have a diagram at the level of groups which induces a diagram on modular curves:
+
+
+\begin{align*}
+\Gamma_2 \hookleftarrow \Gamma_3 \xrightarrow{\cong} \Gamma_3' \hookrightarrow \Gamma_1 \\
+X_2 \xleftarrow{\pi_2} X_3 \xrightarrow{\cong} X_3' \xrightarrow{\pi_1} X_1
+\end{align*}
+
+Suppose $\Gamma_3 / \Gamma_2 = \bigcup_j \Gamma_3 \gamma_{2,j}$ and $\beta_j = \alpha \gamma_{2,j}$. Then the double coset operator induces a map on the divisor groups  after $\ZZ$-linear extension:
+
+\begin{align*}
+    \Div(X_2) &\rightarrow \Div(X_1) \\
+    \Gamma_2 \tau &\mapsto \sum_j \Gamma_1 \beta_j \tau
+\end{align*}
+
+Specialising to the case of Hecke operator, we obtain a similar diagram. 
+
+We could benefit from the moduli interpretation of modular curves for the case of Hecke operators by defining it as a correspondence. For $H \leq GL_2(\ZZ/N\ZZ)$ and $p$ coprime to $N$, we obtain the modular curve $X_H$ and its fiber product $X_H(p) := X_0(p) \times_{X(1)} X_H$. There are two degeneracy maps $\alpha,\beta: X_H(p) \rightarrow X_H$ defining the Hecke operator at $p$ where one forgets the cyclic group of order $p$ and the other quotients out by the cyclic group of order $p$.
+
+
+\[
+\begin{tikzcd}[column sep=small]
+ & X_H(p) \arrow{dl}[swap]{\alpha} \arrow{dr}{\beta} & \\
+X_H \arrow[rr,dashed] & & X_H
+\end{tikzcd}
+\]
+
+By Picard functoriality, for a point $(E,\mathfrak{n}) \in X_H$ where the level structure $\mathfrak{n}$ is determined by $H$, we have an algebraic description of the Hecke operator at $p$: \[T_p(E,\mathfrak{n)} := \alpha^* \beta_* (E,\mathfrak{n}) = \sum_{f:E\rightarrow E', deg(f) = p} (E',f(\mathfrak{n})).\]
+
+

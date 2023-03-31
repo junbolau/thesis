@@ -1,0 +1,50 @@
+\chapter{Coleman Integration on Modular Curves}
+
+In this section, we introduce an algorithm that computes single Coleman integrals on modular curves. The modular curves in consideration have congruence subgroups $\Gamma_H \leq SL_2(\ZZ)$ where $H \leq GL_2(\ZZ/N\ZZ)$ and
+
+\begin{itemize}
+    \item $-I \in H$,
+    \item $\det: H \rightarrow \ZZ/N\ZZ$ is surjective.
+\end{itemize}
+
+Furthermore, our method extends to the Atkin-Lehner quotients of modular curves with a slight modification, i.e., by choosing a different uniformiser.
+
+Another innovation is that the algorithm does not make use of the affine models of the modular curves, which are often required as inputs in previous algorithms. Furthermore, we can compute Coleman integrals between any two points that are not necessarily on the same residue disc. 
+
+\todo{review this part}
+
+The general strategy works as follows:
+
+\begin{enumerate}
+    \item Reduce the problem of computing arbitrary Coleman integrals into a sum of tiny integrals,
+    \item Find a basis of holomorphic $1$-forms and a suitable uniformiser,
+    \item Formally integrate and evaluate at the end points.
+\end{enumerate}
+
+
+\section{Breaking the Coleman integrals into tiny integrals}
+
+Let $X/\QQ$ be a modular curve associated to a congruence subgroup $\Gamma$, two points $Q,R \in X(\bar{\QQ})$, $\{\omega_1, \ldots, \omega_g\}$ a $\QQ$-basis of $H^0(X,\Omega^1)$ where $g$ is the genus of the curve and $p$ a prime of good reduction on $X$.
+
+The Hecke operator at $p$, $T_p$ acts on the weight $2$ cusp forms, which corresponds to the holomorphic $1$-forms, we have:
+
+\[T_p^*\begin{pmatrix} \omega_1 \\\vdots \\ \omega_g \end{pmatrix}  = A\begin{pmatrix} \omega_1 \\\vdots \\ \omega_g \end{pmatrix}.\]
+
+where $A$ is the Hecke matrix on the basis of cusp forms. Integrating between the points $Q$ and $R$ gives:
+
+\[\begin{pmatrix} \int^Q_RT_p^*\omega_1 \\\vdots \\ \int^Q_RT_p^*\omega_g \end{pmatrix}  = A\begin{pmatrix} \int^Q_R\omega_1 \\\vdots \\ \int^Q_R\omega_g \end{pmatrix}.\]
+
+
+For any $\omega \in H^0(X,\Omega^1)$, using the definition of Hecke operator as a correspondence and the functoriality of Coleman integrals, we obtain the following equality:
+
+\[\int^Q_R T_p^*(\omega) = \int^{T_p(Q)}_{T_p(R)} \omega = \sum_{i=0}^{p} \int^{Q_i}_{R_i} \omega,\] where $T_p(Q) = \sum_{i=0}^p Q_i$ and  $T_p(R) = \sum_{i=0}^p R_i$.
+
+By considering $((p+1)\int_{Q}^R \omega - \int_Q^R T_p^* \omega)$, we have the following fundamental equation:
+
+\begin{equation}\label{eq:fundamental-eqn}
+   ((p+1)I-A)\begin{pmatrix} \int^Q_R\omega_1 \\\vdots \\ \int^Q_R\omega_g \end{pmatrix} =  \begin{pmatrix} \sum_{i=0}^{p}\int^Q_{Q_i} \omega_1 - \sum_{i=0}^{p}\int^R_{R_i} \omega_1 \\\vdots \\ \sum_{i=0}^{p}\int^Q_{Q_i} \omega_g - \sum_{i=0}^{p}\int^R_{R_i} \omega_g \end{pmatrix}.
+\end{equation}
+
+ The $Q_i$'s and $R_i$'s are by definition $p$-isogeneous to $Q$ and $R$, therefore, the Eichler-Shimura relation (\cite{Shurman} Theorem 8.7.2) implies that they are in the same residue discs respectively. So the vector on the right hand side consists of sums of tiny integrals. On the left hand side, the matrix $((p+1)I - A)$ is invertible by the Ramanujan bound -- the Hecke matrix $A$ has eigenvalues $\{a_p\}$ which satisfy $|a_p| \leq 2 \sqrt{p}$.
+
+From the above discussion, since any $\omega$ is a linear combination of the $\omega_j$'s, we can simultaneously compute the Coleman integrals $\int_Q^R \omega$ once we have evaluated the tiny integrals $\sum_{i=0}^p \int_{Q_i}^Q \omega$ and $\sum_{i=0}^p \int_{R_i}^R \omega$.
