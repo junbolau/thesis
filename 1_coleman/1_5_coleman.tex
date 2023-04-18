@@ -11,25 +11,30 @@ with $P,Q \in X(\overline{\QQ}_p), \omega \in H^0(X,\Omega^1)$ satisfying:
 
 \begin{enumerate}
     \item The integral is $\overline{\QQ}_p$ linear in $\omega$,
-    \item There is an open subgroup of $J(\QQ_p)$ such that $\int_P^Q \omega$ can be computed in terms of power series in some uniformiser by formal term-by-term integration. In particular, $\int_P^P \omega = 0$,
+    \item We have additivity of endpoints:
+    \begin{equation*}
+        \int_P^Q \omega = \int_P^R \omega + \int_R^Q \omega,
+    \end{equation*}
     \item 
     \begin{equation*}
         \int_P^Q \omega + \int_{P'}^{Q'} \omega = \int_P^{Q'} \omega + \int_{P'}^Q \omega
     \end{equation*}
         Thus, we can define $\int_D \omega$, where $D \in Div^0_X(\overline{\QQ}_p)$. Also, if $D$ is principal, $\int_D \omega = 0$,
-        \item The integral is compatible with the action of $Gal(\overline{\QQ}_p/\QQ_p)$,
-        \item Let $P_0 \in X(\overline{\QQ}_p)$ be fixed. Then the set of $P \in X(\overline{\QQ}_p)$ reducing to $X(\overline{\FF}_p)$ such that $\int_{P_0}^P \omega = 0$ is finite,
-        \item We have additivity of endpoints:
-        \begin{equation*}
-            \int_P^Q \omega = \int_P^R \omega + \int_R^Q \omega,
-        \end{equation*}
+        
+    \item There is an open subgroup of $J(\QQ_p)$ such that $\int_P^Q \omega$ can be computed in terms of power series in some uniformiser by formal term-by-term integration. In particular, $\int_P^P \omega = 0$,
+
+
+
+        \item The integral is compatible with the action of $Gal(\overline{\QQ}_p/\QQ_p)$. In particular, if $P,Q \in X(\QQ_p)$ then $\int_P^Q \omega \in \QQ_p$.
+        \item Let $P_0 \in X(\overline{\QQ}_p)$ be fixed and $\omega \neq 0$. Then the set of $P \in X(\overline{\QQ}_p)$ reducing to $X(\overline{\FF}_p)$ such that $\int_{P_0}^P \omega = 0$ is finite,
+
         \item If $U \subseteq X, V \subseteq Y $ are wide open subspaces of the rigid analytic spaces $X,Y$, $\omega$ a 1-form on $V$, and $\phi:U \rightarrow V$ a rigid analytic map, then we have the change of variables formula:
         
         \begin{equation*}
             \int_P^Q \phi^* \omega = \int_{\phi(P)}^{\phi(Q)} \omega,
         \end{equation*}
-        \item $\int_P^Q df = f(Q) - f(P)$,
-        \item If $P,Q \in X(\QQ_p)$ then $\int_P^Q \omega \in \QQ_p$.
+        \item We have an analogue of the Fundamental Theorem of Calculus: $\int_P^Q df = f(Q) - f(P)$,
+
 \end{enumerate}
 \end{theorem}
 

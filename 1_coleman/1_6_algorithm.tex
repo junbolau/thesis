@@ -26,11 +26,11 @@ The general strategy works as follows:
 
 Let $X/\QQ$ be a modular curve associated to a congruence subgroup $\Gamma$, two points $Q,R \in X(\bar{\QQ})$, $\{\omega_1, \ldots, \omega_g\}$ a $\QQ$-basis of $H^0(X,\Omega^1)$ where $g$ is the genus of the curve and $p$ a prime of good reduction on $X$.
 
-The Hecke operator at $p$, $T_p$ acts on the weight $2$ cusp forms, which corresponds to the holomorphic $1$-forms, we have:
+The Hecke operator at $p$, $T_p$ acts on the weight $2$ cusp forms, which corresponds to the holomorphic $1$-forms:
 
 \[T_p^*\begin{pmatrix} \omega_1 \\\vdots \\ \omega_g \end{pmatrix}  = A\begin{pmatrix} \omega_1 \\\vdots \\ \omega_g \end{pmatrix}.\]
 
-where $A$ is the Hecke matrix on the basis of cusp forms. Integrating between the points $Q$ and $R$ gives:
+where $A$ is the Hecke matrix acting on the basis of cusp forms. Integrating between the points $Q$ and $R$ gives:
 
 \[\begin{pmatrix} \int^Q_RT_p^*\omega_1 \\\vdots \\ \int^Q_RT_p^*\omega_g \end{pmatrix}  = A\begin{pmatrix} \int^Q_R\omega_1 \\\vdots \\ \int^Q_R\omega_g \end{pmatrix}.\]
 
@@ -45,6 +45,6 @@ By considering $((p+1)\int_{Q}^R \omega - \int_Q^R T_p^* \omega)$, we have the f
    ((p+1)I-A)\begin{pmatrix} \int^Q_R\omega_1 \\\vdots \\ \int^Q_R\omega_g \end{pmatrix} =  \begin{pmatrix} \sum_{i=0}^{p}\int^Q_{Q_i} \omega_1 - \sum_{i=0}^{p}\int^R_{R_i} \omega_1 \\\vdots \\ \sum_{i=0}^{p}\int^Q_{Q_i} \omega_g - \sum_{i=0}^{p}\int^R_{R_i} \omega_g \end{pmatrix}.
 \end{equation}
 
- The $Q_i$'s and $R_i$'s are by definition $p$-isogeneous to $Q$ and $R$, therefore, the Eichler-Shimura relation (\cite{Shurman} Theorem 8.7.2) implies that they are in the same residue discs respectively. So the vector on the right hand side consists of sums of tiny integrals. On the left hand side, the matrix $((p+1)I - A)$ is invertible by the Ramanujan bound -- the Hecke matrix $A$ has eigenvalues $\{a_p\}$ which satisfy $|a_p| \leq 2 \sqrt{p}$.
+ The $Q_i$'s and $R_i$'s are by definition $p$-isogenous to $Q$ and $R$, therefore, the Eichler-Shimura relation (\cite{Shurman} Theorem 8.7.2) implies that they are in the same residue discs respectively. So the vector on the right hand side consists of sums of tiny integrals. On the left hand side, the matrix $((p+1)I - A)$ is invertible by the Ramanujan bound -- the Hecke matrix $A$ has eigenvalues $\{a_p\}$ which satisfy $|a_p| \leq 2 \sqrt{p}$.
 
 From the above discussion, since any $\omega$ is a linear combination of the $\omega_j$'s, we can simultaneously compute the Coleman integrals $\int_Q^R \omega$ once we have evaluated the tiny integrals $\sum_{i=0}^p \int_{Q_i}^Q \omega$ and $\sum_{i=0}^p \int_{R_i}^R \omega$.
