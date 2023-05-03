@@ -1,6 +1,6 @@
 \section{$X_0(N)$}\label{sec:X_0_N}
 
-For a positive integer $N$, the modular curve $X = X_0(N)$ is defined to be the quotient of the upper half plane by the congruence subgroup $\Gamma_0(N) = \{ \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix} \pmod{N} \} \leq \SL_2(\ZZ)$. As a moduli space, the $\QQ$-rational points of $X$ correspond elliptic curves $E$ defined over $\QQ$ such that $E$ admits a $\QQ$-rational isogeny of degree $N$ to another elliptic curve $E'$. Given a point $Q$ on $X$, to find the coset representative on the upper half plane, one first finds the period $\tau'$ of $Q$, which corresponds to $\SL_2(\ZZ) \tau' \in \SL_2(\ZZ)\backslash \HH$ satisfying $j(\tau') = j(E)$. This can be done by finding an elliptic curve $E_{\tau}/\CC$ with $j$-invariant $j_E$ via the universal elliptic curve: \[
+Let $N$ be positive integer. The modular curve $X = X_0(N)$ is defined to be the quotient of the upper half plane by the congruence subgroup $\Gamma_0(N) = \{ \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix} \pmod{N} \} \leq \SL_2(\ZZ)$. As a moduli space, the $\QQ$-rational points of $X$ correspond elliptic curves $E$ defined over $\QQ$ such that $E$ admits a $\QQ$-rational isogeny of degree $N$ to another elliptic curve $E'$. Given a point $Q$ on $X$, to find the coset representative on the upper half plane, one first finds the ratio of periods $\tau' \in \HH$ of the elliptic curve $Q$, which corresponds to $\SL_2(\ZZ) \tau' \in \SL_2(\ZZ)\backslash \HH$ satisfying $j(\tau') = j(E)$. This can be done by finding an elliptic curve $E_{\tau}/\CC$ with $j$-invariant $j_E$ via the universal elliptic curve: \[
 y^2 + xy = x^3 - \frac{36}{j_E -1728}x - \frac{1}{j_E - 1728}
 \]
 
@@ -32,13 +32,13 @@ The points $Q,R$ corresponds to the elliptic curve $E_Q,E_R$ with
 $j$-invariants $j(Q),j(R)$ containing a cyclic subgroup of order $37$ (or equivalently, with a degree $37$-isogeny). This information could be verified in LMFDB \cite{lmfdb}. Following the method in Section \ref{sec:X_0_N}, we obtain the upper half plane representatives of $Q,R$ as follows: \begin{align*} \tau_Q &\approx 0.5 + 0.17047019819380\cdot i \in \HH , \\ \tau_R &\approx 0.5 + 0.39635999889406\cdot i \in \HH. \end{align*} 
 
 
-\item \textbf{Basis of differential forms:} One could compute that $\mathcal{S}_2(\Gamma_0(N))$ has $\CC$-dimension $2$ and a basis of the space of weight $2$ cusp forms using $\SageMath$. Furthermore, the action of Hecke operators on the basis of cusp forms is available on $\SageMath$. Some quick linear algebra leads to an eigenbasis $\{f_0,\,f_1\}$ of the $\CC$-vector space $\mathcal{S}_2(\Gamma_0(37))$ with the following $q$-expansions:
+\item \textbf{Basis of differential forms:} One could compute that $\mathcal{S}_2(\Gamma_0(N))$ has $\CC$-dimension $2$ and a basis of the space of weight $2$ cusp forms using $\SageMath$. Furthermore, the action of Hecke operators on the basis of cusp forms is available on $\SageMath$. Linear algebra leads to an eigenbasis $\{f_0,\,f_1\}$ of the $\CC$-vector space $\mathcal{S}_2(\Gamma_0(37))$ with the following $q$-expansions:
 \begin{align*} f_0 &= q+q^3-2q^4+O(q^6), \\ f_1 &= q-2q^2-3q^3+2q^4-2q^5+O(q^6) .\end{align*}
 
-\item \textbf{Hecke action:} We choose $p=3$, and $T_3(f_0) = f_0,\,T_3(f_1) = -3f_1$. Therefore the Hecke operator matrix $T_3$ is $\begin{pmatrix}
+\item \textbf{Hecke action:} We choose $p=3$, and $T_3(f_0) = f_0,\,T_3(f_1) = -3f_1$. Therefore the Hecke operator matrix $T_3$ is $\begin{psmallmatrix}
 1&0\\
 0&-3
-\end{pmatrix}$. 
+\end{psmall matrix}$. 
 
 \item \textbf{Algorithm \ref{alg:tiny_integral} and results:} Let $\omega_0,\omega_1$ be 1-forms that corresponds to cusp forms $-\frac{1}{2}f_0,\,-\frac{1}{2}f_1$ respectively in order to obtain $\omega_0 = \frac{dx}{y}$ and $\omega_1 = \frac{xdx}{y}$. This way, we can get a direct comparison with $\Magma$'s hyperelliptic curve implementation. Now, we proceed with computing the Coleman integrals on $\omega_0,\,\omega_1$. 
 
@@ -47,7 +47,7 @@ $j$-invariants $j(Q),j(R)$ containing a cyclic subgroup of order $37$ (or equiva
 
 
 %Our point $Q$ corresponds to $\tau \approx 0.500000000000000 + 0.170470198193806 \cdot i \in \mathcal{H}$.  
-Now we explain in detail how to calculate $\sum_{i=0}^{p}\int^Q_{Q_i} \omega_1$ using Algorithm \ref{alg:tiny_integral}. By comparing complex coefficients and using $\texttt{algdep}$ to algebraically approximate complex numbers, we first obtain rational coefficients $x_i$ in the expansion of $\omega_1$ about $j=j(Q)$:
+We explain how to calculate $\sum_{i=0}^{p}\int^Q_{Q_i} \omega_1$ using Algorithm \ref{alg:tiny_integral}. By comparing complex coefficients and using $\texttt{algdep}$ to algebraically approximate complex numbers, we first obtain rational coefficients $x_i$ in the expansion of $\omega_1$ about $j=j(Q)$:
 \begin{align*} \omega_1  = &(-9317) + \frac{717409}{2 \cdot 37 \cdot 47}(j-j(Q))
                              + \frac{253086749261192}{37^2 \cdot 47^3}(j-j(Q))^2
   \\ &+ \frac{176804544077038351043955}{37^3 \cdot 47^5}(j-j(Q))^3 +
