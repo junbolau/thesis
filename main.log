@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.4.3)  3 MAY 2023 01:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2023.4.3)  3 MAY 2023 12:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1411,9 +1411,6 @@ Overfull \hbox (15.84596pt too wide) detected at line 81
 
  (./2_bike/2_1_intro.tex
 Chapter 4.
-
-LaTeX Warning: Citation `' on page 45 undefined on input line 5.
-
 [45
 
 
@@ -1454,9 +1451,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 214--217
 (./1_coleman/1_9_tinyintegrals.aux) (./1_coleman/1_10_examples.aux)
 (./1_coleman/1_11_X0.aux) (./1_coleman/1_12_X0plus.aux)
 (./1_coleman/1_13_Xns.aux) (./2_bike/2_1_intro.aux) (./2_bike/2_2_prelim.aux))
-
-LaTeX Warning: There were undefined references.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0E473CF94CD54F7365BB6857A105FE0B;4889.
  )
@@ -1467,7 +1461,7 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  31459 strings out of 478238
  575588 string characters out of 5850457
- 959933 words of memory out of 5000000
+ 959934 words of memory out of 5000000
  48370 multiletter control sequences out of 15000+600000
  604256 words of font info for 462 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1485,7 +1479,7 @@ pe1/urw/courier/ucrr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/courier/ucrro
 mes/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/s
 hare/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/t
 ype1/urw/times/utmri8a.pfb>
-Output written on main.pdf (62 pages, 280882 bytes).
+Output written on main.pdf (62 pages, 280183 bytes).
 PDF statistics:
  727 PDF objects out of 1000 (max. 8388607)
  626 compressed objects within 7 object streams
