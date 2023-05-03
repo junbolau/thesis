@@ -1,0 +1,245 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{{The}22b}
+
+\bibitem[Ass20]{Assaf2020}
+Eran Assaf.
+\newblock Computing classical modular forms for arbitrary congruence subgroups.
+\newblock {\em arXiv: Number Theory}, 2020.
+
+\bibitem[BBK10]{BBK10}
+Jennifer~S. Balakrishnan, Robert~W. Bradshaw, and Kiran~S. Kedlaya.
+\newblock Explicit coleman integration for hyperelliptic curves.
+\newblock In Guillaume Hanrot, Fran{\c{c}}ois Morain, and Emmanuel Thom{\'e},
+  editors, {\em Algorithmic Number Theory}, pages 16--31, Berlin, Heidelberg,
+  2010. Springer Berlin Heidelberg.
+
+\bibitem[BCP97]{magma}
+Wieb Bosma, John Cannon, and Catherine Playoust.
+\newblock The {M}agma algebra system. {I}. {T}he user language.
+\newblock {\em J. Symbolic Comput.}, 24(3-4):235--265, 1997.
+\newblock Computational algebra and number theory (London, 1993).
+
+\bibitem[BD17]{BD2}
+Jennifer Balakrishnan and Netan Dogra.
+\newblock Quadratic chabauty and rational points ii: Generalised height
+  functions on selmer varieties.
+\newblock {\em International Mathematics Research Notices}, 04 2017.
+
+\bibitem[BD18]{BD1}
+Jennifer~S. Balakrishnan and Netan Dogra.
+\newblock Quadratic {C}habauty and rational points, {I}: {$p$}-adic heights.
+\newblock {\em Duke Math. J.}, 167(11):1981--2038, 2018.
+\newblock With an appendix by J. Steffen M\"{u}ller.
+
+\bibitem[BDM{\etalchar{+}}19]{cursed-curve}
+Jennifer Balakrishnan, Netan Dogra, J.~Steffen M{\"u}ller, Jan Tuitman, and Jan
+  Vonk.
+\newblock {Explicit Chabauty–Kim for the split Cartan modular curve of level
+  13}.
+\newblock {\em Annals of Mathematics}, 189(3):885 -- 944, 2019.
+
+\bibitem[BDM{\etalchar{+}}21]{BDMTV}
+Jennifer Balakrishnan, Netan Dogra, Jan Müller, Jan Tuitman, and Jan Vonk.
+\newblock Quadratic chabauty for modular curves: Algorithms and examples.
+\newblock {\em Preprint, 2101.01862}, 01 2021.
+
+\bibitem[BN20]{Brunault2020}
+Fran{\c{c}}ois Brunault and Michael Neururer.
+\newblock Fourier expansions at cusps.
+\newblock {\em The Ramanujan Journal}, 53(2):423--437, Nov 2020.
+
+\bibitem[BP11]{BP2}
+Yuri Bilu and Pierre Parent.
+\newblock Serre's uniformity problem in the split {C}artan case.
+\newblock {\em Ann. of Math. (2)}, 173(1):569--584, 2011.
+
+\bibitem[BPR13]{BP1}
+Yuri Bilu, Pierre Parent, and Marusia Rebolledo.
+\newblock Rational points on {$X^+_0(p^r)$}.
+\newblock {\em Ann. Inst. Fourier (Grenoble)}, 63(3):957--984, 2013.
+
+\bibitem[BT20]{BT_coleman}
+Jennifer~S. Balakrishnan and Jan Tuitman.
+\newblock Explicit coleman integration for curves.
+\newblock {\em Mathematics of Computation}, 89:2965--2984, 2020.
+
+\bibitem[BT22]{balatuit}
+Jennifer Balakrishnan and Jan Tuitman.
+\newblock Magma code.
+\newblock \url{https://github.com/jtuitman/Coleman}, 2022.
+
+\bibitem[CdS88]{Coleman1}
+Robert Coleman and Ehud de~Shalit.
+\newblock {$p$}-adic regulators on curves and special values of {$p$}-adic
+  {$L$}-functions.
+\newblock {\em Invent. Math.}, 93(2):239--266, 1988.
+
+\bibitem[Col85a]{Coleman3}
+Robert~F. Coleman.
+\newblock {Effective Chabauty}.
+\newblock {\em Duke Mathematical Journal}, 52(3):765 -- 770, 1985.
+
+\bibitem[Col85b]{Coleman2}
+Robert~F. Coleman.
+\newblock Torsion points on curves and {$p$}-adic abelian integrals.
+\newblock {\em Ann. of Math. (2)}, 121(1):111--168, 1985.
+
+\bibitem[Col85c]{coleman85}
+Robert~F. Coleman.
+\newblock Torsion points on curves and {$p$}-adic abelian integrals.
+\newblock {\em Ann. of Math. (2)}, 121(1):111--168, 1985.
+
+\bibitem[Dic]{dickson}
+Leonard~E. Dickson.
+\newblock {\em Linear groups with an exposition of the Galois field theory}.
+\newblock Leipzig, B.G. Teubner, 1901.
+
+\bibitem[DS05]{Shurman}
+Fred Diamond and Jerry Shurman.
+\newblock {\em A first course in modular forms}, volume 228 of {\em Graduate
+  Texts in Mathematics}.
+\newblock Springer-Verlag, New York, 2005.
+
+\bibitem[For81]{forster}
+Otto Forster.
+\newblock {\em Lectures on Riemann Surfaces}.
+\newblock Springer New York, NY, 1981.
+
+\bibitem[Gal96]{Galbraith_1996}
+Steven~D. Galbraith.
+\newblock Equations for modular curves.
+\newblock {\em DPhil thesis, University of Oxford}, 1996.
+
+\bibitem[Gal99]{Galbraith_1999}
+Steven~D. Galbraith.
+\newblock Rational points on {$X_0^+(p)$}.
+\newblock {\em Experiment. Math.}, 8(4):311--318, 1 1999.
+
+\bibitem[GJS16]{GJS}
+Qian Guo, Thomas Johansson, and Paul Stankovski.
+\newblock A key recovery attack on mdpc with cca security using decoding
+  errors.
+\newblock pages 789--815, 12 2016.
+
+\bibitem[Joz01]{Jozsa}
+R.~Jozsa.
+\newblock Quantum factoring, discrete logarithms, and the hidden subgroup
+  problem.
+\newblock {\em Computing in Science \& Engineering}, 3(2):34--43, 2001.
+
+\bibitem[{Ked}01]{Kedlaya_coho_hyper}
+Kiran~S. {Kedlaya}.
+\newblock {Counting Points on Hyperelliptic Curves using Monsky-Washnitzer
+  Cohomology}.
+\newblock {\em arXiv Mathematics e-prints}, page math/0105031, May 2001.
+
+\bibitem[{LMF}22]{lmfdb}
+The {LMFDB Collaboration}.
+\newblock The {L}-functions and modular forms database.
+\newblock \url{http://www.lmfdb.org}, 2022.
+
+\bibitem[Maz77]{Mazur77}
+B.~Mazur.
+\newblock Rational points on modular curves.
+\newblock In Jean-Pierre Serre and Don~Bernard Zagier, editors, {\em Modular
+  Functions of one Variable V}, pages 107--148, Berlin, Heidelberg, 1977.
+  Springer Berlin Heidelberg.
+
+\bibitem[Maz78]{borel}
+B.~Mazur.
+\newblock Rational isogenies of prime degree (with an appendix by {D}.
+  {G}oldfeld).
+\newblock {\em Invent. Math.}, 44(2):129--162, 1978.
+
+\bibitem[{McE}78]{mceliece}
+R.~J. {McEliece}.
+\newblock {A Public-Key Cryptosystem Based On Algebraic Coding Theory}.
+\newblock {\em Deep Space Network Progress Report}, 44:114--116, January 1978.
+
+\bibitem[Mer18]{Mercuri_2018}
+Pietro Mercuri.
+\newblock Equations and rational points of the modular curves {$X_0^+(p)$}.
+\newblock {\em Ramanujan J.}, 47(2):291--308, 2018.
+
+\bibitem[MSD74]{maswd}
+B.~Mazur and P.~Swinnerton-Dyer.
+\newblock Arithmetic of weil curves.
+\newblock {\em Invent Math}, 25:1--61, 1974.
+
+\bibitem[MTSB13]{QCMDPC}
+Rafael Misoczki, Jean-Pierre Tillich, Nicolas Sendrier, and Paulo S. L.~M.
+  Barreto.
+\newblock Mdpc-mceliece: New mceliece variants from moderate density
+  parity-check codes.
+\newblock In {\em 2013 IEEE International Symposium on Information Theory},
+  pages 2069--2073, 2013.
+
+\bibitem[Ser72]{serre72}
+J.-P. Serre.
+\newblock Propriétés galoisiennes des points d’ordre fini des courbes
+  elliptiques.
+\newblock {\em Inv. Math.}, 15:259--3319, 1972.
+
+\bibitem[Shi94]{shimura}
+Goro Shimura.
+\newblock {\em Introduction to the arithmetic theory of automorphic functions},
+  volume~11 of {\em Publications of the Mathematical Society of Japan}.
+\newblock Princeton University Press, Princeton, NJ, 1994.
+\newblock Reprint of the 1971 original, Kan\^{o} Memorial Lectures, 1.
+
+\bibitem[Sho99]{Shor}
+Peter~W. Shor.
+\newblock Polynomial-time algorithms for prime factorization and discrete
+  logarithms on a quantum computer.
+\newblock {\em SIAM Review}, 41(2):303--332, 1999.
+
+\bibitem[Sik17]{Siksek}
+Samir Siksek.
+\newblock Quadratic chabauty for modular curves.
+\newblock {\em Preprint, 1704.00473}, 04 2017.
+
+\bibitem[Sta75]{stark_classnumber1}
+H.~M. Stark.
+\newblock On complex quadratic fields with class-number two.
+\newblock {\em Mathematics of Computation}, 29(129):289--302, 1975.
+
+\bibitem[Ste07]{steinmf}
+William Stein.
+\newblock {\em Modular forms, a computational approach}, volume~79 of {\em
+  Graduate Studies in Mathematics}.
+\newblock American Mathematical Society, Providence, RI, 2007.
+\newblock With an appendix by Paul E. Gunnells.
+
+\bibitem[{The}22a]{BIKE}
+{The BIKE Developers}.
+\newblock {\em {B}IKE: {B}it-{F}lipping {K}ey {E}ncapsulation}, 2022.
+\newblock {\tt https://bikesuite.org/}.
+
+\bibitem[{The}22b]{sagemath}
+{The Sage Developers}.
+\newblock {\em {S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem
+  ({V}ersion 9.6.1)}, 2022.
+\newblock {\tt https://www.sagemath.org}.
+
+\bibitem[Tui16]{Tui16}
+Jan Tuitman.
+\newblock Counting points on curves using a map to $\mathbf{P}^1$, i.
+\newblock {\em Math. Comput.}, 85:961--981, 2016.
+
+\bibitem[Tui17]{Tui17}
+Jan Tuitman.
+\newblock Counting points on curves using a map to $\mathbf{P}^1$, \text{II}.
+\newblock {\em Finite Fields and Their Applications}, 45:301--322, 05 2017.
+
+\bibitem[Wet97]{wetherell}
+Joseph~L. Wetherell.
+\newblock {\em Bounding the number of rational points on certain curves of high
+  rank}.
+\newblock PhD thesis, 1997.
+
+\bibitem[Zyw20]{Zywina2020ComputingAO}
+David Zywina.
+\newblock Computing actions on cusp forms.
+\newblock {\em arXiv: Number Theory}, 2020.
+
+\end{thebibliography}

@@ -1,0 +1,35 @@
+\contentsline {frontmatter}{\numberline {}Signature Page}{iii}{section*.1}%
+\contentsline {frontmatter}{\numberline {}Epigraph}{iv}{section*.2}%
+\contentsline {frontmatter}{\numberline {}Table of Contents}{v}{section*.3}%
+\contentsline {frontmatter}{\numberline {}Acknowledgements}{vii}{section*.4}%
+\contentsline {frontmatter}{\numberline {}Vita}{viii}{section*.5}%
+\contentsline {frontmatter}{\numberline {}Abstract}{ix}{section*.6}%
+\contentsline {part}{I\hspace {1em}Coleman Integration on Modular Curves}{1}{part.1}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}1}Preliminaries}{2}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Background}{6}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Modular forms}{6}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Modular curves}{9}{subsection.1.2.2}%
+\contentsline {subsubsection}{As Riemann surfaces}{9}{section*.7}%
+\contentsline {subsubsection}{As algebraic curves}{9}{section*.8}%
+\contentsline {subsubsection}{As moduli spaces of elliptic curves}{10}{section*.9}%
+\contentsline {subsection}{\numberline {1.2.3}Hecke operators}{12}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Coleman integrals}{15}{subsection.1.2.4}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}2}Coleman Integration on Modular Curves}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Breaking the Coleman integrals into tiny integrals}{18}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Computing a basis of cusp forms}{20}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Hecke operators as double coset operators}{21}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Tiny integrals via complex number approximation}{23}{section.2.4}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}3}Computations and examples}{26}{chapter.3}%
+\contentsline {section}{\numberline {3.1}$X_0(N)$}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Example: $X_0(37)$}{27}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}$X_0^+(N)$}{31}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Example: $X_0^+(67)$}{33}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}$X_{ns}^+(p)$}{37}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Example: $X_{ns}^+(13)$}{40}{subsection.3.3.1}%
+\contentsline {part}{II\hspace {1em}Decoding Failures of BIKE}{44}{part.2}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}4}Preliminaries}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Preliminaries on coding theory}{48}{section.4.2}%
+\contentsline {chapter}{\numberline {Appendix\nobreakspace {}A}Final notes}{49}{appendix.A}%
+\contentsline {backmatter}{Bibliography}{50}{appendix*.14}%
