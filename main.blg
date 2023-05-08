@@ -4,9 +4,6 @@ The top-level auxiliary file: main.aux
 A level-1 auxiliary file: frontmatter.aux
 A level-1 auxiliary file: 1_coleman/1_1_intro.aux
 A level-1 auxiliary file: 1_coleman/1_2_mf.aux
-A level-1 auxiliary file: 1_coleman/1_3_mc.aux
-A level-1 auxiliary file: 1_coleman/1_4_hecke.aux
-A level-1 auxiliary file: 1_coleman/1_5_coleman.aux
 A level-1 auxiliary file: 1_coleman/1_6_algorithm.aux
 A level-1 auxiliary file: 1_coleman/1_7_basis.aux
 A level-1 auxiliary file: 1_coleman/1_8_heckedouble.aux
@@ -19,49 +16,48 @@ A level-1 auxiliary file: 2_bike/2_1_intro.aux
 A level-1 auxiliary file: 2_bike/2_2_prelim.aux
 The style file: alpha.bst
 Database file #1: template.bib
-Warning--I didn't find a database entry for ""
 Warning--empty year in dickson
 Warning--empty booktitle in GJS
 Warning--empty school in wetherell
-You've used 43 entries,
+You've used 50 entries,
             2543 wiz_defined-function locations,
-            864 strings with 10755 characters,
-and the built_in function-call counts, 16012 in all, are:
-= -- 1621
-> -- 607
-< -- 35
-+ -- 194
-- -- 187
-* -- 1113
-:= -- 2585
-add.period$ -- 135
-call.type$ -- 43
-change.case$ -- 235
-chr.to.int$ -- 40
-cite$ -- 46
-duplicate$ -- 689
-empty$ -- 1223
-format.name$ -- 255
-if$ -- 3290
-int.to.chr$ -- 4
+            903 strings with 11603 characters,
+and the built_in function-call counts, 18918 in all, are:
+= -- 1917
+> -- 726
+< -- 41
++ -- 235
+- -- 225
+* -- 1322
+:= -- 3050
+add.period$ -- 158
+call.type$ -- 50
+change.case$ -- 275
+chr.to.int$ -- 46
+cite$ -- 53
+duplicate$ -- 811
+empty$ -- 1443
+format.name$ -- 304
+if$ -- 3900
+int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 43
-newline$ -- 223
-num.names$ -- 133
-pop$ -- 220
+missing$ -- 49
+newline$ -- 258
+num.names$ -- 158
+pop$ -- 254
 preamble$ -- 1
-purify$ -- 286
+purify$ -- 334
 quote$ -- 0
-skip$ -- 568
+skip$ -- 667
 stack$ -- 0
-substring$ -- 979
-swap$ -- 113
-text.length$ -- 35
-text.prefix$ -- 27
+substring$ -- 1158
+swap$ -- 137
+text.length$ -- 41
+text.prefix$ -- 31
 top$ -- 0
-type$ -- 324
+type$ -- 380
 warning$ -- 3
-while$ -- 151
-width$ -- 45
-write$ -- 559
-(There were 4 warnings)
+while$ -- 180
+width$ -- 53
+write$ -- 653
+(There were 3 warnings)

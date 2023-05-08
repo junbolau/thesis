@@ -1,3 +1,166 @@
-\section{Preliminaries on coding theory}
+\section{Preliminaries on code-based cryptography}
 
-test
+In this chapter, we recall the main definitions from coding theory and what will be needed to construct QC-MDPC codes in cryptography. Throughout this chapter, $q$ is a prime power. In our case, we will study codes when $q=2$, over the binary field $\FF_2$.
+
+\subsection{Coding theory}
+We start with the basic definitions from coding theory.
+
+\begin{defn}
+A linear code $\mathcal{C} \subseteq \FF_q^n$ is a $k$-dimensional linear subspace of the vector space $\FF_q^n$. Such a code is called a $[n,k]$-code. The elements of $\mathcal{C}$ are called codewords.
+\end{defn}
+
+\begin{defn}
+The rate of a $[n,k]$-code $\mathcal{C}$ is the ratio $ R = \frac{k}{n}$.
+
+In the context of communications or cryptography, this means that for every $n$-bit of information, there are $k$ symbols of useful information and $(n-k)$ symbols of redundant information. Usually, the redundant information is used to detect or correct errors.
+\end{defn}
+
+We introduce some tools from linear algebra.
+
+\begin{defn}
+Let $\mathcal{C}$ be a $[n,k]$-code. A generator matrix $\mathbf{G} \in \FF_q^{k \times n}$ is a $k \times n$ matrix whose rows form a basis of $\mathcal{C}$. So $\mathcal{C} = \{ vG: v \in v \in \FF_q^k\}$.
+\end{defn}
+
+\begin{defn}
+Given a $[n,k]$-code $\mathcal{C}$, the dual code $\mathcal{C}^\perp$ is defined to be
+
+\[
+\mathcal{C}^\perp := \{ v \in \FF_q^n | \forall w \in \mathcal{C} w \cdot v = 0 \}   
+\]
+
+where $ w \cdot v $ is the usual dot product. The generator matrix of $\mathcal{C}^\perp$ is called the parity check matrix.
+\end{defn}
+
+\begin{remark}
+Let $\mathcal{C}$ a linear code, $\mathbf{G}$ its generator matrix and $\mathbf{H}$ its parity check matrix. Then,
+
+\begin{itemize}
+\item $\mathbf{G},\mathbf{H}$ satisfy $GH^\top = 0$.
+\item We can write $\mathbf{G},\mathbf{H}$ in systematic form:
+
+\[
+\mathbf{G} = [ \mathbf{I}_k | P] , \ , \mathbf{H} = [ \mathbf{I}_{n-k} | P]
+\]
+
+\item One matrix can be determined by the other using linear algebra. In particular, we can define $\mathcal{C}$ in terms of its paritcy check matrix: \[\mathcal{C} = \{c \in \FF_q^n | Hc^\top = 0 \}.\]
+\end{itemize}
+\end{remark}
+
+\begin{defn}
+Let $\mathcal{C}$ be a $[n,k]$-code and $\mathbf{H} \in \FF_q^{(n-k)\times n}$ its parity check matrix. The syndrome of $x \in \FF_q^n$ is the vector $Hx^\top \in \FF_q^{n-k}$.
+
+\end{defn}
+
+\begin{defn}
+For an element $v = (v_0, v_1, \ldots, v_{n-1}) \in \FF_q^n$, the support of $v$ is the set of indices with nonzero entries, \[Supp(v) := \{ i \in \{ 0, 1, \ldots, n-1 \} : v_i \neq 0 \}\].
+
+The Hamming weight of a vector is the number of nonzero entries: $|v| := | Supp(v) |$.
+\end{defn}
+
+\begin{defn}
+$\FF_q^n$ is a metric space with the metric defined to be $d(x,y) := | x - y |$. This is called the Hamming distance between $x,y$.
+\end{defn}
+
+\begin{defn}
+The minimum distance of a linear code $\mathcal{C}$ is defined to be the minimum distance between two distinct codewords: \[d(\mathcal{C}) := \min_{c_0, c_1 \in \mathcal{C}} d(c_0,c_1) = min_{c \in \mathcal{C}} d(c,0) = min_{c \in \mathcal{C}} |c|\].
+\end{defn}
+
+\begin{defn}
+Given $v, w \in \FF_q^n$, the Schur product of $v,w$ is the componentwise product: \[v \star w:= (v_0 \cdot w_0, v_1 \cdot w_1, \ldots , v_{n-1} \cdot w_{n-1}).\]
+\end{defn}
+
+\subsection{Code-based cryptography}
+
+In this section, we define QC-MDPC codes and their representations as graphs. 
+
+\begin{defn}
+A $[n,k]$ Low Density Parity Check (LDPC) code is a linear code for which its parity check matrix is sparse, meaning that the Hamming weight of reach row is in $O(1)$.
+
+A $[n,k]$ Moderate Density Parity Check (MDPC) code is a linear code for which its parity check matrix is moderately sparse, meaning that the Hamming weight of reach row is in $O(\sqrt{n})$.
+\end{defn}
+
+We introduce graph theory as a tool to study these codes.
+
+\begin{defn}
+Given a $[n,k]$-code $\mathcal{C}$ and its parity check matrix $\mathbf{H} \in \FF_q^{(n-k) \times n}$. The Tanner graph of $\mathcal{C}$ (or $\mathbf{H}$) is the bipartite graph defined by the biadjacency matrix $\mathbf{H}$. The $n$ columns correspond to $n$ nodes, called variable nodes, and the $(n-k)$ rows correspond to $(n-k)$ nodes called check nodes.
+\end{defn}
+
+Tanner graph is a powerful tool that is used to analyse decoders in LDPC codes since they have sparse parity check matrices. Therefore, it is easy to capture certain graph theoretic information, for example, number of cycles, girth of the graph, etc. On the other hand, MDPC codes have denser parity check matrices and the cost of analysis will increase exponentially in this situation.
+
+LDPC and MDPC codes have their advantages and disadvantages in cryptography. For example, LDPC codes have better decoding performance than their MDPC counterparts but certain low weight codewords can lead to an attack on the McEliece cryptosystem using LDPC codes. MDPC codes can be made more secure but at the expense of more complicated decoder behaviours and large key sizes. Influenced by the development of NTRU \cite{ntru}, lattice- and code-based cryptosystems adapted the use of quotient polynomial rings of the form $\FF_2[x]/(x^n -1)$ in order to reduce key sizes. This leads to our next definition.
+
+\begin{defn}
+A circulant matrix is a matrix such that each row is a cyclic shift to the right of its previous row. 
+
+Let $r$ be a positive integer. If $\mathbf{H} \in \FF_q^{r \times r}$ is a circulant matrix, then $\mathbf{H}$ can be defined by its first row $( h_0 \ h_{r-1} \ \ldots \ h_1)$:
+
+\[
+\mathbf{H} = \begin{pmatrix}
+h_0 & h_{r-1} & \ldots & h_2 & h_1 \\
+h_1 & h_0 & \ldots & h_3 & h_2 \\
+\vdots &  & \ddots & & \vdots \\
+h_{r-2} & h_{r-3} & \ldots & h_0 & h_{r-1} \\
+h_{r-1} & h_{r-2} & \ldots & h_1 & h_0 
+\end{pmatrix}
+\]
+
+Observe that a circulant matrix can be defined as the cyclic shift of each column by one entry down of its previous column as well.
+
+We say a matrix is a Quasi-Circulant (QC) matrix if it is a block sum of circulant matrices.
+\end{defn}
+
+\begin{defn}
+Fix positive integers $n_0,r,d$. A QC-MDPC code is a code with parity check matrix:
+
+\[
+\mathbf{H} = [ \mathbf{H}_0 \  \ldots \ \mathbf{H}_{n_0 -1} ] 
+\]
+
+where each block $\mathbf{H}_i$ is a $r \times r$ MDPC matrix, with each row having Hamming weight $d$ such that $n_0d = O(\sqrt{n_0 r})$. One could check that this code is a $[n_0 r, n_0 r - r]$-code, with rate $R = 1 - 1/n_0$. We call $r$ the block size of the code.
+\end{defn}
+
+In code-based cryptography, there are two hard problems, in which most cryptosystems are based on:
+
+\begin{enumerate}
+\item (Syndrome Decoding Problem) Given a parity check matrix $\mathbf{H} \in \FF_q^{(n-k) \times n }$, a syndrome $s \in \FF_q^{n-k}$ and a fixed weight $t \in \ZZ_{>0}$, find $e \in \FF_q^n$ such that $|e| = t$ and $He^\top = s$.
+\item (Codeword Finding Problem) Given a parity check matrix $\mathbf{H} \in \FF_q^{(n-k) \times n }$, a fixed weight $w \in \ZZ_{>0}$, find $e \in \FF_q^n$ such that $|e| = w$ and $He^\top = 0$.
+\end{enumerate}
+
+It is known that these problems are NP-hard \cite{nphard}. The best known attacks are based on Prange's information set decoding algorithm and its improvements \cite{prange}.
+
+\subsection{KEM's and Niederreiter cryptosystems}
+
+BIKE is a Key Encapsulation Mechanism that is based on a Niederreiter cryptosystem. In this section, we provide definitions to the objects involved.
+
+Modern cryptography uses hybrid cryptosystems: there is a public key cryptosystem combined with a symmetric key cryptosystem. The Key Encapsulation Mechanism allows the involved parties to exchange a common key, thus establishing a secure channel for future communications. The Diffie-Hellman key exchange is a well-known example of this instance.
+
+\begin{defn}
+A Key Encapsulation Mechanism (KEM) is a triple of probabilistic polynomial-time algoritms $(KeyGen, Encaps, Decaps)$ with:
+
+\begin{itemize}
+\item A key generation method:
+\[
+KeyGen: \{ 0,1 \}^\lambda \rightarrow K_{pub} \times K_{priv}
+\]
+
+where $\lambda$ is the security parameter, $K_{pub}$ and $K_{priv}$ are the spaces of public and private keys respectively.
+
+\item An encapsulation method:
+
+\[
+Encaps: K_{pub} \rightarrow M \times C
+\]
+
+where $M$ and $C$ are the spaces of message and ciphertext. The encapsulation method has a public key as the input and outputs a pair of message and ciphertext.
+
+\item A decapsulation method:
+
+\[
+Decaps: K_{priv} \times C \rightarrow M
+\]
+
+The decapsulation method takes a private key and ciphertext pair as inputs then outputs the message or a failure, which is denoted by $\perp$.
+\end{itemize}
+\end{defn}
+
+The McEliece cryptosystem works as follows. One generates a code such that an efficient decoder is known then scrambles the generator matrix by changing the basis or permuting the coordinates. The resulting scrambled matrix is the public generator matrix of the code. Furthermore, the decoder must be able to detect and correct up to a certain number $t$ of errors. In the NIST PQC submission, the McEliece candidate uses Goppa codes which is known to have a good decoder \cite{mceliece,nistmceliece,mceliecedecoder}. BIKE and Classic McEliece use the Niederreiter cryptosystem \cite{niederreiter}, in which parity check matrices are used instead of the generator matrices. In this sense, it is dual to McEliece cryptosystems and share the same advantages (fast encryption and decryption) and disadvantages (large key sizes). The block size of Niederreiter cryptosystems is smaller than McEliece's.

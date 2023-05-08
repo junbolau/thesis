@@ -43,6 +43,11 @@ Jennifer Balakrishnan, Netan Dogra, Jan Müller, Jan Tuitman, and Jan Vonk.
 \newblock Quadratic chabauty for modular curves: Algorithms and examples.
 \newblock {\em Preprint, 2101.01862}, 01 2021.
 
+\bibitem[BMvT78]{nphard}
+E.~Berlekamp, R.~McEliece, and H.~van Tilborg.
+\newblock On the inherent intractability of certain coding problems (corresp.).
+\newblock {\em IEEE Transactions on Information Theory}, 24(3):384--386, 1978.
+
 \bibitem[BN20]{Brunault2020}
 Fran{\c{c}}ois Brunault and Michael Neururer.
 \newblock Fourier expansions at cusps.
@@ -89,6 +94,12 @@ Robert~F. Coleman.
 \newblock Torsion points on curves and {$p$}-adic abelian integrals.
 \newblock {\em Ann. of Math. (2)}, 121(1):111--168, 1985.
 
+\bibitem[DGK20]{bgf}
+Nir Drucker, Shay Gueron, and Dusan Kostic.
+\newblock Qc-mdpc decoders with several shades of gray.
+\newblock In Jintai Ding and Jean-Pierre Tillich, editors, {\em Post-Quantum
+  Cryptography}, pages 35--50, Cham, 2020. Springer International Publishing.
+
 \bibitem[Dic]{dickson}
 Leonard~E. Dickson.
 \newblock {\em Linear groups with an exposition of the Galois field theory}.
@@ -120,6 +131,12 @@ Qian Guo, Thomas Johansson, and Paul Stankovski.
 \newblock A key recovery attack on mdpc with cca security using decoding
   errors.
 \newblock pages 789--815, 12 2016.
+
+\bibitem[HPS98]{ntru}
+Jeffrey Hoffstein, Jill Pipher, and Joseph~H. Silverman.
+\newblock Ntru: A ring-based public key cryptosystem.
+\newblock In Joe~P. Buhler, editor, {\em Algorithmic Number Theory}, pages
+  267--288, Berlin, Heidelberg, 1998. Springer Berlin Heidelberg.
 
 \bibitem[Joz01]{Jozsa}
 R.~Jozsa.
@@ -174,6 +191,21 @@ Rafael Misoczki, Jean-Pierre Tillich, Nicolas Sendrier, and Paulo S. L.~M.
 \newblock In {\em 2013 IEEE International Symposium on Information Theory},
   pages 2069--2073, 2013.
 
+\bibitem[NIE86]{niederreiter}
+H.~NIEDERREITER.
+\newblock Knapsack-type cryptosystems and algebraic coding theory.
+\newblock {\em Prob. Contr. Inform. Theory}, 15(2):157--166, 1986.
+
+\bibitem[Pat75]{mceliecedecoder}
+N.~Patterson.
+\newblock The algebraic decoding of goppa codes.
+\newblock {\em IEEE Transactions on Information Theory}, 21(2):203--207, 1975.
+
+\bibitem[Pra62]{prange}
+E.~Prange.
+\newblock The use of information sets in decoding cyclic codes.
+\newblock {\em IRE Transactions on Information Theory}, 8(5):5--9, 1962.
+
 \bibitem[Ser72]{serre72}
 J.-P. Serre.
 \newblock Propriétés galoisiennes des points d’ordre fini des courbes
@@ -215,7 +247,12 @@ William Stein.
 \newblock {\em {B}IKE: {B}it-{F}lipping {K}ey {E}ncapsulation}, 2022.
 \newblock {\tt https://bikesuite.org/}.
 
-\bibitem[{The}22b]{sagemath}
+\bibitem[{The}22b]{nistmceliece}
+{The McEliece Developers}.
+\newblock {\em Classic McEliece}, 2022.
+\newblock {\tt https://classic.mceliece.org/index.html}.
+
+\bibitem[{The}22c]{sagemath}
 {The Sage Developers}.
 \newblock {\em {S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem
   ({V}ersion 9.6.1)}, 2022.

@@ -9,12 +9,12 @@
 \contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Background}{6}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Modular forms}{6}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Modular curves}{9}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.2}Modular curves}{8}{subsection.1.2.2}%
 \contentsline {subsubsection}{As Riemann surfaces}{9}{section*.7}%
 \contentsline {subsubsection}{As algebraic curves}{9}{section*.8}%
 \contentsline {subsubsection}{As moduli spaces of elliptic curves}{10}{section*.9}%
-\contentsline {subsection}{\numberline {1.2.3}Hecke operators}{12}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Coleman integrals}{15}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.3}Hecke operators}{11}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Coleman integrals}{14}{subsection.1.2.4}%
 \contentsline {chapter}{\numberline {Chapter\nobreakspace {}2}Coleman Integration on Modular Curves}{17}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Breaking the Coleman integrals into tiny integrals}{18}{section.2.1}%
 \contentsline {section}{\numberline {2.2}Computing a basis of cusp forms}{20}{section.2.2}%
@@ -30,6 +30,11 @@
 \contentsline {part}{II\hspace {1em}Decoding Failures of BIKE}{44}{part.2}%
 \contentsline {chapter}{\numberline {Chapter\nobreakspace {}4}Preliminaries}{45}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Introduction}{45}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Preliminaries on coding theory}{48}{section.4.2}%
-\contentsline {chapter}{\numberline {Appendix\nobreakspace {}A}Final notes}{49}{appendix.A}%
-\contentsline {backmatter}{Bibliography}{50}{appendix*.14}%
+\contentsline {section}{\numberline {4.2}Preliminaries on code-based cryptography}{48}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Coding theory}{48}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Code-based cryptography}{50}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}KEM's and Niederreiter cryptosystems}{52}{subsection.4.2.3}%
+\contentsline {section}{\numberline {4.3}BIKE}{54}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Decoding failures}{55}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {Appendix\nobreakspace {}A}Final notes}{56}{appendix.A}%
+\contentsline {backmatter}{Bibliography}{57}{appendix*.15}%
