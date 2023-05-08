@@ -1,0 +1,53 @@
+\section{BIKE}
+
+In this section, we describe the design of BIKE. Details about the choice of parameters and designs can be found on the BIKE website \cite{BIKE}.
+
+The parameters of BIKE are as follows:
+
+\begin{itemize}
+\item $r = $ the block size of a parity check matrix,
+\item $n = 2r$; the length of the code,
+\item $d = $ the column weight of a parity check matrix,
+\item $w = 2d$; the row weight of a parity check matrix,
+\item $t = $ the error weight of an error pattern,
+\item $\lambda = $ the security parameter, in bits.
+\end{itemize}
+
+The design principles of BIKE are as follows:
+
+\begin{itemize}
+\item $r$ is a prime such that $x^r -1 \in \FF_2[x]$ has only two irreducible factors,
+\item $w = 2d = O(\sqrt{n})$,
+\item $\lambda \approx t - \frac{1}{2}\log_2(r) \approx w - \frac{1}{2}\log_2(r)$.
+\end{itemize}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{cccc}
+\hline
+$\lambda$ & $r$ & $w$ & $t$ \\ \hline
+128 & 12,323 & 142 & 134 \\
+192 & 24,659 & 206 & 199 \\
+256 & 40,973 & 274 & 264 \\ \hline
+\end{tabular}
+\caption{BIKE parameters}
+\end{table}
+
+Following the Niederreiter framework, BIKE is defined in the following manner:
+
+\begin{itemize}
+\item ( Key generation) Randomly sample two rows $h_0, h_1 \in \FF_2^r$ of fixed weight $d \in \ZZ_{> 0}$ which form the (private) $r \times 2r$ QC-MDPC matrix $\mathbf{H} = [ \mathbf{H}_0 | \mathbf{H_1}]$. The public key is $\mathbf{H}' = [\mathbf{I} | \mathbf{H}_0^{-1}\mathbf{H}_1]$ in systematic form.
+\item ( Encapsulation) The message $m$ will be encoded as an error vector $e \in \FF_2^{2r}$ of weight at  most $t$. The ciphertext will be the syndrome $s = He^\top$.
+\item ( Decapsulation) Solve the syndrome decoding problem on inputs $H,s$ using the Black-Grey-Flip decoder \cite{bgf}.
+\end{itemize}
+
+\subsection{Decoding failures}
+
+\begin{defn}
+For a syndrome decoding instance $(H,s)$, where $s = He^\top$ for some unknown $e \in \FF_2^{2r}$, we say a decoding failure occured when the output $e' := Decode(H,s)$ is such that $He'^\top \neq s$.
+\end{defn}
+
+\begin{remark}
+The Black-Grey-Flip decoder is a probabilistic iterative decoder. It is not bounded by a bounded decoding radius and therefore we expect a nonzero decoding failure rate.
+\end{remark}
+
