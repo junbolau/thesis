@@ -1,6 +1,32 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{{The}22b}
 
+\bibitem[ABB{\etalchar{+}}17]{BIKE2017}
+Nicolas Aragon, Paulo Barreto, Slim Bettaieb, Loïc Bidoux, Olivier Blazy,
+  Jean-Christophe Deneuville, Philippe Gaborit, Shay Gueron, Tim Güneysu,
+  Carlos {Aguilar Melchor}, Rafael Misoczki, Edoardo Persichetti, Nicolas
+  Sendrier, Jean-Pierre Tillich, and Gilles Zémor.
+\newblock {BIKE}: Bit flipping key encapsulation - spec v1.0.
+\newblock \url{https://bikesuite.org/files/BIKE.2017.11.30.pdf}, 2017.
+
+\bibitem[ABB{\etalchar{+}}21]{BIKE}
+Nicolas Aragon, Paulo Barreto, Slim Bettaieb, Loïc Bidoux, Olivier Blazy,
+  Jean-Christophe Deneuville, Philippe Gaborit, Santosh Ghosh, Shay Gueron, Tim
+  Güneysu, Carlos {Aguilar Melchor}, Rafael Misoczki, Edoardo Persichetti, Jan
+  Richter-Brockmann, Nicolas Sendrier, Jean-Pierre Tillich, Valentin Vasseur,
+  and Gilles Zémor.
+\newblock {BIKE}: Bit flipping key encapsulation - spec v4.2.
+\newblock \url{https://bikesuite.org/files/v4.2/BIKE_Spec.2021.07.26.1.pdf},
+  2021.
+
+\bibitem[ABH{\etalchar{+}}]{raw-data-decoder}
+Sarah Arpin, Tyler~Raven Billingsley, Daniel~Rayor Hast, Jun~Bo Lau, Ray
+  Perlner, and Angela Robinson.
+\newblock Raw data and decoder in the paper "a study of error floor behavior in
+  qc-mdpc codes".
+\newblock \url{https://github.com/HastD/BIKE-error-floor}.
+\newblock Accessed: 2022-05-23.
+
 \bibitem[Ass20]{Assaf2020}
 Eran Assaf.
 \newblock Computing classical modular forms for arbitrary congruence subgroups.
@@ -43,6 +69,15 @@ Jennifer Balakrishnan, Netan Dogra, Jan Müller, Jan Tuitman, and Jan Vonk.
 \newblock Quadratic chabauty for modular curves: Algorithms and examples.
 \newblock {\em Preprint, 2101.01862}, 01 2021.
 
+\bibitem[BJMM12]{BJMM:2012:ISD}
+Anja Becker, Antoine Joux, Alexander May, and Alexander Meurer.
+\newblock Decoding random binary linear codes in $2^{n/20}$: How
+  1{\thinspace}+{\thinspace}1{\thinspace}={\thinspace}0 improves information
+  set decoding.
+\newblock In David Pointcheval and Thomas Johansson, editors, {\em Advances in
+  Cryptology -- EUROCRYPT 2012}, pages 520--536, Berlin, Heidelberg, 2012.
+  Springer Berlin Heidelberg.
+
 \bibitem[BMvT78]{nphard}
 E.~Berlekamp, R.~McEliece, and H.~van Tilborg.
 \newblock On the inherent intractability of certain coding problems (corresp.).
@@ -52,6 +87,12 @@ E.~Berlekamp, R.~McEliece, and H.~van Tilborg.
 Fran{\c{c}}ois Brunault and Michael Neururer.
 \newblock Fourier expansions at cusps.
 \newblock {\em The Ramanujan Journal}, 53(2):423--437, Nov 2020.
+
+\bibitem[Bos]{SCC}
+{B}oston {U}niversity {S}hared {C}omputing {C}luster.
+\newblock
+  \url{https://www.bu.edu/tech/support/research/computing-resources/scc/}.
+\newblock Accessed: 2022-02-18.
 
 \bibitem[BP11]{BP2}
 Yuri Bilu and Pierre Parent.
@@ -94,7 +135,19 @@ Robert~F. Coleman.
 \newblock Torsion points on curves and {$p$}-adic abelian integrals.
 \newblock {\em Ann. of Math. (2)}, 121(1):111--168, 1985.
 
-\bibitem[DGK20]{bgf}
+\bibitem[DGK20a]{DGK20b}
+Nir Drucker, Shay Gueron, and Dusan Kostic.
+\newblock On constant-time {QC}-{MDPC} decoders with negligible failure rate.
+\newblock In Marco Baldi, Edoardo Persichetti, and Paolo Santini, editors, {\em
+  Code-Based Cryptography}, pages 50--79. Springer, Cham, 2020.
+
+\bibitem[DGK20b]{DGK20a}
+Nir Drucker, Shay Gueron, and Dusan Kostic.
+\newblock {QC}-{MDPC} decoders with several shades of gray.
+\newblock In Jintai Ding and Jean-Pierre Tillich, editors, {\em Post-Quantum
+  Cryptography}, pages 35--50. Springer, Cham, 2020.
+
+\bibitem[DGK20c]{bgf}
 Nir Drucker, Shay Gueron, and Dusan Kostic.
 \newblock Qc-mdpc decoders with several shades of gray.
 \newblock In Jintai Ding and Jean-Pierre Tillich, editors, {\em Post-Quantum
@@ -178,6 +231,13 @@ Pietro Mercuri.
 \newblock Equations and rational points of the modular curves {$X_0^+(p)$}.
 \newblock {\em Ramanujan J.}, 47(2):291--308, 2018.
 
+\bibitem[MMT11]{MMT:2011:ISD}
+Alexander May, Alexander Meurer, and Enrico Thomae.
+\newblock Decoding random linear codes in $\tilde{O}(2^{0.054n})$.
+\newblock In Dong~Hoon Lee and Xiaoyun Wang, editors, {\em Advances in
+  Cryptology -- ASIACRYPT 2011}, pages 107--124, Berlin, Heidelberg, 2011.
+  Springer Berlin Heidelberg.
+
 \bibitem[MSD74]{maswd}
 B.~Mazur and P.~Swinnerton-Dyer.
 \newblock Arithmetic of weil curves.
@@ -205,6 +265,12 @@ N.~Patterson.
 E.~Prange.
 \newblock The use of information sets in decoding cyclic codes.
 \newblock {\em IRE Transactions on Information Theory}, 8(5):5--9, 1962.
+
+\bibitem[Ric03]{Richardson03}
+Tom Richardson.
+\newblock Error floors of {LDPC} codes.
+\newblock In {\em Proc. 41st Annual Allerton Conf. on Communication, Control,
+  and Computing}, pages 1426--1435, 01 2003.
 
 \bibitem[Ser72]{serre72}
 J.-P. Serre.
@@ -235,6 +301,13 @@ H.~M. Stark.
 \newblock On complex quadratic fields with class-number two.
 \newblock {\em Mathematics of Computation}, 29(129):289--302, 1975.
 
+\bibitem[Ste89]{Stern:1988:ISD}
+Jacques Stern.
+\newblock A method for finding codewords of small weight.
+\newblock In G{\'e}rard Cohen and Jacques Wolfmann, editors, {\em Coding Theory
+  and Applications}, pages 106--113, Berlin, Heidelberg, 1989. Springer Berlin
+  Heidelberg.
+
 \bibitem[Ste07]{steinmf}
 William Stein.
 \newblock {\em Modular forms, a computational approach}, volume~79 of {\em
@@ -242,21 +315,34 @@ William Stein.
 \newblock American Mathematical Society, Providence, RI, 2007.
 \newblock With an appendix by Paul E. Gunnells.
 
-\bibitem[{The}22a]{BIKE}
-{The BIKE Developers}.
-\newblock {\em {B}IKE: {B}it-{F}lipping {K}ey {E}ncapsulation}, 2022.
-\newblock {\tt https://bikesuite.org/}.
+\bibitem[SV19a]{SV:2019:extrapolate}
+Nicolas Sendrier and Valentin Vasseur.
+\newblock About low {DFR} for {QC-MDPC} decoding.
+\newblock Cryptology ePrint Archive, Paper 2019/1434, 2019.
+\newblock \url{https://eprint.iacr.org/2019/1434}.
 
-\bibitem[{The}22b]{nistmceliece}
+\bibitem[SV19b]{SV19}
+Nicolas Sendrier and Valentin Vasseur.
+\newblock On the decoding failure rate of {QC}-{MDPC} bit-flipping decoders.
+\newblock In {\em Post-quantum cryptography}, volume 11505 of {\em Lecture
+  Notes in Comput. Sci.}, pages 404--416. Springer, Cham, 2019.
+
+\bibitem[{The}22a]{nistmceliece}
 {The McEliece Developers}.
 \newblock {\em Classic McEliece}, 2022.
 \newblock {\tt https://classic.mceliece.org/index.html}.
 
-\bibitem[{The}22c]{sagemath}
+\bibitem[{The}22b]{sagemath}
 {The Sage Developers}.
 \newblock {\em {S}ageMath, the {S}age {M}athematics {S}oftware {S}ystem
   ({V}ersion 9.6.1)}, 2022.
 \newblock {\tt https://www.sagemath.org}.
+
+\bibitem[Til18]{tillich:2018:decoding}
+Jean-Pierre Tillich.
+\newblock The decoding failure probability of {MDPC} codes.
+\newblock In {\em 2018 IEEE International Symposium on Information Theory
+  (ISIT)}, pages 941--945. IEEE, 2018.
 
 \bibitem[Tui16]{Tui16}
 Jan Tuitman.
@@ -267,6 +353,18 @@ Jan Tuitman.
 Jan Tuitman.
 \newblock Counting points on curves using a map to $\mathbf{P}^1$, \text{II}.
 \newblock {\em Finite Fields and Their Applications}, 45:301--322, 05 2017.
+
+\bibitem[Vas21a]{Vasseur-thesis}
+Valentin Vasseur.
+\newblock {\em {Post-quantum cryptography: a study of the decoding of
+  {QC}-{MDPC} codes}}.
+\newblock PhD thesis, {Universit{\'e} de Paris}, Mar 2021.
+
+\bibitem[Vas21b]{Vasseur:2021:eprint}
+Valentin Vasseur.
+\newblock {QC-MDPC} codes {DFR} and the {IND-CCA} security of {BIKE}.
+\newblock Cryptology ePrint Archive, Paper 2021/1458, 2021.
+\newblock \url{https://eprint.iacr.org/2021/1458}.
 
 \bibitem[Wet97]{wetherell}
 Joseph~L. Wetherell.

@@ -1,4 +1,4 @@
-\section{Preliminaries on code-based cryptography}
+\section{Background on code-based cryptography}
 
 In this chapter, we recall the main definitions from coding theory and what will be needed to construct QC-MDPC codes in cryptography. Throughout this chapter, $q$ is a prime power. In our case, we will study codes when $q=2$, over the binary field $\FF_2$.
 
@@ -126,7 +126,7 @@ In code-based cryptography, there are two hard problems, in which most cryptosys
 \item (Codeword Finding Problem) Given a parity check matrix $\mathbf{H} \in \FF_q^{(n-k) \times n }$, a fixed weight $w \in \ZZ_{>0}$, find $e \in \FF_q^n$ such that $|e| = w$ and $He^\top = 0$.
 \end{enumerate}
 
-It is known that these problems are NP-hard \cite{nphard}. The best known attacks are based on Prange's information set decoding algorithm and its improvements \cite{prange}.
+It is known that these problems are NP-hard \cite{nphard}. The best known attacks are based on Prange's information set decoding algorithm and its improvements \cite{prange,Stern:1988:ISD,MMT:2011:ISD,BJMM:2012:ISD}.
 
 \subsection{KEM's and Niederreiter cryptosystems}
 

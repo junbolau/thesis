@@ -804,14 +804,6 @@ abstract = { A digital computer is generally believed to be an efficient univers
   doi={10.1109/5992.909000}}
   
   
-@manual{BIKE,
-  Key          = {BIKE},
-  Author       = {{The BIKE Developers}},
-  Title        = {{B}IKE: {B}it-{F}lipping {K}ey {E}ncapsulation},
-  note         = {{\tt https://bikesuite.org/}},
-  Year         = {2022},
-}
-  
   
 @ARTICLE{mceliece,
        author = {{McEliece}, R.~J.},
@@ -925,3 +917,472 @@ abstract="QC-MDPC code-based KEMs rely on decoders that have a small or even neg
 isbn="978-3-030-44223-1"
 }
 
+@InProceedings{LEDA_break,
+author="Apon, Daniel
+and Perlner, Ray
+and Robinson, Angela
+and Santini, Paolo",
+editor="Micciancio, Daniele
+and Ristenpart, Thomas",
+title="Cryptanalysis of LEDAcrypt",
+booktitle="Advances in Cryptology -- CRYPTO 2020",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="389--418",
+abstract="We report on the concrete cryptanalysis of LEDAcrypt, a 2nd Round candidate in NIST's Post-Quantum Cryptography standardization process and one of 17 encryption schemes that remain as candidates for near-term standardization. LEDAcrypt consists of a public-key encryption scheme built from the McEliece paradigm and a key-encapsulation mechanism (KEM) built from the Niederreiter paradigm, both using a quasi-cyclic low-density parity-check (QC-LDPC) code.",
+isbn="978-3-030-56877-1",
+}
+
+@misc{raw-data-decoder,
+  author = {Sarah Arpin and Tyler Raven Billingsley and Daniel Rayor Hast and Jun Bo Lau and Ray Perlner and Angela Robinson},
+  title = {Raw data and decoder in the paper "A study of error floor behavior in QC-MDPC codes"},
+  howpublished = {\url{https://github.com/HastD/BIKE-error-floor}},
+  note = {Accessed: 2022-05-23},
+}
+
+@incollection{VASIC2014299,
+title = {Chapter 6 - Failures and Error Floors of Iterative Decoders},
+editor = {David Declerq and Marc Fossorier and Ezio Biglieri},
+booktitle = {Academic Press Library in Mobile and Wireless Communications},
+publisher = {Academic Press},
+address = {Oxford},
+pages = {299-341},
+year = {2014},
+isbn = {978-0-12-396499-1},
+doi = {https://doi.org/10.1016/B978-0-12-396499-1.00006-6},
+url = {https://www.sciencedirect.com/science/article/pii/B9780123964991000066},
+author = {Bane Vasić and Shashi Kiran Chilappagari and Dung Viet Nguyen},
+keywords = {Error correction codes, Low-density parity check codes, LDPC codes, Iterative decoding, Belief propagation, Message passing, Bit flipping, Linear programming decoding, Error floor, Trapping sets},
+abstract = {This chapter presents a study of graph substructures and corresponding error patterns involved in decoding failures on various channels under different iterative message passing and linear programming decoding algorithms. The intriguing structural dependence among these subgraphs, called trapping sets, suggests a comprehensive framework for studying the error floor performance of LDPC codes, as well as for designing codes with guaranteed error floor performance on the binary symmetric channel, additive white Gaussian noise channel and other channels. The problem treated in this chapter is one of the major challenges in modern coding theory. The topological relationship among trapping sets advances our fundamental understanding of the relationship between graphical code representations and the performance of iterative decoding algorithms on several core channel models. In particular, it serves as a foundation for elucidating the relationship between various decoding algorithms and lead to the design of LDPC codes with a superior performance in the error floor region.}
+}
+
+
+@InProceedings{CS:2016:ISD,
+author="Canto Torres, Rodolfo
+and Sendrier, Nicolas",
+editor="Takagi, Tsuyoshi",
+title="Analysis of Information Set Decoding for a Sub-linear Error Weight",
+booktitle="Post-Quantum Cryptography",
+year="2016",
+publisher="Springer International Publishing",
+address="Cham",
+pages="144--161",
+abstract="The security of code-based cryptography is strongly related to the hardness of generic decoding of linear codes. The best known generic decoding algorithms all derive from the Information Set Decoding algorithm proposed by Prange in 1962. The ISD algorithm was later improved by Stern in 1989 (and Dumer in 1991). Those last few years, some significant improvements have occurred. First by May, Meurer, and Thomae at Asiacrypt 2011, then by Becker, Joux, May, and Meurer at Eurocrypt 2012, and finally by May and Ozerov at Eurocrypt 2015. With those methods, correcting w errors in a binary linear code of length n and dimension k has a cost {\$}{\$}2^{\{}cw(1+{\backslash}mathbf {\{}o{\}}(1)){\}}{\$}{\$}when the length n grows, where c is a constant, depending of the code rate k / n and of the error rate w / n. The above ISD variants have all improved that constant c when they appeared.",
+isbn="978-3-319-29360-8"
+}
+
+@misc{Vasseur:2021:eprint,
+      author = {Valentin Vasseur},
+      title = {{QC-MDPC} codes {DFR} and the {IND-CCA} security of {BIKE}},
+      howpublished = {Cryptology ePrint Archive, Paper 2021/1458},
+      year = {2021},
+      note = {\url{https://eprint.iacr.org/2021/1458}},
+      url = {https://eprint.iacr.org/2021/1458}
+}
+
+@misc{SV:2019:extrapolate,
+      author = {Nicolas Sendrier and Valentin Vasseur},
+      title = {About Low {DFR} for {QC-MDPC} Decoding},
+      howpublished = {Cryptology ePrint Archive, Paper 2019/1434},
+      year = {2019},
+      note = {\url{https://eprint.iacr.org/2019/1434}},
+      url = {https://eprint.iacr.org/2019/1434}
+}
+
+@misc {BIKE,
+    label={BIKE},
+    author = {Nicolas Aragon
+              and Paulo Barreto
+              and Slim Bettaieb
+              and Loïc Bidoux
+              and Olivier Blazy
+              and Jean-Christophe Deneuville
+              and Philippe Gaborit
+              and Santosh Ghosh
+              and Shay Gueron
+              and Tim Güneysu
+              and Carlos {Aguilar Melchor}
+              and Rafael Misoczki
+              and Edoardo Persichetti
+              and Jan Richter-Brockmann
+              and Nicolas Sendrier
+              and Jean-Pierre Tillich
+              and Valentin Vasseur
+              and Gilles Zémor},
+    title = {{BIKE}: Bit Flipping Key Encapsulation - Spec v4.2},
+    year = {2021},
+    howpublished = {\url{https://bikesuite.org/files/v4.2/BIKE_Spec.2021.07.26.1.pdf}},
+    urldate = {2021-09-14},
+}
+
+
+@misc {BIKE2017,
+    label={BIKE},
+    author = {Nicolas Aragon
+              and Paulo Barreto
+              and Slim Bettaieb
+              and Loïc Bidoux
+              and Olivier Blazy
+              and Jean-Christophe Deneuville
+              and Philippe Gaborit
+              and Shay Gueron
+              and Tim Güneysu
+              and Carlos {Aguilar Melchor}
+              and Rafael Misoczki
+              and Edoardo Persichetti
+              and Nicolas Sendrier
+              and Jean-Pierre Tillich
+              and Gilles Zémor},
+    title = {{BIKE}: Bit Flipping Key Encapsulation - Spec v1.0},
+    year = {2017},
+    howpublished = {\url{https://bikesuite.org/files/BIKE.2017.11.30.pdf}},
+    urldate = {2022-07-29},
+}
+
+
+
+@book {Baldi14,
+    author = {Baldi, Marco},
+    year = {2014},
+    month = {01},
+    title = {{QC}-{LDPC} Code-Based Cryptography},
+    series = {SpringerBriefs in Electrical and Computer Engineering},
+    publisher = {Springer, Cham},
+    issn = {2191-8112},
+    isbn = {978-3-319-02555-1},
+    doi = {10.1007/978-3-319-02556-8},
+}
+
+@InProceedings{DGK20a,
+    author={Drucker, Nir
+            and Gueron, Shay
+            and Kostic, Dusan},
+    editor={Ding, Jintai and Tillich, Jean-Pierre},
+    title={{QC}-{MDPC} Decoders with Several Shades of Gray},
+    booktitle={Post-Quantum Cryptography},
+    year={2020},
+    publisher={Springer, Cham},
+    pages={35--50},
+    isbn={978-3-030-44223-1},
+    doi = {10.1007/978-3-030-44223-1\_3},
+}
+
+@InProceedings{DGK20b,
+    author={Drucker, Nir
+            and Gueron, Shay
+            and Kostic, Dusan},
+    editor={Baldi, Marco
+            and Persichetti, Edoardo
+            and Santini, Paolo},
+    title={On Constant-Time {QC}-{MDPC} Decoders with Negligible Failure Rate},
+    booktitle={Code-Based Cryptography},
+    year={2020},
+    publisher={Springer, Cham},
+    pages={50--79},
+    isbn={978-3-030-54074-6},
+    doi = {10.1007/978-3-030-54074-6_4},
+}
+
+@article {Gallager62,
+    AUTHOR = {Gallager, R. G.},
+     TITLE = {Low-density parity-check codes},
+   JOURNAL = {IRE Trans.},
+  FJOURNAL = {IRE Transactions on Information Theory},
+    VOLUME = {IT-8},
+      YEAR = {1962},
+     PAGES = {21--28},
+       DOI = {10.1109/tit.1962.1057683},
+}
+
+@InProceedings{GJS16,
+    author={Guo, Qian
+            and Johansson, Thomas
+            and Stankovski, Paul},
+    editor={Cheon, Jung Hee
+            and Takagi, Tsuyoshi},
+    title={A {Key Recovery Attack} on {MDPC} with {CCA Security Using Decoding Errors}},
+    booktitle={Advances in Cryptology -- ASIACRYPT 2016},
+    series = {Lecture Notes in Computer Science},
+    volume = {10031},
+    year={2016},
+    publisher={Springer},
+    address={Berlin, Heidelberg},
+    pages={789--815},
+    isbn={978-3-662-53887-6},
+    doi={10.1007/978-3-662-53887-6_29},
+}
+
+@article {OB09,
+      title={Moderate-Density Parity-Check Codes}, 
+      author={Samuel Ouzan and Yair Be'ery},
+      year={2009},
+      eprint={0911.3262v1},
+      journal = {ArXiv e-prints},
+      archivePrefix={arXiv},
+      primaryClass={cs.IT},
+}
+
+@article {PH17,
+      title={A Survey on Trapping Sets and Stopping Sets}, 
+      author={Aiden Price and Joanne Hall},
+      year={2017},
+      eprint={1705.05996v1},
+      archivePrefix={arXiv},
+      primaryClass={cs.IT},
+      journal={ArXiv e-prints},
+}
+
+@inproceedings {Richardson03,
+    author = {Richardson, Tom},
+    title = {Error floors of {LDPC} codes},
+    year = {2003},
+    month = {01},
+    pages = {1426--1435},
+    booktitle = {Proc. 41st Annual Allerton Conf. on Communication, Control, and Computing},
+}
+
+
+
+@inproceedings{tillich:2018:decoding,
+  title={The decoding failure probability of {MDPC} codes},
+  author={Tillich, Jean-Pierre},
+  booktitle={2018 IEEE International Symposium on Information Theory (ISIT)},
+  pages={941--945},
+  year={2018},
+  organization={IEEE}
+}
+
+@inproceedings {Richter06,
+    author = {Gerd Richter},
+    title = {Finding small stopping sets in the {T}anner graphs of {LDPC} codes},
+    booktitle = {4th International Symposium on Turbo Codes and Related Topics},
+    year = {2006},
+    month = {04},
+    isbn = {978-3-8007-2947-0},
+    pages = {1--5},
+}
+
+@incollection {SV19,
+    AUTHOR = {Sendrier, Nicolas and Vasseur, Valentin},
+     TITLE = {On the decoding failure rate of {QC}-{MDPC} bit-flipping decoders},
+ BOOKTITLE = {Post-quantum cryptography},
+    SERIES = {Lecture Notes in Comput. Sci.},
+    VOLUME = {11505},
+     PAGES = {404--416},
+ PUBLISHER = {Springer, Cham},
+      YEAR = {2019},
+       DOI = {10.1007/978-3-030-25510-7\_22},
+}
+
+@InProceedings{SV20,
+    author={Sendrier, Nicolas
+            and Vasseur, Valentin},
+    editor={Ding, Jintai
+            and Tillich, Jean-Pierre},
+    title={About Low DFR for {QC}-{MDPC} Decoding},
+    booktitle={Post-Quantum Cryptography},
+    series = {Lecture Notes in Computer Science},
+    volume = {12100},
+    year={2020},
+    publisher={Springer, Cham},
+    pages={20--34},
+    isbn={978-3-030-44223-1},
+    doi = {10.1007/978-3-030-44223-1\_2},
+}
+
+@incollection {Vasic14,
+    title = {{Failures} and Error Floors of Iterative Decoders},
+    author = {Bane Vasić and Shashi Kiran Chilappagari and Dung Viet Nguyen},
+    editor = {David Declerq and Marc Fossorier and Ezio Biglieri},
+    booktitle = {Channel Coding: Theory, Algorithms, and Applications},
+    series = {Academic Press Library in Mobile and Wireless Communications},
+    publisher = {Academic Press},
+    address = {Oxford},
+    chapter = {6},
+    pages = {299--341},
+    year = {2014},
+    isbn = {978-0-12-396499-1},
+    doi = {10.1016/B978-0-12-396499-1.00006-6},
+}
+
+@inbook{DGK_OnConstantTime,
+author={Drucker,Nir and Gueron,Shay and Kostic,Dusan},
+year={2020},
+title={On Constant-Time QC-MDPC Decoders with Negligible Failure Rate},
+series={Code-Based Cryptography},
+publisher={Springer International Publishing},
+address={Cham},
+pages={50-79},
+keywords={BIKE; Constant-time algorithm; Constant-time implementation; IND-CCA; QC-MDPC codes},
+isbn={0302-9743},
+language={English},
+}
+
+@phdthesis{Vasseur-thesis,
+  TITLE = {{Post-quantum cryptography: a study of the decoding of {QC}-{MDPC} codes}},
+  AUTHOR = {Vasseur, Valentin},
+  URL = {https://tel.archives-ouvertes.fr/tel-03254461},
+  SCHOOL = {{Universit{\'e} de Paris}},
+  YEAR = {2021},
+  MONTH = {Mar},
+  HAL_ID = {tel-03254461},
+  HAL_VERSION = {v1},
+}
+
+@article {WKP09,
+    AUTHOR = {Wang, Chih-Chun and Kulkarni, Sanjeev R. and Poor, H. Vincent},
+     TITLE = {Finding all small error-prone substructures in {LDPC} codes},
+   JOURNAL = {IEEE Trans. Inform. Theory},
+  FJOURNAL = {Institute of Electrical and Electronics Engineers.
+              Transactions on Information Theory},
+    VOLUME = {55},
+      YEAR = {2009},
+    NUMBER = {5},
+     PAGES = {1976--1999},
+      ISSN = {0018-9448},
+       DOI = {10.1109/TIT.2009.2015993},
+}
+
+@article {ZC07,
+    AUTHOR = {Zhu, Mingrui and Chugg, Keith M.},
+     TITLE = {Bounds on the expansion properties of {T}anner graphs},
+   JOURNAL = {IEEE Trans. Inform. Theory},
+  FJOURNAL = {Institute of Electrical and Electronics Engineers.
+              Transactions on Information Theory},
+    VOLUME = {53},
+      YEAR = {2007},
+    NUMBER = {12},
+     PAGES = {4834--4841},
+      ISSN = {0018-9448},
+       DOI = {10.1109/TIT.2007.909127},
+}
+@misc {SCC,
+    key = {Boston University},
+    title = {{B}oston {U}niversity {S}hared {C}omputing {C}luster},
+    howpublished = {\url{https://www.bu.edu/tech/support/research/computing-resources/scc/}},
+    note = {Accessed: 2022-02-18},
+}
+
+
+@inproceedings{Dumer:1991:ISD,
+  title={On minimum distance decoding of linear codes},
+  author={Dumer, Ilya},
+  booktitle={Proc. 5th Joint Soviet-Swedish Int. Workshop Inform. Theory},
+  pages={50--52},
+  year={1991}
+}
+
+@ARTICLE{Prange:1962:ISD,
+author={Prange, Eugene},
+journal={IRE Transactions on Information Theory},
+title={The use of information sets in decoding cyclic codes},
+year={1962},
+volume={8},
+number={5},
+pages={5-9},
+doi={10.1109/TIT.1962.1057777}}
+
+@InProceedings{Stern:1988:ISD,
+author="Stern, Jacques",
+editor="Cohen, G{\'e}rard
+and Wolfmann, Jacques",
+title="A method for finding codewords of small weight",
+booktitle="Coding Theory and Applications",
+year="1989",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="106--113",
+abstract="We describe a probabilistic algorithm, which can be used to discover words of small weight in a linear binary code. The work-factor of the algorithm is asymptotically quite large but the method can be applied for codes of a medium size. Typical instances that are investigated are codewords of weight 20 in a code of length 300 and dimension 150.",
+isbn="978-3-540-46726-7"
+}
+
+
+@InProceedings{MO:2015:ISD,
+author="May, Alexander
+and Ozerov, Ilya",
+editor="Oswald, Elisabeth
+and Fischlin, Marc",
+title="On Computing Nearest Neighbors with Applications to Decoding of Binary Linear Codes",
+booktitle="Advances in Cryptology -- EUROCRYPT 2015",
+year="2015",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="203--228",
+abstract="We propose a new decoding algorithm for random binary linear codes. The so-called information set decoding algorithm of Prange (1962) achieves worst-case complexity {\$}{\$}2^{\{}0.121n{\}}{\$}{\$}. In the late 80s, Stern proposed a sort-and-match version for Prange's algorithm, on which all variants of the currently best known decoding algorithms are build. The fastest algorithm of Becker, Joux, May and Meurer (2012) achieves running time {\$}{\$}2^{\{}0.102n{\}}{\$}{\$}in the full distance decoding setting and {\$}{\$}2^{\{}0.0494n{\}}{\$}{\$}with half (bounded) distance decoding.",
+isbn="978-3-662-46800-5"
+}
+
+% https://eprint.iacr.org/2013/162
+@misc{cryptoeprint:2013:162,
+    author       = {Yann Hamdaoui and
+		    Nicolas Sendrier},
+    title        = {A Non Asymptotic Analysis of Information Set Decoding},
+    howpublished = {Cryptology ePrint Archive, Report 2013/162},
+    year         = {2013},
+    note         = {\url{https://ia.cr/2013/162}},
+}
+
+% https://eprint.iacr.org/2012/026
+@InProceedings{BJMM:2012:ISD,
+author="Becker, Anja
+and Joux, Antoine
+and May, Alexander
+and Meurer, Alexander",
+editor="Pointcheval, David
+and Johansson, Thomas",
+title="Decoding Random Binary Linear Codes in $2^{n/20}$: How 1{\thinspace}+{\thinspace}1{\thinspace}={\thinspace}0 Improves Information Set Decoding",
+booktitle="Advances in Cryptology -- EUROCRYPT 2012",
+year="2012",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="520--536",
+abstract="Decoding random linear codes is a well studied problem with many applications in complexity theory and cryptography. The security of almost all coding and LPN/LWE-based schemes relies on the assumption that it is hard to decode random linear codes. Recently, there has been progress in improving the running time of the best decoding algorithms for binary random codes. The ball collision technique of Bernstein, Lange and Peters lowered the complexity of Stern's information set decoding algorithm to 20.0556n. Using representations this bound was improved to 20.0537nby May, Meurer and Thomae. We show how to further increase the number of representations and propose a new information set decoding algorithm with running time 20.0494n.",
+isbn="978-3-642-29011-4"
+}
+
+@InProceedings{MMT:2011:ISD,
+author="May, Alexander
+and Meurer, Alexander
+and Thomae, Enrico",
+editor="Lee, Dong Hoon
+and Wang, Xiaoyun",
+title="Decoding Random Linear Codes in $\tilde{O}(2^{0.054n})$",
+booktitle="Advances in Cryptology -- ASIACRYPT 2011",
+year="2011",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="107--124",
+abstract="Decoding random linear codes is a fundamental problem in complexity theory and lies at the heart of almost all code-based cryptography. The best attacks on the most prominent code-based cryptosystems such as McEliece directly use decoding algorithms for linear codes. The asymptotically best decoding algorithm for random linear codes of length n was for a long time Stern's variant of information-set decoding running in time {\$}{\backslash}tilde{\{}{\backslash}mathcal{\{}O{\}}{\}}{\backslash}left(2^{\{}0.05563n{\}}{\backslash}right){\$}. Recently, Bernstein, Lange and Peters proposed a new technique called Ball-collision decoding which offers a speed-up over Stern's algorithm by improving the running time to {\$}{\backslash}tilde{\{}{\backslash}mathcal{\{}O{\}}{\}}{\backslash}left(2^{\{}0.05558n{\}}{\backslash}right){\$}.",
+isbn="978-3-642-25385-0"
+}
+
+@article{MP:2003:nearcodewords,
+title = {Weaknesses of {Margulis} and {Ramanujan-Margulis Low-Density Parity-Check Codes}},
+journal = {Electronic Notes in Theoretical Computer Science},
+volume = {74},
+pages = {97-104},
+year = {2003},
+note = {MFCSIT 2002, The Second Irish Conference on the Mathematical Foundations of Computer Science and Information Technology},
+issn = {1571-0661},
+doi = {https://doi.org/10.1016/S1571-0661(04)80768-0},
+url = {https://www.sciencedirect.com/science/article/pii/S1571066104807680},
+author = {David J.C. MacKay and Michael S. Postol},
+abstract = {We report weaknesses in two algebraic constructions of low-density parity-check codes based on expander graphs. The Margulis construction gives a code with near-codewords, which cause problems for the sum-product decoder; The Ramanujan-Margulis construction gives a code with low-weight codewords, which produce an error-floor.}
+}
+
+
+@phdthesis{Cha:2017:thresholdformula,
+  TITLE = {{Etude de cryptosyst{\`e}mes {\`a} cl{\'e} publique bas{\'e}s sur les codes MDPC quasi-cycliques}},
+  AUTHOR = {Chaulet, Julia},
+  URL = {https://tel.archives-ouvertes.fr/tel-01599347},
+  NUMBER = {2017PA066064},
+  SCHOOL = {{Universit{\'e} Pierre et Marie Curie - Paris VI}},
+  YEAR = {2017},
+  MONTH = Mar,
+  KEYWORDS = {Code based cryptography ; MDPC McEliece ; Cryptography ; Code polaire ; MDPC ; Cryptosyst{\`e}me de McEliece ; Code correcteur d'erreurs ; Post-quantique ; Cryptographie},
+  TYPE = {Theses},
+  PDF = {https://tel.archives-ouvertes.fr/tel-01599347/file/2017PA066064.pdf},
+  HAL_ID = {tel-01599347},
+  HAL_VERSION = {v1},
+}
