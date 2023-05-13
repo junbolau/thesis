@@ -6,7 +6,11 @@ Most cryptosystems implemented today rely on certain hard problems in number the
 
 While building a large-scale quantum computer is an engineering challenge, some scientists predict that within the twenty to fifty years, sufficiently powerful quantum computers will be built to break most if not all current public key cryptography infrastructure. Taking into account the amount of time to implement quantum resistant cryptosystems in public, the National Institute of Standards and Technology (NIST) initiated a process in 2016 to standardise post-quantum digital signature algorithms (DSA), public-key encryption (PKE), and key-encapsulation mechanisms (KEM). Initially, there were 82 submissions. As of April 2023, there 4 algorithms are selected for standardisation while there are three code-based candidates that are still going through evaluation. There is also an on-ramp call for new DSA's in order to diversify the signature portfolio to include signature schemes that are not based on lattices.
 
-\begin{table}[]
+
+\begin{center}
+\textbf{Table 4.1}: NIST Post-Quantum Standardisation Process - Round 4
+\end{center}
+\begin{table}[h]
 \centering
 \begin{tabular}{lll}
 \hline
@@ -17,12 +21,12 @@ Hash & 0 & 1 \\ \hline
 Candidates &  &  \\ \hline
 Code & 3 & 0 \\ \hline
 \end{tabular}
-\caption{NIST Post-Quantum Standardisation Process - Round 4}
+
 \end{table}
 
 In this document, we focus on code-based cryptography, more specifically, one of the 4th round candidates in NIST's standardisation process, BIt-flipping Key Encapsulation (BIKE) \cite{BIKE}. In 1978, McEliece introduced the use of error-correcting codes in cryptography \cite{mceliece}. Originally, error-correcting codes are used in telecommunications in which one party transmits a message through a noisy channel and the recipient recovers the original message from a noisy codeword. In McEliece's proposal, one would use a structured code and hide a message by adding as many errors as the decoder can remove so that the codewords are indistinguishable from random codes. So far, there are no major classical or quantum attacks on the McEliece system but the downside is that it suffers from having large key sizes which make implementations costly.
 
-BIKE is an instance of a more general scheme, called Quasi-Circulant Moderate Density Parity Check (QC-MDPC) codes \cite{QCMDPC}. QC-MDPC codes have much smaller key sizes compared to the McEliece cryptosystem and have not suffered from major attacks. One difference between QC-MDPC codes and McEliece's variants is that QC-MDPC codes use decoders which depend on probabilitistic properties, not algebraic ones. Therefore, one expects decoding failures to occur. Furthermore, decoding failures also reveal information about the secret key. An attack by \cite{GJS} exploits these failures by collecting a set of failure-causing inputs and recover the secret key. With this in mind, one needs to consider the use of ephemeral versus statis keys in applications and also verify certain security conditions, called indistinguishability under chosen cipher attack (IND-CCA). NIST has considered BIKE as one of the promising candidates and has expressed concerns about its IND-CCA security and decoding failure analysis. 
+BIKE is an instance of a more general scheme, called Quasi-Circulant Moderate Density Parity Check (QC-MDPC) codes \cite{QCMDPC}. QC-MDPC codes have much smaller key sizes compared to the McEliece cryptosystem and have not suffered from major attacks. One difference between QC-MDPC codes and McEliece's variants is that QC-MDPC codes use decoders which depend on probabilitistic properties, not algebraic ones. Therefore, one expects decoding failures to occur. Furthermore, decoding failures also reveal information about the secret key. An attack by \cite{GJS} exploits these failures by collecting a set of failure-causing inputs and recover the secret key. With this in mind, one needs to consider the use of ephemeral versus static keys in applications and also verify certain security conditions, called indistinguishability under chosen cipher attack (IND-CCA). NIST has considered BIKE as one of the promising candidates and has expressed concerns about its IND-CCA security and decoding failure analysis. 
 
 By design, it is not feasible to directly compute the average Decoding Failure Rate (DFR) for BIKE at cryptographic security levels. It is possible to measure DFR's via extrapolation methods to estimate the DFR for larger parameters from smaller ones \cite{SV:2019:extrapolate,DGK20a}. But one needs to consider a phenomenon known as the \textit{error floor} region of DFR curves to avoid an underestimate of DFR for larger code sizes.  It is known that for LDPC and MDPC codes, the logarithm of the DFR drops significantly faster than linearly, and then linearly as the signal-to-noise ratio is increased \cite{bgf,Richardson03}. Thus a typical DFR curve contains a concave \textit{waterfall} region followed by a near-linear \textit{error floor} region. One must accurately predict the error floor of a DFR curve to accurately predict the DFR for cryptographically relevant code sizes.
 

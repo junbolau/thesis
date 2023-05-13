@@ -1,9 +1,23 @@
 \section{Experimental results}
 
-As we have defined earlier, a decoding failure is an instance where, on input $(H,s)$, where $s$ is of the form $s=He^T$, the syndrome decoder output $e'$ is such that $He'^T \ne s$ or $e' \ne e$.  The experiment was also designed to record any decoding instances where $He'^T=s$ and $e'\ne e$, but none were discovered. 
+As we have defined earlier, a decoding failure is an instance where, on input $(H,s)$, where $s$ is of the form $s=He^T$, the syndrome decoder output $e'$ is such that $He'^T \ne s$ or $e' \ne e$.  The experiment was also designed to record any decoding instances where $He'^T=s$ and $e'\ne e$, but none were discovered. For the security level $\lambda = 20$, we manage to reproduce the error floor region as predicted in \cite{Richardson03}.
+
+\begin{figure}[htbp]
+  \begin{center}
+    \includegraphics[width=0.49\textwidth]{2_bike/DFR-plot-T3.png}
+    \includegraphics[width=0.49\textwidth]{2_bike/DFR-plot-random.png}
+  \end{center}
+  \caption{Semi-log plot of decoding failure rates for non-weak keys ($T = 3$, left) and for unfiltered random keys (right), with a 95\% confidence interval for each $r$. There is a quadratic best fit (blue) in the waterfall region and a linear best fit (red) in the error floor region ($r \geq 587$).}
+  \label{fig:DFR}
+\end{figure}
+
+\newpage
 
 \todo{Updated data available}
-\begin{table}[ht]
+\begin{flushleft}
+    \textbf{Table 6.1}: Decoding failure rates for $r$-values such that $389 \leq r \leq 827$, $r$ is prime, and $x^r - 1$ has only two irreducible factors modulo $2$. The data was computed using the parameters and methods described above.
+    \end{flushleft}
+\begin{table}[htb]
     \begin{center}
         \begin{tabular}{c|c|c|r}
             \;\;\;$r$\;\;\; & \;Decoding failures\;  & \;Decoding trials\;  & \;$\log_2(\mathrm{DFR})$ \\
@@ -33,19 +47,5 @@ As we have defined earlier, a decoding failure is an instance where, on input $(
             827 & 7 & $10^8$ & $-23.77$
         \end{tabular}
     \end{center}
-    \caption{Decoding failure rates for $r$-values such that $389 \leq r \leq 827$, $r$ is prime, and $x^r - 1$ has only two irreducible factors modulo $2$. The data was computed using the parameters and methods described above.}
     \label{table:DFR}
 \end{table}
-
-For the security level $\lambda = 20$, we manage to reproduce the error floor region as predicted in \cite{Richardson03}.
-
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=0.49\textwidth]{2_bike/DFR-plot-T3.png}
-    \includegraphics[width=0.49\textwidth]{2_bike/DFR-plot-random.png}
-  \end{center}
-  \caption{Semi-log plot of decoding failure rates for non-weak keys ($T = 3$, left) and for unfiltered random keys (right), with a 95\% confidence interval for each $r$. There is a quadratic best fit (blue) in the waterfall region and a linear best fit (red) in the error floor region ($r \geq 587$).}
-  \label{fig:DFR}
-\end{figure}
-
-

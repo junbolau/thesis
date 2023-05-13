@@ -79,6 +79,8 @@
     "Magma"
     "SageMath"
     "Singular")
+   (LaTeX-add-environments
+    '("subfloatrow*" LaTeX-env-args ["argument"] 0))
    (LaTeX-add-bibliographies
     "template")
    (LaTeX-add-amsthm-newtheorems

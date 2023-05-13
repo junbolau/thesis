@@ -4,7 +4,7 @@
 
 In this section, we focus on BIKE and its security. Details about the choice of parameters and designs can be found on the BIKE website \cite{BIKE}.
 
-BIKE was originally designed for ephemeral use, i.e., in settings where a KEM key pair is generated for every key exchange instance. This provides a countermeasure against the GJS attack \cite{gjs} where an attacker can use decoding failures to recover the private key of the scheme. Since the second round of the NIST PQC process, BIKE proporsed parameter sets that can security in the static-key setting.
+BIKE was originally designed for ephemeral use, i.e., in settings where a KEM key pair is generated for every key exchange instance. This provides a countermeasure against the GJS attack \cite{GJS16} where an attacker can use decoding failures to recover the private key of the scheme. Since the second round of the NIST PQC process, BIKE proprosed parameter sets that can achieve security in the static-key setting.
 
 The parameters of BIKE are as follows:
 
@@ -25,7 +25,10 @@ The design principles of BIKE are as follows:
 \item $\lambda \approx t - \frac{1}{2}\log_2(r) \approx w - \frac{1}{2}\log_2(r)$.
 \end{itemize}
 
-\begin{table}[h]
+\begin{center}
+\textbf{Table 5.1}: BIKE parameters
+\end{center}
+\begin{table}[h] \label{parametertable}
 \centering
 \begin{tabular}{cccc}
 \hline
@@ -34,7 +37,6 @@ $\lambda$ & $r$ & $w$ & $t$ \\ \hline
 192 & 24,659 & 206 & 199 \\
 256 & 40,973 & 274 & 264 \\ \hline
 \end{tabular}
-\caption{BIKE parameters}
 \end{table}
 
 Following the Niederreiter framework, BIKE is defined in the following manner:
@@ -52,7 +54,7 @@ Following the Niederreiter framework, BIKE is defined in the following manner:
 We are interested in the decoding failure rate (DFR) for BIKE using the BGF decoder. In particular, we want to understand the factors causing the error floor phenomenon. In this subsection, we provide definitions of decoding failures and the factors causing them.
 
 \begin{defn}
-For a syndrome decoding instance $(H,s)$, where $s = He^\top$ for some unknown $e \in \FF_2^{2r}$, we say a decoding failure occured when the output $e' := Decode(H,s)$ is such that $He'^\top \neq s$.
+For a syndrome decoding instance $(H,s)$, where $s = He^\top$ for some unknown $e \in \FF_2^{2r}$, we say a \textit{decoding failure} occured when the output $e' := Decode(H,s)$ is such that $He'^\top \neq s$.
 \end{defn}
 
 In \cite{Vasseur-thesis}, the author identifies three classes of weak keys for BIKE. These are parity check matrices which have higher than usual DFR's compared to random parity check matrices of the same parameters.
@@ -66,7 +68,7 @@ In \cite{Vasseur-thesis}, the author identifies three classes of weak keys for B
 There are also some sets of vectors that are likely to cause decoding failures than random vectors.
 
 \begin{defn}
-Given a parity check matrix $\mathbf{H}$ of a linear code, we say an error vector $e \in \FF_2^{2r}$ is a $(u,v)$-near codeword if $|e| = u$ and $|\mathbf{H}e^\perp|=v$.
+Given a parity check matrix $\mathbf{H}$ of a linear code, we say an error vector $e \in \FF_2^{2r}$ is a \textit{$(u,v)$-near codeword} if $|e| = u$ and $|\mathbf{H}e^\perp|=v$.
 \end{defn}
 
 When $u, v$ are small, these near codewords can be likely to cause decoding failures \cite{Richardson03}. Based on the structure of BIKE, Vasseur defines three sets with small $u,v$ as follows: Given a parity check matrix $\mathbf{H} = [\mathbf{H}_0 | \mathbf{H}_1 ]$ with first rows defined by $\mathbf{h}_0, \mathbf{h}_1$ respectively,

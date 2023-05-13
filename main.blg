@@ -16,11 +16,6 @@ A level-1 auxiliary file: 1_coleman/1_14_conclusion.aux
 A level-1 auxiliary file: 2_bike/2_1_intro.aux
 A level-1 auxiliary file: 2_bike/2_2_prelim.aux
 A level-1 auxiliary file: 2_bike/2_3_bike.aux
-Case mismatch error between cite keys gjs and GJS
----line 4 of file 2_bike/2_3_bike.aux
- : \citation{gjs
- :              }
-I'm skipping whatever remains of this command
 A level-1 auxiliary file: 2_bike/2_4_methods.aux
 A level-1 auxiliary file: 2_bike/2_5_results.aux
 A level-1 auxiliary file: 2_bike/2_6_atls.aux
@@ -31,45 +26,45 @@ Database file #1: template.bib
 Warning--empty year in dickson
 Warning--empty booktitle in GJS
 Warning--empty school in wetherell
-You've used 64 entries,
+You've used 65 entries,
             2543 wiz_defined-function locations,
-            998 strings with 14997 characters,
-and the built_in function-call counts, 26357 in all, are:
-= -- 2651
-> -- 1171
-< -- 54
-+ -- 397
-- -- 382
-* -- 1857
-:= -- 4221
-add.period$ -- 210
-call.type$ -- 64
-change.case$ -- 392
+            1007 strings with 15212 characters,
+and the built_in function-call counts, 27004 in all, are:
+= -- 2718
+> -- 1204
+< -- 56
++ -- 410
+- -- 393
+* -- 1908
+:= -- 4318
+add.period$ -- 214
+call.type$ -- 65
+change.case$ -- 399
 chr.to.int$ -- 57
-cite$ -- 67
-duplicate$ -- 1083
-empty$ -- 1940
-format.name$ -- 475
-if$ -- 5476
-int.to.chr$ -- 8
+cite$ -- 68
+duplicate$ -- 1110
+empty$ -- 1984
+format.name$ -- 487
+if$ -- 5617
+int.to.chr$ -- 9
 int.to.str$ -- 0
-missing$ -- 57
-newline$ -- 331
-num.names$ -- 207
-pop$ -- 409
+missing$ -- 58
+newline$ -- 336
+num.names$ -- 212
+pop$ -- 416
 preamble$ -- 1
-purify$ -- 465
+purify$ -- 473
 quote$ -- 0
-skip$ -- 909
+skip$ -- 932
 stack$ -- 0
-substring$ -- 1506
-swap$ -- 226
-text.length$ -- 54
+substring$ -- 1546
+swap$ -- 238
+text.length$ -- 56
 text.prefix$ -- 36
 top$ -- 0
-type$ -- 492
+type$ -- 500
 warning$ -- 3
-while$ -- 244
-width$ -- 67
-write$ -- 845
-(There was 1 error message)
+while$ -- 251
+width$ -- 68
+write$ -- 861
+(There were 3 warnings)

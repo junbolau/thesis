@@ -542,7 +542,7 @@ All rights reserved.}
 % (EVM, 9/19/94)
 
 \phantomsection
-\addcontentsline{toc}{frontmatter}{\protect\numberline{}Signature Page}%
+\addcontentsline{toc}{frontmatter}{\protect\numberline{}Dissertation Approval Page}%
 \begin{alwayssingle}
 \null\vfill
 \begin{center}
@@ -550,48 +550,37 @@ All rights reserved.}
 \vspace{\@approvalspace}
 \makebox[4in][l]{\parbox{4in}{\fmfont The dissertation of {\@author}
 is approved, and it is acceptable in quality and form for publication
-on microfilm and electronically: }}\\
+on microfilm and electronically. }}\\
 \begin{tabular*}{4in}[t]{r@{\extracolsep{\fill}}r}
 & \rule{0pt}{\@approvalspace} \\
-\hline
+
 \ifnum \@numberofmembers > 2
   & \rule{0pt}{\@approvalspace} \\
-  \hline
+
 \fi
 \ifnum \@numberofmembers > 3
   & \rule{0pt}{\@approvalspace} \\
-  \hline
+
 \fi
 \ifnum \@numberofmembers > 4
   & \rule{0pt}{\@approvalspace} \\
-  \hline
+
 \fi
 \ifnum \@numberofmembers > 5
   & \rule{0pt}{\@approvalspace} \\
-  \hline
+
 \fi
 \ifnum \@numberofmembers > 6
   & \rule{0pt}{\@approvalspace} \\
-  \hline
+
 \fi
 
 \ifx\UCSD@cochair\@isnotdefined% No cochair
   &\rule{0pt}{\@approvalspace} \\
-  \hline
-\else% Cochair
-  &
-  % Add the Co-Chair label below the last line and make
-  % vertical space before adding another line.
-  \newlength{\@tempapprovalspace}
-  \settoheight{\@tempapprovalspace}{\UCSD@text@cochair}
-  \setlength{\@tempapprovalspace}{-\@tempapprovalspace}
-  \addtolength{\@tempapprovalspace}{-2pt}
-  \raisebox{\@approvalspace}[\@approvalspace][0pt]%
-  {\raisebox{\@tempapprovalspace}{\UCSD@text@cochair}}\\
-  \hline
+
+
 \fi
 
-& \UCSD@text@chair
 \end{tabular*}\\[\@approvalspace]
 {\fmfont University of California {\@campus}} \\
 \vspace{-.25in}
@@ -702,12 +691,12 @@ on microfilm and electronically: }}\\
   \phantomsection
   \addcontentsline{toc}{frontmatter}{\protect\numberline{}\abstractshortname}
   \begin{center}
-  \ssp
+  %\ssp
   {\fmfont
-  \null\vspace{1.25in}
+  %\null %\vspace{1.25in}
   {\expandafter\uppercase\expandafter{\abstractlongname}}\par
-  \vspace{.5in}
-  \vspace{.5in}
+  %\vspace{.5in}
+  %\vspace{.5in}
   \vspace{.3in}
   } % Closes fmfont above
   \end{center}

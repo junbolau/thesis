@@ -1,4 +1,4 @@
-\contentsline {frontmatter}{\numberline {}Signature Page}{iii}{section*.1}%
+\contentsline {frontmatter}{\numberline {}Dissertation Approval Page}{iii}{section*.1}%
 \contentsline {frontmatter}{\numberline {}Epigraph}{iv}{section*.2}%
 \contentsline {frontmatter}{\numberline {}Table of Contents}{v}{section*.3}%
 \contentsline {frontmatter}{\numberline {}Acknowledgements}{vii}{section*.4}%

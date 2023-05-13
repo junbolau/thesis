@@ -179,11 +179,19 @@ Steven~D. Galbraith.
 \newblock Rational points on {$X_0^+(p)$}.
 \newblock {\em Experiment. Math.}, 8(4):311--318, 1 1999.
 
-\bibitem[GJS16]{GJS}
+\bibitem[GJS16a]{GJS}
 Qian Guo, Thomas Johansson, and Paul Stankovski.
 \newblock A key recovery attack on mdpc with cca security using decoding
   errors.
 \newblock pages 789--815, 12 2016.
+
+\bibitem[GJS16b]{GJS16}
+Qian Guo, Thomas Johansson, and Paul Stankovski.
+\newblock A {Key Recovery Attack} on {MDPC} with {CCA Security Using Decoding
+  Errors}.
+\newblock In Jung~Hee Cheon and Tsuyoshi Takagi, editors, {\em Advances in
+  Cryptology -- ASIACRYPT 2016}, volume 10031 of {\em Lecture Notes in Computer
+  Science}, pages 789--815, Berlin, Heidelberg, 2016. Springer.
 
 \bibitem[HPS98]{ntru}
 Jeffrey Hoffstein, Jill Pipher, and Joseph~H. Silverman.
