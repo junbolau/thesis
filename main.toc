@@ -1,18 +1,17 @@
 \contentsline {frontmatter}{\numberline {}Dissertation Approval Page}{iii}{section*.1}%
-\contentsline {frontmatter}{\numberline {}Epigraph}{iv}{section*.2}%
-\contentsline {frontmatter}{\numberline {}Table of Contents}{v}{section*.3}%
-\contentsline {frontmatter}{\numberline {}Acknowledgements}{vii}{section*.4}%
-\contentsline {frontmatter}{\numberline {}Vita}{viii}{section*.5}%
-\contentsline {frontmatter}{\numberline {}Abstract}{ix}{section*.6}%
+\contentsline {frontmatter}{\numberline {}Table of Contents}{iv}{section*.2}%
+\contentsline {frontmatter}{\numberline {}Acknowledgements}{vi}{section*.3}%
+\contentsline {frontmatter}{\numberline {}Vita}{viii}{section*.4}%
+\contentsline {frontmatter}{\numberline {}Abstract}{ix}{section*.5}%
 \contentsline {part}{I\hspace {1em}Coleman Integration on Modular Curves}{1}{part.1}%
 \contentsline {chapter}{\numberline {Chapter\nobreakspace {}1}Preliminaries}{2}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Introduction}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Background}{6}{section.1.2}%
 \contentsline {subsection}{\numberline {1.2.1}Modular forms}{6}{subsection.1.2.1}%
 \contentsline {subsection}{\numberline {1.2.2}Modular curves}{8}{subsection.1.2.2}%
-\contentsline {subsubsection}{As Riemann surfaces}{9}{section*.7}%
-\contentsline {subsubsection}{As algebraic curves}{9}{section*.8}%
-\contentsline {subsubsection}{As moduli spaces of elliptic curves}{10}{section*.9}%
+\contentsline {subsubsection}{As Riemann surfaces}{9}{section*.6}%
+\contentsline {subsubsection}{As algebraic curves}{9}{section*.7}%
+\contentsline {subsubsection}{As moduli spaces of elliptic curves}{10}{section*.8}%
 \contentsline {subsection}{\numberline {1.2.3}Hecke operators}{11}{subsection.1.2.3}%
 \contentsline {subsection}{\numberline {1.2.4}Coleman integrals}{14}{subsection.1.2.4}%
 \contentsline {chapter}{\numberline {Chapter\nobreakspace {}2}Coleman Integration on Modular Curves}{17}{chapter.2}%
@@ -44,4 +43,4 @@
 \contentsline {section}{\numberline {6.3}DFR on $\mathcal {A}_{t,\ell }(\mathcal {S})$}{64}{section.6.3}%
 \contentsline {section}{\numberline {6.4}Syndrome weight as an indicator}{66}{section.6.4}%
 \contentsline {section}{\numberline {6.5}Conclusion and future work}{69}{section.6.5}%
-\contentsline {backmatter}{Bibliography}{70}{chapter*.22}%
+\contentsline {backmatter}{Bibliography}{70}{chapter*.21}%
