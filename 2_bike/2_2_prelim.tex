@@ -74,9 +74,9 @@ Given $v, w \in \FF_q^n$, the \textit{Schur product} of $v,w$ is the componentwi
 In this section, we define QC-MDPC codes and their representations as graphs. 
 
 \begin{defn}
-A $[n,k]$ \textit{Low Density Parity Check (LDPC)} code is a linear code for which its parity check matrix is sparse, meaning that the Hamming weight of reach row is in $O(1)$.
+Let $\{ C_i \}$ be a family of linear codes with length $n_i$ and parity check matrix $H_i$.
 
-A $[n,k]$ \textit{Moderate Density Parity Check (MDPC)} code is a linear code for which its parity check matrix is moderately sparse, meaning that the Hamming weight of reach row is in $O(\sqrt{n})$.
+If $H_i$ has row weight $O(\sqrt{n_i})$, we say that $\{C_i\}$ is a family of \textit{moderate density parity check} (MDPC) codes. If $H_i$ has row weight $O(1)$, we say that $\{C_i\}$ is a family of \textit{low density parity check} (LDPC) codes.
 \end{defn}
 
 We introduce graph theory as a tool to study these codes.
@@ -85,9 +85,9 @@ We introduce graph theory as a tool to study these codes.
 Given a $[n,k]$-code $\mathcal{C}$ and its parity check matrix $\mathbf{H} \in \FF_q^{(n-k) \times n}$, the \textit{Tanner graph} of $\mathcal{C}$ (or $\mathbf{H}$) is the bipartite graph defined by the biadjacency matrix $\mathbf{H}$. The $n$ columns correspond to $n$ nodes, called \textit{variable nodes}, and the $(n-k)$ rows correspond to $(n-k)$ nodes called \textit{check nodes}.
 \end{defn}
 
-Tanner graph is a powerful tool that is used to analyse decoders in LDPC codes since they have sparse parity check matrices. Therefore, it is easy to capture certain graph theoretic information, for example, number of cycles, girth of the graph, etc. On the other hand, MDPC codes have denser parity check matrices and the cost of analysis will increase exponentially in this situation.
+Tanner graph is a powerful tool that is used to analyse decoders in LDPC codes since they have sparse parity check matrices and no algebraic structures \cite{1057683}. Therefore, it is easy to capture certain graph theoretic information, for example, number of cycles, girth of the graph, etc. On the other hand, MDPC codes have denser parity check matrices and the cost of analysis will increase exponentially in this situation.
 
-LDPC and MDPC codes have their advantages and disadvantages in cryptography. For example, LDPC codes have better decoding performance than their MDPC counterparts but certain low weight codewords can lead to an attack on the McEliece cryptosystem using LDPC codes. MDPC codes can be made more secure but at the expense of more complicated decoder behaviours and large key sizes. Influenced by the development of NTRU \cite{ntru}, lattice- and code-based cryptosystems adapted the use of quotient polynomial rings of the form $\FF_2[x]/(x^n -1)$ in order to reduce key sizes. This leads to our next definition.
+LDPC and MDPC codes have their advantages and disadvantages in cryptography. For example, LDPC codes have better decoding performance than their MDPC counterparts but certain low weight codewords can lead to an attack on the McEliece cryptosystem using LDPC codes \cite{866513, 4557609,10.1007/978-3-540-85855-3_17}. MDPC codes can be made more secure but at the expense of more complicated decoder behaviours and large key sizes. Influenced by the development of NTRU \cite{ntru}, lattice- and code-based cryptosystems adapted the use of quotient polynomial rings of the form $\FF_2[x]/(x^n -1)$ in order to reduce key sizes. This leads to our next definition.
 
 \begin{defn}
 A \textit{circulant} matrix is a matrix such that each row is a cyclic shift to the right of its previous row. 
