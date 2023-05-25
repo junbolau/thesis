@@ -1,0 +1,77 @@
+\subsection{Modular curves and Hecke operators}
+
+\begin{frame}{Contributions (joint work with Chen-Kedlaya)}
+\begin{itemize}
+\item We develop an algorithm that computes Coleman integrals on modular curves.
+\item The algorithm does not rely on models.
+\item We compute some examples of well-known modular curves.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modular curves}
+Let $\Gamma \leq \SL_2(\ZZ)$ be a congruence subgroup. The (compactified) quotient space $X(\Gamma) := \Gamma \backslash (\HH \cup \PP^1(\QQ))$ is called the \textit{modular curve with level $\Gamma$}.
+
+\begin{itemize}
+\item Riemann surfaces (genus/ramification theory, Riemann-Hurwitz, Riemann-Roch, etc.)
+\item Algebraic curves (curves-fields correspondence)
+\item Moduli spaces of elliptic curves with torsion
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Hecke operators}
+Let $\Gamma_1,\Gamma_2 \leq \SL_2(\ZZ)$ be congruence subgroups and $\alpha \in \GL_2^+(\QQ)$. We define the double coset $\Gamma_1 \alpha \Gamma_2$ as the set
+
+\[
+\Gamma_1 \alpha \Gamma_2 := \{ \gamma_1 \alpha \gamma_2: \gamma_1 \in \Gamma_1, \gamma_2 \in \Gamma_2 \}
+\]
+
+These sets give rise to \textit{double coset operators} which act on both the $1$-forms and the points on the modular curves.
+
+\end{frame}
+
+\begin{frame}{Hecke operators on $1$-forms}
+
+For a congruence subgroup $\Gamma$, we have an isomorphism between the space of holomorphic $1$-forms on $X(\Gamma)$ and the space of weight $2$ cusp forms of level $\Gamma$. For $\alpha \in \GL_2^+(\QQ)$, we define the double coset operator:
+
+\[
+f|_2 [\Gamma_1 \alpha \Gamma_2] = \sum_i f|_2 \beta_i
+\]
+
+where $f$ is a weight $2$ cusp form of level $\Gamma_1$, $\Gamma_1 \alpha \Gamma_2 = \cup_i \Gamma_1 \beta_i$. Hecke operators at $p$ are double coset operators when $\Gamma_1= \Gamma_2 = \Gamma$ and $\det(\alpha) = p$.
+
+\end{frame}
+
+\begin{frame}{Hecke operators on points}
+
+For $\Gamma_1, \Gamma_2$ congruence subgroups, $\alpha \in GL_2^+(\QQ) $, define $\Gamma_3 := \alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2$ and $\Gamma_3' := \alpha \Gamma_3 \alpha^{-1}$. We have a diagram at the level of groups and the corresponding modular curves:
+
+\begin{align*}
+\Gamma_2 \hookleftarrow \Gamma_3 \xrightarrow{\cong} \Gamma_3' \hookrightarrow \Gamma_1 \\
+X_2 \xleftarrow{\pi_2} X_3 \xrightarrow{\cong} X_3' \xrightarrow{\pi_1} X_1
+\end{align*}
+
+Suppose $\Gamma_3 / \Gamma_2 = \bigcup_j \Gamma_3 \gamma_{2,j}$ and $\beta_j = \alpha \gamma_{2,j}$. Then the double coset operator induces a map on the divisor groups:
+
+\begin{align*}
+    \Div(X_2) &\rightarrow \Div(X_1) \\
+    \Gamma_2 \tau &\mapsto \sum_j \Gamma_1 \beta_j \tau
+\end{align*}
+
+\end{frame}
+
+\begin{frame}{Hecke operators on points}
+
+Consider fiber product $X(\Gamma, p) := X_0(p) \times_{X(1)} X(\Gamma)$. There are two degeneracy maps $\alpha,\beta: X_H(p) \rightarrow X_H$ defining the Hecke operator at $p$ where one forgets the cyclic group of order $p$ and the other quotients out by the cyclic group of order $p$.
+
+\[
+X(\Gamma) \xleftarrow{\alpha} X(\Gamma,p) \xrightarrow{\beta} X(\Gamma)
+\]
+
+This gives an algebraic description of the Hecke operator at $p$:
+\[
+T_p(E,\mathfrak{n)} := \alpha^* \beta_* (E,\mathfrak{n}) = \sum_{f:E\rightarrow E', deg(f) = p} (E',f(\mathfrak{n})).
+\]
+
+\end{frame}
+

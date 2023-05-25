@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2022/Arch Linux)
+This is BibTeX, Version 0.99d (TeX Live 2023/Arch Linux)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: frontmatter.aux
@@ -26,45 +26,45 @@ Database file #1: template.bib
 Warning--empty year in dickson
 Warning--empty booktitle in GJS
 Warning--empty school in wetherell
-You've used 65 entries,
+You've used 69 entries,
             2543 wiz_defined-function locations,
-            1007 strings with 15212 characters,
-and the built_in function-call counts, 27004 in all, are:
-= -- 2718
-> -- 1204
-< -- 56
-+ -- 410
-- -- 393
-* -- 1908
-:= -- 4318
-add.period$ -- 214
-call.type$ -- 65
-change.case$ -- 399
-chr.to.int$ -- 57
-cite$ -- 68
-duplicate$ -- 1110
-empty$ -- 1984
-format.name$ -- 487
-if$ -- 5617
+            1029 strings with 15910 characters,
+and the built_in function-call counts, 29069 in all, are:
+= -- 2928
+> -- 1292
+< -- 60
++ -- 440
+- -- 422
+* -- 2044
+:= -- 4624
+add.period$ -- 227
+call.type$ -- 69
+change.case$ -- 424
+chr.to.int$ -- 61
+cite$ -- 72
+duplicate$ -- 1205
+empty$ -- 2143
+format.name$ -- 521
+if$ -- 6077
 int.to.chr$ -- 9
 int.to.str$ -- 0
-missing$ -- 58
-newline$ -- 336
-num.names$ -- 212
-pop$ -- 416
+missing$ -- 62
+newline$ -- 356
+num.names$ -- 226
+pop$ -- 444
 preamble$ -- 1
-purify$ -- 473
+purify$ -- 502
 quote$ -- 0
-skip$ -- 932
+skip$ -- 1020
 stack$ -- 0
-substring$ -- 1546
-swap$ -- 238
-text.length$ -- 56
-text.prefix$ -- 36
+substring$ -- 1677
+swap$ -- 273
+text.length$ -- 60
+text.prefix$ -- 37
 top$ -- 0
-type$ -- 500
+type$ -- 532
 warning$ -- 3
-while$ -- 251
-width$ -- 68
-write$ -- 861
+while$ -- 271
+width$ -- 72
+write$ -- 915
 (There were 3 warnings)

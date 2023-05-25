@@ -32,12 +32,26 @@ Eran Assaf.
 \newblock Computing classical modular forms for arbitrary congruence subgroups.
 \newblock {\em arXiv: Number Theory}, 2020.
 
+\bibitem[BBC08]{10.1007/978-3-540-85855-3_17}
+Marco Baldi, Marco Bodrato, and Franco Chiaraluce.
+\newblock A new analysis of the mceliece cryptosystem based on qc-ldpc codes.
+\newblock In Rafail Ostrovsky, Roberto De~Prisco, and Ivan Visconti, editors,
+  {\em Security and Cryptography for Networks}, pages 246--262, Berlin,
+  Heidelberg, 2008. Springer Berlin Heidelberg.
+
 \bibitem[BBK10]{BBK10}
 Jennifer~S. Balakrishnan, Robert~W. Bradshaw, and Kiran~S. Kedlaya.
 \newblock Explicit coleman integration for hyperelliptic curves.
 \newblock In Guillaume Hanrot, Fran{\c{c}}ois Morain, and Emmanuel Thom{\'e},
   editors, {\em Algorithmic Number Theory}, pages 16--31, Berlin, Heidelberg,
   2010. Springer Berlin Heidelberg.
+
+\bibitem[BC07]{4557609}
+Marco Baldi and Franco Chiaraluce.
+\newblock Cryptanalysis of a new instance of mceliece cryptosystem based on
+  qc-ldpc codes.
+\newblock In {\em 2007 IEEE International Symposium on Information Theory},
+  pages 2591--2595, 2007.
 
 \bibitem[BCP97]{magma}
 Wieb Bosma, John Cannon, and Catherine Playoust.
@@ -169,6 +183,11 @@ Otto Forster.
 \newblock {\em Lectures on Riemann Surfaces}.
 \newblock Springer New York, NY, 1981.
 
+\bibitem[Gal62]{1057683}
+R.~Gallager.
+\newblock Low-density parity-check codes.
+\newblock {\em IRE Transactions on Information Theory}, 8(1):21--28, 1962.
+
 \bibitem[Gal96]{Galbraith_1996}
 Steven~D. Galbraith.
 \newblock Equations for modular curves.
@@ -245,6 +264,12 @@ Alexander May, Alexander Meurer, and Enrico Thomae.
 \newblock In Dong~Hoon Lee and Xiaoyun Wang, editors, {\em Advances in
   Cryptology -- ASIACRYPT 2011}, pages 107--124, Berlin, Heidelberg, 2011.
   Springer Berlin Heidelberg.
+
+\bibitem[MRS00]{866513}
+C.~Monico, J.~Rosenthal, and A.~Shokrollahi.
+\newblock Using low density parity check codes in the mceliece cryptosystem.
+\newblock In {\em 2000 IEEE International Symposium on Information Theory (Cat.
+  No.00CH37060)}, pages 215--, 2000.
 
 \bibitem[MSD74]{maswd}
 B.~Mazur and P.~Swinnerton-Dyer.

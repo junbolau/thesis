@@ -1,0 +1,133 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{beamer}
+
+\usefonttheme{professionalfonts}
+\mode<presentation> {
+\usetheme{default}
+\usecolortheme{seahorse}
+}
+\usepackage{ulem}
+\usepackage{algorithm2e,algorithmic}
+\usepackage{url,amsmath, tikz-cd}
+\usepackage{graphicx} % Allows including images
+\usepackage{booktabs} % Allows the use of \toprule, \midrule and \bottomrule in tables
+\usepackage{mathtools}
+
+
+\newcommand{\NN}{\mathbb{N}} % Natural numbers
+\newcommand{\ZZ}{\mathbb{Z}} % Integers
+\newcommand{\QQ}{\mathbb{Q}} % Rationals
+\newcommand{\RR}{\mathbb{R}} % Real numbers
+\newcommand{\CC}{\mathbb{C}} % Complex numbers
+\newcommand{\FF}{\mathbb{F}} % Finite field
+\newcommand{\PP}{\mathbb{P}} % Projective space
+\newcommand{\Spec}{\text{Spec}} %Spec
+\newcommand{\Max}{\text{Max}} %MaxSpec
+\newcommand{\HH}{\mathbb{H}}
+
+
+\newtheorem{proposition}{Proposition}
+\newtheorem{remark}{Remark}
+\newtheorem{question}{Question}
+\BeforeBeginEnvironment{question}{
+  \setbeamercolor{block title}{use=example text,fg=white,bg=example text.fg!75!black}
+  \setbeamercolor{block body}{parent=normal text,use=block title example,bg=block title example.bg!10!bg}
+}
+\AfterEndEnvironment{question}{
+  \setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!black}
+  \setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+}
+\newtheorem{answer}{Answer}
+\newtheorem{hypothesis}{Hypothesis}
+\newtheorem{conjecture}{Conjecture}
+\BeforeBeginEnvironment{conjecture}{
+  \setbeamercolor{block title}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
+  \setbeamercolor{block body}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+}
+\AfterEndEnvironment{conjecture}{
+  \setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!black}
+  \setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+}
+\newtheorem{metaconjecture}{Meta-Conjecture}
+\newtheorem{philosophy}{Philosophy}
+\newtheorem{claim}{Claim}
+\newtheorem{exercise}{Exercise}
+
+\newtheorem{warning}{Warning}
+\BeforeBeginEnvironment{warning}{
+  \setbeamercolor{block title}{use=alerted text,fg=white,bg=alerted text.fg!75!black}
+  \setbeamercolor{block body}{parent=normal text,use=block title alerted,bg=block title alerted.bg!10!bg}
+}
+\AfterEndEnvironment{warning}{
+  \setbeamercolor{block title}{use=structure,fg=white,bg=structure.fg!75!black}
+  \setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!10!bg}
+  
+}
+
+\DeclareMathOperator{\coker}{coker}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\Gr}{Gr}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\OG}{OG}
+\DeclareMathOperator{\PGL}{PGL}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\PSL}{PSL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\SpG}{SpG}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Trace}{Trace}
+% \DeclareMathOperator{\det}{det}
+\DeclareMathOperator{\Div}{Div}
+
+
+
+\renewcommand{\footnotesize}{\fontsize{5pt}{7}\selectfont}
+
+
+
+\title{$p$-adic Integration on Modular Curves and Code-based Cryptography}
+\author{Jun Bo Lau}
+\institute{UCSD}
+\date{31 May 2023}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Overview} % Table of contents slide, comment this block out to remove it
+\tableofcontents % Throughout your presentation, if you choose to use \section{} and \subsection{} commands, these will automatically be printed on this slide as an overview of your presentation
+\end{frame}
+
+
+%----------------------------------------------------------------------------------------
+%	PRESENTATION SLIDES
+%----------------------------------------------------------------------------------------
+
+\input{1_1_intro}
+\input{1_2_mchecke}
+\input{1_3_colemanintegration}
+\input{2_1_intro}
+\input{2_2_bike}
+\input{2_3_experiments}
+
+
+\begin{frame}{}
+    \centering
+    Thank you!
+  \end{frame}
+ 
+  
+\end{document}
