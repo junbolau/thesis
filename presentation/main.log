@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.5.19)  25 MAY 2023 08:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Arch Linux) (preloaded format=pdflatex 2023.5.26)  29 MAY 2023 22:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1050,41 +1050,35 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ] [5
 
-]
-Overfull \hbox (8.31544pt too wide) detected at line 46
-[][] \OML/cmm/m/it/10.95 ! \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 !\OT1/
-cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = [][] [] \OML/cmm/m/i
-t/10.95 a[]t[]dt \OT1/cmr/m/n/10.95 = [] []\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10
-.95 (\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.95 )[] \OMS/cmsy/m/n/10.95 ^^@ \OML/c
-mm/m/it/10.95 t\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 )[]
- []
-
-[6
+] [6
 
 ] [7
 
 ] [8
 
-]) (./1_2_mchecke.tex [9
+] [9
 
-] [10
+]
+Overfull \hbox (16.83214pt too wide) detected at line 47
+[][] \OML/cmm/m/it/10.95 ! \OT1/cmr/m/n/10.95 = [][] \OML/cmm/m/it/10.95 !\OT1/
+cmr/m/n/10.95 (\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 ) = [][] [] \OML/cmm/m/i
+t/10.95 a[]t[]dt \OT1/cmr/m/n/10.95 = [] [](\OML/cmm/m/it/10.95 t\OT1/cmr/m/n/1
+0.95 (\OML/cmm/m/it/10.95 Q\OT1/cmr/m/n/10.95 )[] \OMS/cmsy/m/n/10.95 ^^@ \OML/
+cmm/m/it/10.95 t\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 P\OT1/cmr/m/n/10.95 )[]
+)
+ []
+
+[10
 
 ] [11
 
 ] [12
 
-] [13
+]) (./1_2_mchecke.tex [13
 
-]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 76.
+] [14
 
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [14
-
-])
-(./1_3_colemanintegration.tex [15
+] [15
 
 ] [16
 
@@ -1094,91 +1088,110 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 
 ] [19
 
-] [20
+]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 105
+.
 
-]) (./2_1_intro.tex
-[21
+(/usr/share/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [20
+
+])
+(./1_3_colemanintegration.tex [21
 
 ] [22
 
-]
-<Images/errorfloor.png, id=638, 576.1525pt x 476.78125pt>
-File: Images/errorfloor.png Graphic file (type png)
-<use Images/errorfloor.png>
-Package pdftex.def Info: Images/errorfloor.png  used on input line 42.
-(pdftex.def)             Requested size: 115.22845pt x 95.35455pt.
- [23
+] [23
 
- <./Images/errorfloor.png>]) (./2_2_bike.tex [24
+] [24
 
 ] [25
 
 ] [26
 
-]
+]) (./2_1_intro.tex
 [27
 
 ] [28
 
-] [29
+]
+<Images/errorfloor.png, id=791, 576.1525pt x 476.78125pt>
+File: Images/errorfloor.png Graphic file (type png)
+<use Images/errorfloor.png>
+Package pdftex.def Info: Images/errorfloor.png  used on input line 42.
+(pdftex.def)             Requested size: 115.22845pt x 95.35455pt.
+ [29
 
-]) (./2_3_experiments.tex [30
+ <./Images/errorfloor.png>]) (./2_2_bike.tex [30
 
 ] [31
 
+] [32
+
 ]
-<Images/buscc.jpg, id=870, 903.375pt x 1221.6039pt>
+[33
+
+] [34
+
+] [35
+
+]) (./2_3_experiments.tex [36
+
+] [37
+
+]
+<Images/buscc.jpg, id=1023, 903.375pt x 1221.6039pt>
 File: Images/buscc.jpg Graphic file (type jpg)
 <use Images/buscc.jpg>
 Package pdftex.def Info: Images/buscc.jpg  used on input line 49.
 (pdftex.def)             Requested size: 108.40031pt x 146.58614pt.
- [32
+ [38
 
  <./Images/buscc.jpg>]
-<Images/DFR-plot-T3.png, id=897, 2107.875pt x 2107.875pt>
+<Images/DFR-plot-T3.png, id=1049, 2107.875pt x 2107.875pt>
 File: Images/DFR-plot-T3.png Graphic file (type png)
 <use Images/DFR-plot-T3.png>
 Package pdftex.def Info: Images/DFR-plot-T3.png  used on input line 70.
 (pdftex.def)             Requested size: 147.56631pt x 147.56631pt.
 
-[33
+[39
 
- <./Images/DFR-plot-T3.png>] [34
+ <./Images/DFR-plot-T3.png>] [40
 
-] [35
+] [41
 
-] [36
+] [42
 
-] [37
+] [43
 
-] [38
+] [44
 
 ]
-<Images/DFR_20bit_CN2N_new.png, id=1052, 428.5611pt x 288.3573pt>
+<Images/DFR_20bit_CN2N_new.png, id=1204, 428.5611pt x 288.3573pt>
 File: Images/DFR_20bit_CN2N_new.png Graphic file (type png)
 <use Images/DFR_20bit_CN2N_new.png>
 Package pdftex.def Info: Images/DFR_20bit_CN2N_new.png  used on input line 163.
 
 (pdftex.def)             Requested size: 257.13864pt x 173.0157pt.
- [39
+ [45
 
- <./Images/DFR_20bit_CN2N_new.png>] [40
+ <./Images/DFR_20bit_CN2N_new.png>] [46
 
 ]
-<Images/Rplot-587-df.png, id=1104, 2107.875pt x 2107.875pt>
+<Images/Rplot-587-df.png, id=1257, 2107.875pt x 2107.875pt>
 File: Images/Rplot-587-df.png Graphic file (type png)
 <use Images/Rplot-587-df.png>
 Package pdftex.def Info: Images/Rplot-587-df.png  used on input line 197.
 (pdftex.def)             Requested size: 126.46704pt x 126.46704pt.
-<Images/Rplot-587-random.png, id=1105, 2107.875pt x 2107.875pt>
+<Images/Rplot-587-random.png, id=1258, 2107.875pt x 2107.875pt>
 File: Images/Rplot-587-random.png Graphic file (type png)
 <use Images/Rplot-587-random.png>
 Package pdftex.def Info: Images/Rplot-587-random.png  used on input line 197.
 (pdftex.def)             Requested size: 126.46704pt x 126.46704pt.
- [41
+ [47
 
  <./Images/Rplot-587-df.png> <./Images/Rplot-587-random.png>]
-<Images/average_sw_generic_vs_DF_T3.png, id=1134, 456.0237pt x 342.5598pt>
+<Images/average_sw_generic_vs_DF_T3.png, id=1286, 456.0237pt x 342.5598pt>
 File: Images/average_sw_generic_vs_DF_T3.png Graphic file (type png)
 <use Images/average_sw_generic_vs_DF_T3.png>
 Package pdftex.def Info: Images/average_sw_generic_vs_DF_T3.png  used on input 
@@ -1188,19 +1201,19 @@ line 206.
 Overfull \vbox (5.12941pt too high) detected at line 206
  []
 
-[42
+[48
 
  <./Images/average_sw_generic_vs_DF_T3.png>]
-<Images/synweights_587.png, id=1161, 427.1157pt x 286.1892pt>
+<Images/synweights_587.png, id=1313, 427.1157pt x 286.1892pt>
 File: Images/synweights_587.png Graphic file (type png)
 <use Images/synweights_587.png>
 Package pdftex.def Info: Images/synweights_587.png  used on input line 221.
 (pdftex.def)             Requested size: 213.55733pt x 143.09424pt.
- [43
+ [49
 
- <./Images/synweights_587.png>] [44
+ <./Images/synweights_587.png>] [50
 
-]) [45
+]) [51
 
 ]
 \tf@nav=\write6
@@ -1214,16 +1227,16 @@ Package pdftex.def Info: Images/synweights_587.png  used on input line 221.
 
  (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 59FE4DE304898DEFC4C11D579E4A2D21;1614.
+(rerunfilecheck)             Checksum: 64A6405CE52A9043999CC86A605FF91F;1615.
  ) 
 Here is how much of TeX's memory you used:
- 28081 strings out of 476025
- 561805 string characters out of 5796532
+ 28100 strings out of 476025
+ 562011 string characters out of 5796532
  1868388 words of memory out of 5000000
- 47847 multiletter control sequences out of 15000+600000
+ 47854 multiletter control sequences out of 15000+600000
  526217 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 128i,21n,122p,473b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 128i,21n,122p,379b,747s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/publi
@@ -1244,10 +1257,10 @@ ublic/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 /euler/eufm10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/ms
 am10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on main.pdf (45 pages, 5823115 bytes).
+Output written on main.pdf (51 pages, 5838572 bytes).
 PDF statistics:
- 1359 PDF objects out of 1440 (max. 8388607)
- 1233 compressed objects within 13 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 1514 PDF objects out of 1728 (max. 8388607)
+ 1381 compressed objects within 14 object streams
+ 113 named destinations out of 1000 (max. 500000)
  147 words of extra memory for PDF output out of 10000 (max. 10000000)
 

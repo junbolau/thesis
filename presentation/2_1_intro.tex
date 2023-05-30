@@ -9,14 +9,14 @@ BIKE (\textbf{B}it-\textbf{F}lipping \textbf{K}ey \textbf{E}ncapsulation) is bas
 \begin{itemize}
     \item Round 4 candidate in NIST's PQC Standardisation process.
     \item Among the selected algorithms after round 3, 3 are lattice-based, 1 hash-based.
-    \item Three code-based algorithms remain for consideration: BIKE, Classic McEliece, HQC, \sout{SIKE}.
+    \item Three algorithms remain for consideration: BIKE, Classic McEliece, HQC, \sout{SIKE}\footnote{SIKE (or SIDH) has been broken in last summer, by Castryk-Decru, Maino-Martindale, Robert, etc.}.
 \end{itemize}
     
 \end{frame}
 
 \begin{frame}{Motivation}
 \begin{itemize}
-\item BIKE uses an iterative bit flipping decoder which are not characterized by bounded decoding radius $\implies$ we expect nonzero DFR (\textbf{D}ecoding \textbf{F}ailure \textbf{R}ate).
+\item BIKE uses an iterative bit flipping decoder which is not characterized by bounded decoding radius $\implies$ we expect nonzero DFR (\textbf{D}ecoding \textbf{F}ailure \textbf{R}ate).
     \item The security proof of BIKE in the IND-CCA2 setting assumes a low DFR. Currently, DFR has been estimated through simulation and extrapolation.
 \end{itemize}
 \end{frame}

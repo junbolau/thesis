@@ -2,30 +2,25 @@
 
 \begin{frame}{Coleman integration on modular curves}
 
-We consider congruence subgroups $\Gamma \leq \SL_2(\ZZ)$ where $\Gamma$ is a lift of $H \leq \GL_2(\ZZ/N\ZZ)$ satisfying:
-
-\begin{itemize}
-\item $-I \in H$,
-\item $\det:H \rightarrow \ZZ/N\ZZ$ is surjective.
-\end{itemize}
-
-The general strategy is as follows:
+For a congruence subgroup $\Gamma$ and two points $P,Q \in X(\Gamma)$, we compute $\int_P^Q \omega$ in the following way:
 
 \begin{enumerate}
-\item Write any arbitrary Coleman integral as a sum of tiny integrals,
-\item Find a basis of holomorphic $1$-forms and a suitable uniformiser,
-\item Formally integrate and evaluate at the end points.
+\item (Reduction step) Write any arbitrary Coleman integral as a sum of tiny integrals,
+\item (Basis and uniformiser) Find a basis of holomorphic $1$-forms and a suitable uniformiser,
+\item (Hecke action) Compute the action of Hecke operator on differential forms and points,
+\item (Linear algebra over $\mathbb{C}$) Solve a system of equations and recover algebraic solutions,
+\item (Evaluation) Formally integrate and evaluate the end points.
 \end{enumerate}
 \end{frame}
 
-\begin{frame}{Fundamental system of equations}
+\begin{frame}{(Reduction) Fundamental system of equations}
 Let $\Gamma$ be a congruence subgroup, $\omega_i \in H^0(X(\Gamma), \Omega^1)$, $P,Q \in X(\QQ_p)$, $p >2$ a prime of good reduction. We have:
 
 \[
-\int_P^Q T_p^* \omega_i = \sum_j \int_P^Q A_{ij} \omega_j = \sum_j \sum_k \int_{P_k}^{Q_k} \omega_j.
+\int_Q^R T_p^* \omega_i = \sum_j \int_Q^R A_{ij} \omega_j = \sum_j \sum_k \int_{Q_k}^{R_k} \omega_j.
 \]
 
-where $T_p P = \sum_k P_k.$ This gives the following system of equations: 
+where $T_p Q = \sum_k Q_k.$ This gives the following system of equations: 
 
 \begin{equation*}
    ((p+1)I-A)\begin{pmatrix} \int^Q_R\omega_1 \\\vdots \\ \int^Q_R\omega_g \end{pmatrix} =  \begin{pmatrix} \sum_{i=0}^{p}\int^Q_{Q_i} \omega_1 - \sum_{i=0}^{p}\int^R_{R_i} \omega_1 \\\vdots \\ \sum_{i=0}^{p}\int^Q_{Q_i} \omega_g - \sum_{i=0}^{p}\int^R_{R_i} \omega_g \end{pmatrix}.
@@ -40,34 +35,38 @@ where $T_p P = \sum_k P_k.$ This gives the following system of equations:
 \end{equation*}
 
 \begin{itemize}
-\item \textcolor{red}{Action of Hecke operator at $p$ on basis of cusp forms}
-\item \textcolor{blue}{Sums of tiny integrals}
+\item \textcolor{red}{Action of Hecke operator at $p$ on basis of cusp forms},
+\item \textcolor{blue}{Sums of tiny integrals},
+\begin{itemize}
+\item Action of Hecke operator on points,
+\item Basis of cusp forms in terms of uniformiser
+\end{itemize}
 \end{itemize}
 
 \end{frame}
 
 \begin{frame}{Action of Hecke operator on cusp forms}
 
-Let $\Gamma(N) := \{ A \equiv \begin{psmallmatrix} 1 & 0 \\ 0 & 1 \end{psmallmatrix} \pmod{N} \}$. For the congruence subgroups $\Gamma_H$ induced by $H \leq \GL_2(\ZZ/N\ZZ)$, $H^0(X(\Gamma_H),\Omega^1) \cong S_2(\Gamma(N))^H$. A modification of Zywina's Magma implementation \footnote{D. Zywina, \href{https://arxiv.org/abs/2001.07270}{Computing actions on cusp forms}} allows us to compute a basis of $H^0(X(\Gamma_H),\Omega^1)$.
+For the congruence subgroups $\Gamma_H$ induced by $H \leq \GL_2(\ZZ/N\ZZ)$, $H^0(X(\Gamma_H),\Omega^1) \cong S_2(\Gamma(N))^H$. A modification of Zywina's Magma implementation \footnote{D. Zywina, \href{https://arxiv.org/abs/2001.07270}{Computing actions on cusp forms}} allows us to compute a basis of $H^0(X(\Gamma_H),\Omega^1)$.
 
 Then, using the double coset definition of Hecke operators, one expresses $f|_2 [\Gamma_H \alpha \Gamma_H]$ as a linear combination of basis elements.
 \end{frame}
 
 \begin{frame}{Computing $\sum_i \int_{Q_i}^Q \omega $}
 \begin{enumerate}
-\item Pick a uniformiser $u$ and write $\omega = \sum_j x_i u^i du$,
+\item Pick a uniformiser $u$ and write $\omega = \sum_j x_j u^j du$,
 \item Calculate $u(Q_i)$ as algebraic numbers,
-\item Evaluate $\sum_i \int_{Q_i}^Q \omega $.
+\item Evaluate $\sum_i \int_{Q_i}^Q \omega = \sum_i \int_{u(Q_i)}^{u(Q)} \omega(u) du$.
 \end{enumerate}
 \end{frame}
 
 \begin{frame}{Examples}
 
-The algorithm works for modular curves of the form:
+The algorithm works for:
 
 \begin{itemize}
-\item Serre's Uniformity Conjecture,
-\item Atkin-Lehner quotients.
+\item Modular curves coming from maximal proper subgroups of $\GL_2(\ZZ/N\ZZ)$ (Serre's Uniformity Conjecture),
+\item Modular curves quotiented by the action of Atkin-Lehner involutions.
 \end{itemize}
 
 Each example has its input data:

@@ -28,10 +28,16 @@ Let $f: \HH \rightarrow \CC$ be a function and $k \in \ZZ$.
 
 The automorphy factory satisfies a cocycle relation $j(\gamma_1\gamma2,z) = j(\gamma_1,\gamma_2 z)j(\gamma_2,z)$ which implies that $\GL_2^+(\RR)$ acts on $\Hom(\HH,\CC)$ via $f|_k\gamma_1\gamma_2 = (f|_k\gamma_1)|_k\gamma_2$.
 
-Consider the projection map $\pi: \SL_2(\ZZ) \rightarrow \SL_2(\ZZ/N\ZZ)$. We define congruence subgroups in the following way.
+Consider the projection map $\pi: \SL_2(\ZZ) \rightarrow \SL_2(\ZZ/N\ZZ)$ where we reduce the entries modulo $N$. We define congruence subgroups in the following way.
+
+\begin{defn}
+$\Gamma \leq \SL_2(\ZZ)$ is a \textit{congruence subgroup} if there exists an integer $N \geq 1$ such that $\Gamma(N) \leq \Gamma$. The minimal such $N$ is called the \textit{level} of $\Gamma$.
+
+It follows immediately that congruence subgroups of $\SL_2(\ZZ)$ have finite index and correspond to subgroups of $\SL_2(\ZZ/N\ZZ)$.
+\end{defn}
 
 \begin{example}\label{example:1_congsgp}
-Here are some common examples of preimages of $\pi$:
+Here are some common examples of preimages of $\pi$ which give rise to congruence subgroups of level $N$:
 
 \begin{itemize}
     \item $\Gamma(N) = \pi^{-1} (\begin{psmallmatrix}
@@ -64,14 +70,12 @@ Here are some common examples of preimages of $\pi$:
 \end{itemize}
 \end{example}
 
-\begin{defn}
-$\Gamma \leq \SL_2(\ZZ)$ is a \textit{congruence subgroup} if there exists an integer $N \geq 1$ such that $\Gamma(N) \leq \Gamma$. The minimal such $N$ is called the \textit{level} of $\Gamma$.
-
-It follows immediately that congruence subgroups of $\SL_2(\ZZ)$ have finite index and correspond to subgroups of $\SL_2(\ZZ/N\ZZ)$. The above examples are all congruence subgroups of level $N$.
-\end{defn}
+\begin{example}
+We can also construct congruence subgroups corresponding to the maximal proper subgroups of $\GL_2(\FF_p)$. Let $H \leq \GL_2(\FF_p)$ be one of the maximal proper subgroups in Dickson's classification. Then the associated congruence subgroup ( of level $p$) is defined as $\Gamma_H := \pi^{-1}(H \cap \SL_2(\FF_p))$.
+\end{example}
 
 \begin{defn}
-    Let $\Gamma \leq \SL_2(\ZZ)$ be a congruence subgroup of level $N$, $k \geq 0$ an integer. We say a function $f: \HH \rightarrow \CC$ is a \textit{modular form of weight $k$ with level $\Gamma$} if
+    Let $\Gamma \leq \SL_2(\ZZ)$ be a congruence subgroup of level $N$ and $k \geq 0$ an integer. We say a function $f: \HH \rightarrow \CC$ is a \textit{modular form of weight $k$ with level $\Gamma$} if
 
     \begin{enumerate}
         \item $f$ is holomorphic,
@@ -91,14 +95,14 @@ Suppose $f$ is a modular form of weight $k$ with level $\Gamma$. Since $\Gamma$ 
 \begin{example}
 Let $G_k(\tau) = \sum_{(c,d) \not = (0,0)} 1/(c\tau + d)^k$. This is a modular form of weight $k$ for $\SL_2(\ZZ)$ called \textit{Eisenstein series}. 
 
-    The \textit{$j$-invariant} is a modular form of weight $0$, i.e., a modular function and an element of $\CC(X(\SL_2(\ZZ)))$, with $q$-expansion:
+    The \textit{$j$-invariant} is a modular form of weight $0$, i.e., a modular function and an element of the function field of the modular curve $\CC(X(\SL_2(\ZZ)))$, with $q$-expansion:
 
     \begin{align*}
         j: \HH \rightarrow \CC, j(\tau) = 1728 \frac{(60 G_4(\tau))^3}{(60 G_4(\tau))^3 - 27 (140 G_6(\tau))^2} = \frac{1}{q} + 744 + 196884q + \ldots.
     \end{align*}
 \end{example}
 
-It is a standard result that $\mathcal{M}_k(\Gamma) \supseteq \mathcal{S}_k(\Gamma)$ are finite dimensional complex vector spaces. Modular forms and modular curves are related by the fact that there is an isomorphism between the space of weight $2$ cusp forms and the space of holomorphic differentials on the modular curve $X(\Gamma)$. 
+It is a standard result that $\mathcal{S}_k(\Gamma) \subseteq \mathcal{M}_k(\Gamma)$ are finite dimensional complex vector spaces. Modular forms and modular curves are related by the fact that there is an isomorphism between the space of weight $2$ cusp forms and the space of holomorphic differentials on the modular curve $X(\Gamma)$ given by the map:
 
 \begin{align*}
 \mathcal{S}_2(\Gamma) &\xrightarrow{\cong} H^0(X(\Gamma),\Omega^1) \\
@@ -108,7 +112,7 @@ f(\tau) &\mapsto f(\tau) d\tau.
 
 
 \subsection{Modular curves}
-In this section, we define our object of study. Modular curves have rich structures as Riemann surfaces, algebraic curves and moduli spaces of elliptic curves (with some torsion information). We frequently use properties from various perspectives interchangeably.
+In this section, we define our object of study. Modular curves have rich structures as Riemann surfaces, algebraic curves and moduli spaces of elliptic curves with some torsion data. We frequently use properties from various perspectives interchangeably.
 
 \subsubsection{As Riemann surfaces}
 Let $\Gamma \leq \SL_2(\ZZ)$ be a subgroup of finite index. $\HH$ inherits the Euclidean topology from $\CC$ and so $Y(\Gamma) := \Gamma \backslash \HH$ carries the quotient topology that is Hausdorff. $Y(\Gamma)$ can be compactified by adjoining cusps, which are orbits of $\PP^1(\QQ)$ under the action of $\Gamma$. The resulting quotient space $X(\Gamma) := \Gamma \backslash \HH^*$ where $\HH^* := \HH \cup \PP^1(\QQ)$ is called the modular curve associated to $\Gamma$. One could further show that by considering elliptic points and cusps, one can choose suitable charts, therefore giving $Y(\Gamma)$ and $X(\Gamma)$ the structure of Riemann surface.
@@ -130,11 +134,11 @@ Furthermore, this is contravariant: a nonconstant morphism from  algebraic curve
 
 \end{theorem}
 
-The above theorem allows us to work with simpler objects, i.e., we can replace curves and their morphisms by fields and field injections. In particular, the function field of the modular curve $X(\Gamma)$ consists of modular functions of weight $0$ and level $\Gamma$. 
+The above theorem allows us to use field/Galois theory, i.e., we can replace curves and their morphisms by fields and field injections. In particular, the function field of the modular curve $X(\Gamma)$ consists of modular functions of weight $0$ and level $\Gamma$. 
 
 \subsubsection{As moduli spaces of elliptic curves}
 
-For each $\tau \in \HH$, one could associate it with a lattice $\Lambda_\tau := \ZZ + \tau \cdot \ZZ \subseteq \CC$. The resulting quotient space $\CC/\Lambda_\tau$ is a compact Riemann surface of genus $1$, an elliptic curve. Conversely, for any elliptic curve, as a genus 1 compact Riemann surface, the homology group of the elliptic curve $H_1(E,\ZZ)$ is generated by two loops, $\gamma_1, \gamma_2$. For an invariant differential $\omega$ of the elliptic curve, we can construct the lattice generated by the periods $\Lambda_E = (\int_{\gamma_1} \omega) \cdot \ZZ + (\int_{\gamma_2} \omega) \cdot \ZZ$. This can be renormalised so that $\Lambda_E = \ZZ + \tau \cdot \ZZ$ with $\tau = (\int_{\gamma_1} \omega) /(\int_{\gamma_2} \omega) \in \HH$. In particular the points on $\HH$ correspond to elliptic curves.
+For each $\tau \in \HH$, one could associate it with a lattice $\Lambda_\tau := \ZZ + \tau \cdot \ZZ \subseteq \CC$. The resulting quotient space $\CC/\Lambda_\tau$ is a compact Riemann surface of genus $1$, an elliptic curve. Conversely, for any elliptic curve, as a genus 1 compact Riemann surface, the homology group of the elliptic curve $H_1(E,\ZZ)$ is generated by two loops, $\gamma_1, \gamma_2$. For an invariant differential $\omega$ of the elliptic curve, we can construct the lattice generated by the periods $\Lambda_E = (\int_{\gamma_1} \omega) \cdot \ZZ + (\int_{\gamma_2} \omega) \cdot \ZZ$. This can be renormalised so that $\Lambda_E = \ZZ + \tau \cdot \ZZ$ with $\tau = (\int_{\gamma_1} \omega) /(\int_{\gamma_2} \omega) \in \HH$. In particular, the points on $\HH$ correspond to elliptic curves.
 
 For $\Gamma \leq \SL_2(\ZZ)$, the modular curve $X(\Gamma)(\bar{\QQ})$ parametrise elliptic curves with some torsion data, i.e., a pair $(E, \phi)$ where $E$ is an elliptic curve defined over $\bar{\QQ}$ and $\phi$ is an isomorphism of its $N$-torsion points $\phi: E[N] \rightarrow (\ZZ/N\ZZ)^2$. Two points $(E_1,\phi_1), (E_2,\phi_2)$ are isomorphic if there is an isomorphism of elliptic curves $\psi: E_1 \rightarrow E_2$ and some matrix $M \in \Gamma$ such that the diagram commutes:
 
@@ -146,7 +150,7 @@ For $\Gamma \leq \SL_2(\ZZ)$, the modular curve $X(\Gamma)(\bar{\QQ})$ parametri
 \end{center}
 
 
-Furthermore, there is an action of the absolute Galois group $Gal(\bar{\QQ}/\QQ)$ on $(E,\phi)$ and we say that $(E,\phi)$ is a $\QQ$-rational point if it is invariant under the action. We can view points on modular curves as elliptic curves with certain torsion structures which allows us to apply properties of elliptic curves to study the rational points on $X(\Gamma)$.
+Furthermore, there is an action of the absolute Galois group $\Gal(\bar{\QQ}/\QQ)$ on $(E,\phi)$ and we say that $(E,\phi)$ is a $\QQ$-rational point if it is invariant under the action. We can view points on modular curves as elliptic curves with certain torsion structures which allows us to apply properties of elliptic curves to study the rational points on $X(\Gamma)$.
 
 \begin{example}
 Let $H \leq \GL_2(\ZZ/N\ZZ)$ be a subgroup such that
@@ -215,9 +219,18 @@ The theory of Hecke operators can be made explicit for certain congruence subgro
 \]
 \end{example}
 
-%Since we can view $\tau \in \HH$ as lattices $\Lambda_\tau$, modular forms can be viewed as functions on rank $1$ lattices. In particular, the Hecke operators above can be reinterpreted as 
+We summarise a well-known result from the theory of Hecke operators to show that there is a basis of cusp forms which are eigenvectors of the Hecke operators \cite{Shurman}:
 
-%\[T_p f (\Lambda) = p^{k-1} \sum_{\Lambda' \subseteq \Lambda, [\Lambda:\Lambda'] = p} f(\Lambda')\]
+\begin{theorem}{(\cite{Shurman}, Chap. 5)}
+Let $\Gamma$ be a congruence subgroup of level $N$ and $n$ an integer coprime to $N$. Then,
+
+\begin{itemize}
+\item $\mathcal{M}_k(\Gamma),\mathcal{S}_k(\Gamma)$ are inner product spaces with respect to an inner product called the \textit{Petersson inner product}.
+\item The Hecke operator $T_n$ is a normal operator with respect to this inner product. There is another family called the diamond operators which is also a normal operator.
+\end{itemize}
+
+Therefore, we have a commuting family of operators on a finite dimensional inner product space and the spectral theorem implies that there is an orthogonal basis of simultaneous eigenvectors formed by the cusp forms. In this case, we say that the cusp forms are \textit{Hecke eigenforms} or simply \textit{eigenforms}.
+\end{theorem}
 
 There is also an algebraic/geometric interpretation of the double coset operator as a morphism of divisor groups. For $\Gamma_1, \Gamma_2$ congruence subgroups, $\alpha \in GL_2^+(\QQ) $, $\Gamma_3 := \alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2$ and $\Gamma_3' := \alpha \Gamma_3 \alpha^{-1}$. Since points on the modular curve $X(\Gamma)$ have the form $\Gamma \tau$, we have a diagram at the level of groups which induces a diagram on modular curves:
 
@@ -227,17 +240,14 @@ There is also an algebraic/geometric interpretation of the double coset operator
 X_2 \xleftarrow{\pi_2} X_3 \xrightarrow{\cong} X_3' \xrightarrow{\pi_1} X_1
 \end{align*}
 
-Suppose $\Gamma_3 / \Gamma_2 = \bigcup_j \Gamma_3 \gamma_{2,j}$ and $\beta_j = \alpha \gamma_{2,j}$. Then the double coset operator induces a map on the divisor groups  after $\ZZ$-linear extension:
+Suppose $\Gamma_3 / \Gamma_2 = \bigcup_j \Gamma_3 \gamma_{2,j}$ and $\beta_j = \alpha \gamma_{2,j}$. Then the double coset operator induces a map on the divisor groups after $\ZZ$-linear extension:
 
 \begin{align*}
     \Div(X_2) &\rightarrow \Div(X_1) \\
     \Gamma_2 \tau &\mapsto \sum_j \Gamma_1 \beta_j \tau
 \end{align*}
 
-Specialising to the case of Hecke operator, we obtain a similar diagram. 
-
-We could benefit from the moduli interpretation of modular curves for the case of Hecke operators by defining it as a correspondence. For $H \leq GL_2(\ZZ/N\ZZ)$ and $p$ coprime to $N$, we obtain the modular curve $X_H$ and its fiber product $X_H(p) := X_0(p) \times_{X(1)} X_H$. There are two degeneracy maps $\alpha,\beta: X_H(p) \rightarrow X_H$ defining the Hecke operator at $p$ where one forgets the cyclic group of order $p$ and the other quotients out by the cyclic group of order $p$.
-
+We can specialise the above diagram to Hecke operators to get a similar picture. Furthermore, we could benefit from the moduli interpretation of modular curves by defining it as a correspondence. For $H \leq GL_2(\ZZ/N\ZZ)$ and $p$ coprime to $N$, we obtain the modular curve $X_H$ and its fiber product $X_H(p) := X_0(p) \times_{X(1)} X_H$. There are two degeneracy maps $\alpha,\beta: X_H(p) \rightarrow X_H$ defining the Hecke operator at $p$ where one forgets the cyclic group of order $p$ and the other quotients out by the cyclic group of order $p$.
 
 \[
 \begin{tikzcd}[column sep=small]
@@ -248,12 +258,11 @@ X_H \arrow[rr,dashed] & & X_H
 
 By Picard functoriality, for a point $(E,\mathfrak{n}) \in X_H$ where the level structure $\mathfrak{n}$ is determined by $H$, we have an algebraic description of the Hecke operator at $p$: \[T_p(E,\mathfrak{n)} := \alpha^* \beta_* (E,\mathfrak{n}) = \sum_{f:E\rightarrow E', deg(f) = p} (E',f(\mathfrak{n})).\]
 
-
 \subsection{Coleman integrals}\label{sec:coleman_integration}
 
-Coleman's construction of $p$-adic line integrals share many similar properties as their complex-analytic analogue. Below we record some properties of Coleman integrals from \cite{Coleman1,coleman85} that will be used in our calculations.
+Coleman's construction of $p$-adic line integrals share many similar properties as their complex-analytic analogue. Below we record some properties of Coleman integrals  that will be used in our calculations.
 
-\begin{theorem} \label{coleman_def}
+\begin{theorem}{( \cite{Coleman1,coleman85} )} \label{coleman_def}
 Let $X/\QQ_p$ be a smooth, projective, and geometrically irreducible curve with good reduction at $p$, let $J$ be the Jacobian of $X$.Then there is a $p$-adic integral 
 
 \[ \int_P^Q \omega \in \overline{\QQ}_p\]
@@ -270,7 +279,7 @@ with $P,Q \in X(\overline{\QQ}_p), \omega \in H^0(X,\Omega^1)$ satisfying:
     \begin{equation*}
         \int_P^Q \omega + \int_{P'}^{Q'} \omega = \int_P^{Q'} \omega + \int_{P'}^Q \omega
     \end{equation*}
-        Thus, we can define $\int_D \omega$, where $D \in Div^0_X(\overline{\QQ}_p)$. Also, if $D$ is principal, $\int_D \omega = 0$,
+        Thus, we can define $\int_D \omega$, where $D \in Div^0_X(\overline{\QQ}_p)$. Also, if $D$ is a principal divisor, then $\int_D \omega = 0$,
         
     \item There is an open subgroup of $J(\QQ_p)$ such that $\int_P^Q \omega$ can be computed in terms of power series in some uniformiser by formal term-by-term integration. In particular, $\int_P^P \omega = 0$,
 
@@ -290,12 +299,12 @@ with $P,Q \in X(\overline{\QQ}_p), \omega \in H^0(X,\Omega^1)$ satisfying:
 \end{theorem}
 
 \begin{defn}\label{def:tiny_integral}
-The Coleman integral $\int_P^Q \omega$ is called a \emph{tiny integral} if $P$ and $Q$ reduce to the same point in $X_{\FF_p}(\overline{\FF}_p)$, i.e., they lie in the same residue disc.
+The Coleman integral $\int_P^Q \omega$ is called a \emph{tiny integral} if $P$ and $Q$ reduce to the same point in $X(\overline{\FF}_p)$, i.e., they lie in the same residue disc.
 
 \end{defn}
 
 
-Explicitly, if $P$ and $Q$ are in the same residue disc, then the differential form can be expressed as a power series in terms of a uniformiser at $P$. The tiny integral can be computed by formally integrating the power series and evaluated at the endpoints: \[\int_P^Q \omega = \int_{t(P)}^{t(Q)} \omega(t) = \int_{t(P)}^{t(Q)}\sum a_i t^i dt= \sum \frac{a_i}{i+1} (t(Q) - t(P))^{i+1}.\]
+If $P$ and $Q$ are in the same residue disc, then the differential form can be expressed as a power series in terms of a uniformiser at $P$. The tiny integral can be computed by formally integrating the power series and then evaluating at the endpoints: \[\int_P^Q \omega = \int_{t(P)}^{t(Q)} \omega(t) = \int_{t(P)}^{t(Q)}\sum a_i t^i dt= \sum \frac{a_i}{i+1} (t(Q)^{i+1} - t(P)^{i+1}).\]
 
 
-Coleman’s construction is suitable for computations. In \cite{BBK10}, the authors demonstrated an algorithm to compute single Coleman integrals for hyperelliptic curves. Their method is based on Kedlaya's algorithm for computing the Frobenius action on the de Rham cohomology of hyperelliptic curves \cite{Kedlaya_coho_hyper} and this is generalized to arbitrary smooth curves \cite{balatuit, Tui16, Tui17}. Despite recent developments in this direction, the current implementations require nice affine plane models for the curves as inputs. Since modular curves tend to have large gonality, such models are not readily available and are often bottlenecks in existing algorithms.
+Coleman’s construction is suitable for computations. In \cite{BBK10}, the authors demonstrated an algorithm to compute single Coleman integrals for hyperelliptic curves. Their method is based on Kedlaya's algorithm for computing the Frobenius action on the de Rham cohomology of hyperelliptic curves \cite{Kedlaya_coho_hyper} and this is generalized to arbitrary smooth curves \cite{balatuit, Tui16, Tui17}. Despite recent developments in this direction, current implementations require nice affine plane models for the curves as inputs. Since modular curves tend to have large gonality \cite{gonality}, methods using the canonical map \cite{Galbraith_1996} are impractical. Therefore, such models are not readily available and are often bottlenecks in existing algorithms.

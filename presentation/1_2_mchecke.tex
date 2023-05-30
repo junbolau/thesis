@@ -8,6 +8,32 @@
 \end{itemize}
 \end{frame}
 
+\begin{frame}{Congruence subgroups}
+Let $\Gamma \leq \SL_2(\ZZ)$ be a subgroup. 
+
+\begin{definition}
+We say $\Gamma$ is a congruence subgroup of level $N$ if $\Gamma$ contains $\{ \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \equiv \begin{psmallmatrix} 1 & 0 \\ 0 & 1 \end{psmallmatrix} \pmod{N} \}$ for some positive integer $N$.
+\end{definition}
+
+\begin{itemize}
+\item $\Gamma(N) := \{ \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \equiv \begin{psmallmatrix} 1 & 0 \\ 0 & 1 \end{psmallmatrix} \pmod{N} \}$.
+\item $\Gamma_1(N) := \{ \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \equiv \begin{psmallmatrix} 1 & \ast \\ 0 & 1 \end{psmallmatrix} \pmod{N} \}$.
+\item $\Gamma_0(N) := \{ \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \equiv \begin{psmallmatrix} \ast & \ast \\ 0 & \ast \end{psmallmatrix} \pmod{N} \}$.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Modular forms and cusp forms}
+\begin{definition}
+Let $k$ be a positive integer and $\Gamma$ a congruence subgroup we say $f: \mathbb{H} \rightarrow \mathbb{C}$ is a \textit{modular form of weight $k$ and level $\Gamma$} if
+
+\begin{itemize}
+\item $f$ is holomorphic,
+\item $(c\tau + d)^{-k} f(\gamma \tau) = f(\tau) $ for all $\gamma = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \Gamma$,
+\item $f$ satisfies a certain growth condition at the cusps.
+\end{itemize}
+\end{definition}
+\end{frame}
+
 \begin{frame}{Modular curves}
 Let $\Gamma \leq \SL_2(\ZZ)$ be a congruence subgroup. The (compactified) quotient space $X(\Gamma) := \Gamma \backslash (\HH \cup \PP^1(\QQ))$ is called the \textit{modular curve with level $\Gamma$}.
 
@@ -17,6 +43,9 @@ Let $\Gamma \leq \SL_2(\ZZ)$ be a congruence subgroup. The (compactified) quotie
 \item Moduli spaces of elliptic curves with torsion
 \end{itemize}
 
+\begin{theorem}
+There is an isomorphism of $\mathbb{C}$-vector spaces between the space of holomorphic $1$-forms on modular curves and weight $2$ cusp forms.
+\end{theorem}
 \end{frame}
 
 \begin{frame}{Hecke operators}
@@ -62,7 +91,7 @@ Suppose $\Gamma_3 / \Gamma_2 = \bigcup_j \Gamma_3 \gamma_{2,j}$ and $\beta_j = \
 
 \begin{frame}{Hecke operators on points}
 
-Consider fiber product $X(\Gamma, p) := X_0(p) \times_{X(1)} X(\Gamma)$. There are two degeneracy maps $\alpha,\beta: X_H(p) \rightarrow X_H$ defining the Hecke operator at $p$ where one forgets the cyclic group of order $p$ and the other quotients out by the cyclic group of order $p$.
+Consider fiber product $X(\Gamma, p) := X_0(p) \times_{X(1)} X(\Gamma)$. There are two degeneracy maps $\alpha,\beta: X(\Gamma,p) \rightarrow X(\Gamma)$ defining the Hecke operator at $p$ where one forgets the cyclic group of order $p$ and the other quotients out by the cyclic group of order $p$.
 
 \[
 X(\Gamma) \xleftarrow{\alpha} X(\Gamma,p) \xrightarrow{\beta} X(\Gamma)

@@ -27,6 +27,12 @@ Sarah Arpin, Tyler~Raven Billingsley, Daniel~Rayor Hast, Jun~Bo Lau, Ray
 \newblock \url{https://github.com/HastD/BIKE-error-floor}.
 \newblock Accessed: 2022-05-23.
 
+\bibitem[Abr96]{gonality}
+Dan Abramovich.
+\newblock {A linear lower bound on the gonality of modular curves}.
+\newblock {\em International Mathematics Research Notices},
+  1996(20):1005--1011, 01 1996.
+
 \bibitem[Ass20]{Assaf2020}
 Eran Assaf.
 \newblock Computing classical modular forms for arbitrary congruence subgroups.
@@ -102,6 +108,12 @@ Fran{\c{c}}ois Brunault and Michael Neururer.
 \newblock Fourier expansions at cusps.
 \newblock {\em The Ramanujan Journal}, 53(2):423--437, Nov 2020.
 
+\bibitem[Bom90]{bombieri}
+Enrico Bombieri.
+\newblock The mordell conjecture revisited.
+\newblock {\em Annali della Scuola Normale Superiore di Pisa - Classe di
+  Scienze}, Ser. 4, 17(4):615--640, 1990.
+
 \bibitem[Bos]{SCC}
 {B}oston {U}niversity {S}hared {C}omputing {C}luster.
 \newblock
@@ -133,6 +145,13 @@ Robert Coleman and Ehud de~Shalit.
 \newblock {$p$}-adic regulators on curves and special values of {$p$}-adic
   {$L$}-functions.
 \newblock {\em Invent. Math.}, 93(2):239--266, 1988.
+
+\bibitem[Cha41]{chabauty}
+Claude Chabauty.
+\newblock Sur les points rationnels des courbes alg\'{e}briques de genre
+  supérieur \'{a} l'unit\'{e}.
+\newblock {\em Comptes rendus hebdomadaires des s\'{e}ances de l'Acad\'{e}mie
+  des sciences.}, 212:882--885, 1941.
 
 \bibitem[Col85a]{Coleman3}
 Robert~F. Coleman.
@@ -177,6 +196,17 @@ Fred Diamond and Jerry Shurman.
 \newblock {\em A first course in modular forms}, volume 228 of {\em Graduate
   Texts in Mathematics}.
 \newblock Springer-Verlag, New York, 2005.
+
+\bibitem[Fal86]{faltings}
+Gerd Faltings.
+\newblock {\em Finiteness Theorems for Abelian Varieties over Number Fields},
+  pages 9--26.
+\newblock Springer New York, New York, NY, 1986.
+
+\bibitem[Fal91]{faltingsnew}
+Gerd Faltings.
+\newblock Diophantine approximation on abelian varieties.
+\newblock {\em Annals of Mathematics}, 133(3):549--576, 1991.
 
 \bibitem[For81]{forster}
 Otto Forster.
@@ -230,10 +260,27 @@ Kiran~S. {Kedlaya}.
   Cohomology}.
 \newblock {\em arXiv Mathematics e-prints}, page math/0105031, May 2001.
 
+\bibitem[Kim05]{kim05}
+Minhyong Kim.
+\newblock The motivic fundamental group of $\mathbf{P}^1 \backslash \{
+  0,1,\infty \}$ and the theorem of siegel.
+\newblock {\em Inventiones Mathematicae}, 161:629--656, 09 2005.
+
+\bibitem[Kim09]{kim09}
+Minhyong Kim.
+\newblock The unipotent albanese map and selmer varieties for curves.
+\newblock {\em Publications of the Research Institute for Mathematical
+  Sciences}, 45, 11 2009.
+
 \bibitem[{LMF}22]{lmfdb}
 The {LMFDB Collaboration}.
 \newblock The {L}-functions and modular forms database.
 \newblock \url{http://www.lmfdb.org}, 2022.
+
+\bibitem[LV20]{lawrencevenkatesh}
+Brian Lawrence and Akshay Venkatesh.
+\newblock Diophantine problems and p-adic period mappings.
+\newblock {\em Inventiones mathematicae}, 221, 09 2020.
 
 \bibitem[Maz77]{Mazur77}
 B.~Mazur.
@@ -398,6 +445,11 @@ Valentin Vasseur.
 \newblock {QC-MDPC} codes {DFR} and the {IND-CCA} security of {BIKE}.
 \newblock Cryptology ePrint Archive, Paper 2021/1458, 2021.
 \newblock \url{https://eprint.iacr.org/2021/1458}.
+
+\bibitem[Voj91]{vojta}
+Paul Vojta.
+\newblock Siegel's theorem in the compact case.
+\newblock {\em Annals of Mathematics}, 133(3):509--548, 1991.
 
 \bibitem[Wet97]{wetherell}
 Joseph~L. Wetherell.

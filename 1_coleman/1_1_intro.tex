@@ -4,16 +4,16 @@ All curves in this paper are smooth, projective and geometrically irreducible wi
 
 \section{Introduction}
 
-Some of the oldest questions in number theory can be reformulated in modern terms: given a finite list of polynomials, what are the integer or rational solutions to this set of equations? In fact, these solutions can be viewed as integer or rational solutions of geometric objects -- curves, surfaces or higher dimensional objects.
+Some of the oldest questions in number theory can be reformulated in modern terms: given a finite list of polynomials, what are the integer or rational solutions to this set of equations? In fact, these solutions can be viewed as integral or rational solutions of geometric objects -- curves, surfaces or higher dimensional objects.
 
 In this project, we focus on the case of curves. A remarkable result, formulated by Mordell in 1922 and proved by Faltings in 1983, states that for curves of higher genus, there are only finitely many rational points on them. 
 
 \begin{theorem}{(Mordell's conjecture/ Faltings's theorem)} Let $X/\QQ$ be a curve of genus $g \geq 2$, then the set of rational points $X(\QQ)$ is finite.
 \end{theorem}
 
-However, Faltings's proofs are not effective, i.e., there is no way of explicitly determining the complete set of rational points on the curve. Before Faltings, Chabauty developed a method in this direction with the condition that if the rank of the Jacobian of the curve is strictly less than the genus, then one could compute this set of points. In \cite{Coleman2,Coleman3} Coleman defined $p$-adic line integrals and re-interpreted Chabauty's method to explicitly compute the set of rational points. These Coleman integrals provide an effective method to problems in arithmetic geometry, including but not limited to, torsion points on Jacobians of curves ( Manin-Mumford conjecture), $p$-adic heights on curves, $p$-adic polylogarithms, Mordell conjecture (rational points), etc. In \cite{BD1,BD2}, Balakrishnan and Dogra developed quadratic Chabauty as a computational tool to study the set of rational points as long as the curve satisfies a certain quadratic Chabauty bound, involving the rank of the Jacobian, genus and N\'{e}ron-Severi rank of the Jacobian.
+However, Faltings's \cite{faltings} and subsequent proofs by Vojta \cite{vojta}, Bombieri \cite{bombieri}, Faltings \cite{faltingsnew}, Lawrence-Venkatesh \cite{lawrencevenkatesh}, etc., are not effective, i.e., there is no explicit method to determine the complete set of rational points on the curve. Before Faltings, Chabauty proved Mordell's Conjecture with the condition that if the rank of the Jacobian of the curve is strictly less than the genus, then the set of rational points is finite \cite{chabauty}. In \cite{Coleman2,Coleman3} Coleman defined $p$-adic line integrals and re-interpreted Chabauty's method. The paper produced an explicit bound on the cardinality of the set of rational points and constructed a set of $p$-adic points which contains the rational points. These Coleman integrals provide an effective method to problems in arithmetic geometry, including but not limited to, torsion points on Jacobians of curves ( Manin-Mumford conjecture), $p$-adic heights on curves, $p$-adic polylogarithms, Mordell conjecture (rational points), etc. In \cite{BD1,BD2}, as part of Kim's nonabelian Chabauty program \cite{kim05,kim09}, Balakrishnan and Dogra developed quadratic Chabauty as a computational tool to study the set of rational points as long as the curve satisfies a certain quadratic Chabauty bound, involving the rank of the Jacobian, genus and N\'{e}ron-Severi rank of the Jacobian.
 
-There are several approaches to numerically compute these Coleman integrals. Wetherell \cite{wetherell} combined the certan properties of Coleman integrals and the arithmetic of the Jacobian to compute $\int_D \omega$, where $D$ is a divisor in the Picard group and $\omega$ is a holomorphic differential on the curve. The next approach relies on computing the Frobenius action in $p$-adic cohomology following Dwork's principle of analytic continuation along the Frobenius \cite{BBK10,Tui16,Tui17,BT_coleman}. However, both of these approaches have their shortcomings -- Wetherell's method requires an explicit divisor in order to reduce the computation to a power series integration (``tiny integrals") and the second method requires an explicit equation of the curves as input.
+There are several approaches to numerically compute these Coleman integrals. Wetherell \cite{wetherell} combined the certan properties of Coleman integrals and the arithmetic of the Jacobian to compute $\int_D \omega$, where $D$ is a divisor in the Picard group and $\omega$ is a holomorphic differential on the curve. The next approach relies on computing the Frobenius action in $p$-adic cohomology following Dwork's principle of analytic continuation along the Frobenius \cite{BBK10,Tui16,Tui17,BT_coleman}. However, both of these approaches have their shortcomings -- Wetherell's method requires an explicit divisor in order to reduce the computation to a power series integration (``tiny integrals") and the second method requires an explicit equation of the curves as the input.
 
 We turn our attention to computing Coleman integrals on modular curves. The set of rational points on modular curves has special arithmetic meaning. For instance, the set of rational points $X_0(N)(\QQ)$ correspond to the torsion points of elliptic curves (Mazur's theorem). Another motivation to study modular curves comes from Serre's Uniformity Conjecture. Let $E$ be an elliptic curve defined over $K$. The group of $p$-torsion points $E[p](\bar{K})$ is isomorphic to $(\ZZ/p\ZZ)^2$ and is acted upon by the absolute Galois group $\Gal(\bar{K}/K)$, giving rise to a representation $\rho_ {p,E}: \Gal(\bar{K}/K) \rightarrow \GL_2(\FF_p)$. In \cite{serre72}, Serre proved the following:
 
@@ -21,7 +21,7 @@ We turn our attention to computing Coleman integrals on modular curves. The set 
     Suppose that $E$ does not have complex multiplication. Then there exists a number $N(E)$ such that $\rho_{p,E}$ is surjective for all $p > N(E)$.
 \end{theorem}
 
-In the same paper, he posed the following question:
+In the same paper, he posed the following question on removing the condition of $N$ depending on the elliptic curve $E$:
 
 \begin{conj}{(Serre's Uniformity Conjecture)}
 Given a number field $K$, then there exist a constant $N_K>0$ such that for any elliptic curve $E$ defined over $K$ without complex multiplication, the corresponding Galois representation $\rho_{p,E}$ is surjective for all primes $p > N_K$.
@@ -34,12 +34,10 @@ Since modular curves parametrise elliptic curves with torsion data, this can be 
 \end{conj}
 
 
-
-
-If $\rho_{p,E}$ is not surjective, the image lies inside some maximal proper subgroup of $\GL_2(\FF_p)$. Therefore, one could prove the conjecture by showing that for $p$ large enough, the image of $\rho_{p,E}$ does not lie in any maximal subgroup. The classification of maximal subgroups of $\GL_2(\FF_p)$ is known, originally due to \cite{dickson}:
+If $\rho_{p,E}$ is not surjective, the image lies inside some maximal proper subgroup of $\GL_2(\FF_p)$. Therefore, one could prove the conjecture by showing that for $p$ large enough, the image of $\rho_{p,E}$ does not lie in any maximal subgroup. The classification of maximal subgroups of $\GL_2(\FF_p)$ is classical, originally due to Dickson \cite{dickson}:
 
 \begin{theorem}
-    Let $H \leq \GL_2(\ZZ/p\ZZ)$ not containing $\SL_2(\ZZ/p\ZZ)$. Up to conjugacy, $H$ is one of the following:
+    Let $H \leq \GL_2(\FF_p)$ not containing $\SL_2(\FF_p)$. Up to conjugacy, $H$ is one of the following:
     \begin{itemize}
         \item (Borel) $H \subseteq B_0(p) = \{ \begin{psmallmatrix} \ast \ \ast \\ 0 \ \ast \end{psmallmatrix} \}$ 
         \item (Normaliser of split Cartan) $H \subseteq N_s^+(p) = \{ \begin{psmallmatrix} \alpha \ 0 \\ 0 \ \beta \end{psmallmatrix}, \begin{psmallmatrix} 0 \ \alpha \\ \beta \ 0 \end{psmallmatrix}: \alpha,\beta \in \FF_p^\times \}$ 

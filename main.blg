@@ -24,47 +24,48 @@ A level-1 auxiliary file: 2_bike/2_8_conclusion.aux
 The style file: alpha.bst
 Database file #1: template.bib
 Warning--empty year in dickson
+Warning--can't use both author and editor fields in faltings
 Warning--empty booktitle in GJS
 Warning--empty school in wetherell
-You've used 69 entries,
+You've used 78 entries,
             2543 wiz_defined-function locations,
-            1029 strings with 15910 characters,
-and the built_in function-call counts, 29069 in all, are:
-= -- 2928
-> -- 1292
-< -- 60
-+ -- 440
-- -- 422
-* -- 2044
-:= -- 4624
-add.period$ -- 227
-call.type$ -- 69
-change.case$ -- 424
-chr.to.int$ -- 61
-cite$ -- 72
-duplicate$ -- 1205
-empty$ -- 2143
-format.name$ -- 521
-if$ -- 6077
+            1085 strings with 17229 characters,
+and the built_in function-call counts, 32187 in all, are:
+= -- 3248
+> -- 1375
+< -- 69
++ -- 465
+- -- 444
+* -- 2266
+:= -- 5123
+add.period$ -- 254
+call.type$ -- 78
+change.case$ -- 469
+chr.to.int$ -- 70
+cite$ -- 82
+duplicate$ -- 1344
+empty$ -- 2399
+format.name$ -- 560
+if$ -- 6716
 int.to.chr$ -- 9
 int.to.str$ -- 0
-missing$ -- 62
-newline$ -- 356
-num.names$ -- 226
-pop$ -- 444
+missing$ -- 72
+newline$ -- 401
+num.names$ -- 253
+pop$ -- 477
 preamble$ -- 1
-purify$ -- 502
+purify$ -- 557
 quote$ -- 0
-skip$ -- 1020
+skip$ -- 1127
 stack$ -- 0
-substring$ -- 1677
-swap$ -- 273
-text.length$ -- 60
-text.prefix$ -- 37
+substring$ -- 1906
+swap$ -- 288
+text.length$ -- 69
+text.prefix$ -- 45
 top$ -- 0
-type$ -- 532
-warning$ -- 3
-while$ -- 271
-width$ -- 72
-write$ -- 915
-(There were 3 warnings)
+type$ -- 600
+warning$ -- 4
+while$ -- 302
+width$ -- 81
+write$ -- 1033
+(There were 4 warnings)

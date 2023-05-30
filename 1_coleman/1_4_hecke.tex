@@ -48,9 +48,18 @@ The theory of Hecke operators can be made explicit for certain congruence subgro
 \]
 \end{example}
 
-%Since we can view $\tau \in \HH$ as lattices $\Lambda_\tau$, modular forms can be viewed as functions on rank $1$ lattices. In particular, the Hecke operators above can be reinterpreted as 
+We summarise a well-known result from the theory of Hecke operators to show that there is a basis of cusp forms which are eigenvectors of the Hecke operators \cite{Shurman}:
 
-%\[T_p f (\Lambda) = p^{k-1} \sum_{\Lambda' \subseteq \Lambda, [\Lambda:\Lambda'] = p} f(\Lambda')\]
+\begin{theorem}
+Let $\Gamma$ be a congruence subgroup of level $N$ and $n$ an integer coprime to $N$. Then,
+
+\begin{itemize}
+\item $\mathcal{M}_k(\Gamma),\mathcal{S}_k(\Gamma)$ are inner product spaces with respect to an inner product called the \textit{Petersson inner product}.
+\item The Hecke operator $T_n$ is a normal operator with respect to this inner product. There is another family of Hecke operators called the diamond operators which is also a normal operator.
+\end{itemize}
+
+Therefore, we have a commuting family of operators on a finite dimensional inner product space and the spectral theorem implies that there is an orthogonal basis of simultaneous eigenvectors formed by the cusp forms. In this case, we say that the cusp forms are \textit{Hecke eigenforms} or simply \textit{eigenforms}.
+\end{theorem}
 
 There is also an algebraic/geometric interpretation of the double coset operator as a morphism of divisor groups. For $\Gamma_1, \Gamma_2$ congruence subgroups, $\alpha \in GL_2^+(\QQ) $, $\Gamma_3 := \alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2$ and $\Gamma_3' := \alpha \Gamma_3 \alpha^{-1}$. Since points on the modular curve $X(\Gamma)$ have the form $\Gamma \tau$, we have a diagram at the level of groups which induces a diagram on modular curves:
 
