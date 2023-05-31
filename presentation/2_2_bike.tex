@@ -4,8 +4,8 @@
 
 \begin{itemize}
     \item A \textbf{binary linear code} $C = C(n,k)$ is a $k$-dimensional subspace of $\FF_2^n$. Elements are called \textbf{codewords}.
-    \item A \textbf{generator matrix} $G$ of $C$, is a $k \times n$ matrix such that the rows are a basis of $C$. The nullspace of $G$, represented as a $(n-k)  \times n$ matrix $H$ ,is called \textbf{parity check matrix}. Note that $v \in C \iff Hv^T=0$.
-    \item For any $x \in \FF_2^n$, we call $Hx^T =: s$ the \textbf{syndrome} of $x$.
+\pause    \item A \textbf{generator matrix} $G$ of $C$, is a $k \times n$ matrix such that the rows are a basis of $C$. The nullspace of $G$, represented as a $(n-k)  \times n$ matrix $H$ ,is called \textbf{parity check matrix}. Note that $v \in C \iff Hv^T=0$.
+\pause    \item For any $x \in \FF_2^n$, we call $Hx^T =: s$ the \textbf{syndrome} of $x$.
     \end{itemize}
 
 \end{frame}
@@ -14,7 +14,7 @@
 
 \begin{itemize}
     \item A MDPC (\textbf{M}oderate \textbf{D}ensity \textbf{P}arity \textbf{C}heck) code is a binary linear code $C(n,k)$ that has a parity check matrix with row weight $w \approx \sqrt{n}$.
-    \item A \textbf{circulant} matrix is a matrix such that each row is a cyclic shift of its previous row. For example:
+\pause    \item A \textbf{circulant} matrix is a matrix such that each row is a cyclic shift of its previous row. For example:
     \[
     \begin{bmatrix}
     1 & 0 & 0 & 1 \\
@@ -23,7 +23,7 @@
     0 & 0 & 1 & 1
     \end{bmatrix}
     \]
-    \item A \textbf{quasi-cyclic} (or \textbf{quasi-circulant}) is a block sum of circulant matrices.
+\pause    \item A \textbf{quasi-cyclic} (or \textbf{quasi-circulant}) is a block sum of circulant matrices.
 \end{itemize}
     
 \end{frame}
@@ -61,7 +61,7 @@ H = \begin{bmatrix}
     Given a parity check matrix $H$ and syndrome $s = He^T$, find $e$.
 \end{block}
 
-\begin{itemize}
+\pause \begin{itemize}
     \item Syndrome decoding for a general linear code is NP-hard.
     \item We decode syndromes using a bit-flipping decoder; only depends on $H$.
     \begin{itemize}

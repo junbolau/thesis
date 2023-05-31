@@ -119,31 +119,6 @@ Richardson considered \textbf{$(u,v)$ near-codewords}: error vectors $|e| = u$ s
 \end{frame}
 
 
-\begin{frame}{The sets $\mathcal{C},\mathcal{N}$ and $ 2\mathcal{N}$ - example.}
-    
-    \[
-G = \begin{bmatrix}
-0 & 1 & 0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 & 1 & 0 \\
-1 & 0 & 0 & 0 & 0 & 1
-\end{bmatrix}, \ \ 
-H = \begin{bmatrix}
-1 & 0 & 0 & 0 & 0 & 1 \\
-0 & 1 & 0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 0 & 1 & 0
-\end{bmatrix}
-\]
-
-\begin{itemize}
-    \item $\begin{bmatrix} 0 & 1 & 0 & 1 & 0 & 0 \end{bmatrix}^T \in \mathcal{C}$.
-    \item $\begin{bmatrix} 1 & 0 & 0 & 0 & 0 & 0 \end{bmatrix}^T \in \mathcal{N}$.
-    \item $\begin{bmatrix} 0 & 1 & 0 & 0 & 0 & 1 \end{bmatrix}^T \in 2\mathcal{N}$.
-    \item $\begin{bmatrix} 1 & 0 & 0 & 1 & 0 & 0 \end{bmatrix}^T \in \mathcal{A}_{2,1}(\mathcal{C})$
-\end{itemize}
-
-
-\end{frame}
-
 
 \begin{frame}{DFR for special sets}
     For $r = 523,587,659$, we computed DFR on $\mathcal{A}_{18,\ell}(\mathcal{S})$ for various $\delta$.
@@ -205,24 +180,10 @@ H = \begin{bmatrix}
     \end{figure}
 \end{frame}
 
-\begin{frame}{Syndrome weights and distance from $\mathcal{A}_{t,\ell}(\mathcal{S})$.}
-
-For decoding failure vectors, we have:
-
-\begin{itemize}
-    \item $\mathcal{C}:$ mean $\ell \approx 3.31$.
-    \item $\mathcal{N}:$ mean $\ell \approx 3.42$.
-    \item $2\mathcal{N}:$ mean $\ell \approx 5.77$.
-\end{itemize}
-    \begin{figure}
-        \centering
-        \includegraphics[scale=0.5]{Images/synweights_587.png}
-    \end{figure}
-\end{frame}
-
 \begin{frame}{Ongoing work}
     \begin{itemize}
-        \item Classify error vectors contributing to decoding failures: are there new categories, in addition to $\mathcal{C},\mathcal{N},2\mathcal{N}$ and $\mathcal{A}_{t,\ell}(\mathcal{S})$?
         \item Apply graph theoretic techniques to study Tanner graphs of QC-MDPC codes.
+\item Decoder behaviour (e.g., trapping sets, absorbing sets, etc.)
+\item Syndrome weight and error floor phenomenon
     \end{itemize}
 \end{frame}
