@@ -5,9 +5,6 @@ A level-1 auxiliary file: frontmatter.aux
 A level-1 auxiliary file: 1_coleman/1_1_intro.aux
 A level-1 auxiliary file: 1_coleman/1_2_mf.aux
 A level-1 auxiliary file: 1_coleman/1_6_algorithm.aux
-A level-1 auxiliary file: 1_coleman/1_7_basis.aux
-A level-1 auxiliary file: 1_coleman/1_8_heckedouble.aux
-A level-1 auxiliary file: 1_coleman/1_9_tinyintegrals.aux
 A level-1 auxiliary file: 1_coleman/1_10_examples.aux
 A level-1 auxiliary file: 1_coleman/1_11_X0.aux
 A level-1 auxiliary file: 1_coleman/1_12_X0plus.aux
@@ -27,45 +24,45 @@ Warning--empty year in dickson
 Warning--can't use both author and editor fields in faltings
 Warning--empty booktitle in GJS
 Warning--empty school in wetherell
-You've used 78 entries,
+You've used 80 entries,
             2543 wiz_defined-function locations,
-            1085 strings with 17229 characters,
-and the built_in function-call counts, 32187 in all, are:
-= -- 3248
-> -- 1375
+            1095 strings with 17502 characters,
+and the built_in function-call counts, 33092 in all, are:
+= -- 3340
+> -- 1425
 < -- 69
-+ -- 465
-- -- 444
-* -- 2266
-:= -- 5123
-add.period$ -- 254
-call.type$ -- 78
-change.case$ -- 469
-chr.to.int$ -- 70
-cite$ -- 82
-duplicate$ -- 1344
-empty$ -- 2399
-format.name$ -- 560
-if$ -- 6716
++ -- 483
+- -- 462
+* -- 2338
+:= -- 5277
+add.period$ -- 261
+call.type$ -- 80
+change.case$ -- 483
+chr.to.int$ -- 72
+cite$ -- 84
+duplicate$ -- 1372
+empty$ -- 2459
+format.name$ -- 580
+if$ -- 6898
 int.to.chr$ -- 9
 int.to.str$ -- 0
-missing$ -- 72
-newline$ -- 401
-num.names$ -- 253
-pop$ -- 477
+missing$ -- 74
+newline$ -- 412
+num.names$ -- 259
+pop$ -- 484
 preamble$ -- 1
-purify$ -- 557
+purify$ -- 573
 quote$ -- 0
-skip$ -- 1127
+skip$ -- 1151
 stack$ -- 0
-substring$ -- 1906
-swap$ -- 288
+substring$ -- 1968
+swap$ -- 290
 text.length$ -- 69
 text.prefix$ -- 45
 top$ -- 0
-type$ -- 600
+type$ -- 616
 warning$ -- 4
-while$ -- 302
-width$ -- 81
-write$ -- 1033
+while$ -- 310
+width$ -- 83
+write$ -- 1061
 (There were 4 warnings)

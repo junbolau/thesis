@@ -7,15 +7,15 @@ In this section, we introduce an algorithm that computes single Coleman integral
     \item $\det: H \rightarrow \ZZ/N\ZZ$ is surjective.
 \end{itemize}
 
-Furthermore, our method extends to the Atkin-Lehner quotients of modular curves with a slight modification. Another innovation is that the algorithm does not make use of affine models of the modular curves, which are often required as inputs in previously known algorithms. 
+Furthermore, our method extends to the Atkin-Lehner quotients of modular curves with a slight modification. Another innovation is that the algorithm does not require affine models of the modular curves, which are often required as inputs in previously known algorithms.
 
-The algorithm to compute $\int_Q^R \omega$ for any $P,Q \in X$, $\omega \in H^0(X, \Omega^1)$ has several major steps:
+The algorithm to compute $\int_Q^R \omega$ for any $P,Q \in X$, $\omega \in H^0(X, \Omega^1)$ has the following major steps:
 
 \begin{enumerate}
     \item (Reduction) Write $\int_Q^R \omega$ into a sum of tiny integrals.
     \item (Basis and uniformiser) Find a basis of holomorphic $1$-forms and a suitable uniformiser.
     \item (Hecke operator) Compute the action of Hecke operator on cusp forms and points.
-    \item (Algebraic number approximation) Solve a system of linear equations and recover algebraic solutions from complex ones.
+    \item (Power series expansion) Write the $1$-forms as a power series in the uniformiser. This involves algebraic approximations after solving a system of equations over $\CC$.
     \item (Evaluation) Formally integrate and evaluate at the end points.
 \end{enumerate}
 
@@ -24,18 +24,18 @@ The algorithm to compute $\int_Q^R \omega$ for any $P,Q \in X$, $\omega \in H^0(
 
 Let $X/\QQ$ be a modular curve associated to a congruence subgroup $\Gamma$, two points $Q,R \in X(\bar{\QQ})$, $\{\omega_1, \ldots, \omega_g\}$ a $\QQ$-basis of $H^0(X,\Omega^1)$ where $g$ is the genus of the curve and $p$ a prime of good reduction on $X$.
 
-The Hecke operator at $p$, $T_p$ acts on the weight $2$ cusp forms, which corresponds to the holomorphic $1$-forms:
+The Hecke operator at $p$, $T_p$, acts on the weight $2$ cusp forms, which corresponds to the holomorphic $1$-forms:
 
 \[T_p^*\begin{pmatrix} \omega_1 \\\vdots \\ \omega_g \end{pmatrix}  = A\begin{pmatrix} \omega_1 \\\vdots \\ \omega_g \end{pmatrix}.\]
 
-where $A$ is the Hecke matrix acting on the basis of cusp forms. Integrating between the points $Q$ and $R$ gives:
+where $A$ is the Hecke matrix acting on the basis of cusp forms. Since the Hecke operators are linear, integrating between the points $Q$ and $R$ gives:
 
 \[\begin{pmatrix} \int^Q_RT_p^*\omega_1 \\\vdots \\ \int^Q_RT_p^*\omega_g \end{pmatrix}  = A\begin{pmatrix} \int^Q_R\omega_1 \\\vdots \\ \int^Q_R\omega_g \end{pmatrix}.\]
 
 
 For any $\omega \in H^0(X,\Omega^1)$, using the definition of Hecke operator as a correspondence and the functoriality of Coleman integrals, we obtain the following equality:
 
-\[\int^Q_R T_p^*(\omega) = \int^{T_p(Q)}_{T_p(R)} \omega = \sum_{i=0}^{p} \int^{Q_i}_{R_i} \omega,\] where $T_p(Q) = \sum_{i=0}^p Q_i$ and  $T_p(R) = \sum_{i=0}^p R_i$.
+\[\int^Q_R T_p^*(\omega) = \int^{T_p(Q)}_{T_p(R)} \omega = \sum_{i=0}^{p} \int^{Q_i}_{R_i} \omega,\] where $T_p(Q) = \sum_{i=0}^p Q_i$ and  $T_p(R) = \sum_{i=0}^p R_i$. Note that there are $p+1$ subgroups of order $p$ in $E[p]$, giving rise to $p+1$ isogenies of degree $p$. These isogenies need not be defined over $\QQ$.
 
 By considering $((p+1)\int_{Q}^R \omega - \int_Q^R T_p^* \omega)$, we have the following fundamental equation:
 
@@ -46,3 +46,127 @@ By considering $((p+1)\int_{Q}^R \omega - \int_Q^R T_p^* \omega)$, we have the f
  The $Q_i$'s and $R_i$'s are by definition $p$-isogenous to $Q$ and $R$, therefore, the Eichler-Shimura relation (\cite{Shurman} Theorem 8.7.2) implies that they are in the same residue discs respectively. So the vector on the right hand side consists of sums of tiny integrals. On the left hand side, the matrix $((p+1)I - A)$ is invertible by the Ramanujan bound -- the Hecke matrix $A$ has eigenvalues $\{a_p\}$ which satisfy $|a_p| \leq 2 \sqrt{p}$.
 
 From the above discussion, since any $\omega$ is a linear combination of the $\omega_j$'s, we can simultaneously compute the Coleman integrals $\int_Q^R \omega$ once we have evaluated the tiny integrals $\sum_{i=0}^p \int_{Q_i}^Q \omega$ and $\sum_{i=0}^p \int_{R_i}^R \omega$.
+
+\section{Computing a basis of cusp forms}\label{basis:zyinwa}
+
+The spaces of cusp forms for the congruence subgroups $\Gamma(N), \Gamma_1(N)$ and $\Gamma_0(N)$ are available in software packages \cite{sagemath} and \cite{magma}. For $H \leq GL_2(\ZZ/N\ZZ)$ satisfying the conditions above, $\mathcal{S}_2(\Gamma(N))^H$, the space of weight $2$ cusp forms invariant under $H$, is isomorphic to $\mathcal{S}_2(\Gamma_H)$ and therefore isomorphic to $H^0(X_H,\Omega^1)$.
+
+The problem of computing a basis of cusp form reduces to computing the action of $H \leq \GL_2(\ZZ/N\ZZ)$ on $\mathcal{S}_2(\Gamma(N))$.We follow \cite{Zywina2020ComputingAO,Brunault2020} to compute the (well-defined) action. Note that $\SL_2(\ZZ)$ is freely generated by the two matrices $S = \begin{psmallmatrix} 0 & -1 \\ 1 & 0 \end{psmallmatrix}$ and $T = \begin{psmallmatrix} 1 & 1 \\ 0 & 1 \end{psmallmatrix}$. Since cusp forms of $\mathcal{S}_2(\Gamma(N))$ have $q_N$-expansions, where $q_N = e^{2\pi i /N}$, the slash-$k$ operator by $T$ introduces a factor $\zeta_N^n$ for the $n$-th Fourier coefficient. On the other hand, the action by $S$ is given by a linear combination of the basis of cusp forms on $\Gamma(N)$ where the coefficients depend on a certain Atkin-Lehner operator $W_N$. Since $\GL_2(\ZZ/N\ZZ)/\SL_2(\ZZ/N\ZZ) \xrightarrow{\cong} (\ZZ/N\ZZ)^\times$, we have:
+
+\begin{itemize}
+    \item There is an action of $\SL_2(\ZZ/N\ZZ)$ induced from $\SL_2(\ZZ)$ on the cusp forms,
+    \item $\begin{psmallmatrix} 1 & 0 \\ 0 & d \end{psmallmatrix}$ acts on the coefficients of the $q_N$-expansion by $\zeta_N \mapsto \zeta_N^d$, where $\zeta_N$ is a $N$-th root of unity. 
+\end{itemize}
+
+For congruence subgroups $\Gamma_0^+(N) := \Gamma_0(N)/w_N$ with an Atkin-Lehner involution, we modify Zywina's Magma implementation to compute our examples.
+
+\begin{remark}
+In general, the map $H^0(X_H, \Omega_{X_H}^{\otimes k}) \rightarrow \mathcal{S}_{2k}(\Gamma(N),\QQ(\zeta_N))^H$ is injective \cite{Zywina2020ComputingAO}. It is an isomorphism when $k = 1$, which is what we use here.
+\end{remark}
+
+\section{Hecke operators as double coset operators}
+
+Hecke operators act on both cusp forms and the divisor group of the modular curve. To compute them as a double coset operator, we need to compute the coset representatives $\Gamma_H \backslash \Gamma_H \alpha \Gamma_H$ for the congruence subgroup $\Gamma_H$. A few key lemmas will give us a procedure to compute the coset representatives.
+
+\begin{lemma}{(\cite{Shurman} Lemmata 5.1.1, 5.1.2)}\label{lemma:coset_rep}
+Let $\Gamma, \Gamma_1, \Gamma_2$ be congruence subgroups and  $\alpha \in GL_2^+(\QQ)$. Then,
+
+\begin{enumerate}
+    \item $\alpha^{-1} \Gamma \alpha \cap SL_2(\ZZ) \leq SL_2(\ZZ)$ is a congruence subgroup.
+    \item There is a bijection:
+
+    \begin{align*}
+        (\alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2 )\backslash \Gamma_2 &\leftrightarrow \Gamma_1 \backslash \Gamma_1 \alpha \Gamma_2 \\
+         (\alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2 )\gamma_2 &\mapsto \Gamma_1 \alpha \gamma_2
+    \end{align*}
+
+    More concretely, $\{\gamma_{2,i}\}$ is a set of coset representatives for $(\alpha^{-1} \Gamma_1 \alpha \cap \Gamma_2 )\backslash \Gamma_2$ if and only if $\{\alpha \gamma_{2,i}\}$ is a set of coset representatives of $\Gamma_1 \backslash \Gamma_1 \alpha \Gamma_2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{lemma}{(\cite{shimura} Lemma 3.29(5))} \label{lemma:shimura_coset}
+Let $\alpha \in M_2(\ZZ)$ be such that $\det(\alpha) = p$ and $\alpha \pmod{N} \in H$. If $\Gamma_H \alpha \Gamma_H = \bigcup_i \Gamma_H \alpha_i$ is a disjoint union, then $SL_2(\ZZ) \alpha SL_2(\ZZ) = \bigcup_i SL_2(\ZZ)\alpha_i$ is a disjoint union.
+\end{lemma}
+
+Using the double coset operator definition of Hecke operators as in Equation \ref{eq:hecke_formula}, the Hecke operators can be computed as follows:
+
+\begin{enumerate}
+    \item Find $\alpha \in M_2(\ZZ)$ satisfying $\det(\alpha) = p$, $\alpha \pmod{N} \in H$,
+    \item Find the coset representatives $\{\alpha_i\}$ in $(\alpha^{-1} SL_2(\ZZ) \alpha \cap  SL_2(\ZZ))\backslash SL_2(\ZZ)$. Usually, $\alpha$ will be chosen such that $(\alpha^{-1} SL_2(\ZZ) \alpha \cap  SL_2(\ZZ))$ has a clear description. By Lemma \ref{lemma:coset_rep}, $SL_2(\ZZ)\backslash SL_2(\ZZ) \alpha SL_2(\ZZ)$ has coset representatives $\{\alpha \alpha_i\}$,
+    \item By Lemma \ref{lemma:shimura_coset}, for each $\alpha \alpha_i$, find $\beta_i \in SL_2(\ZZ)$ such that $\beta_i \alpha \alpha_i \in \Gamma_H$. Then $\{ \beta_i \alpha \alpha_i\}$ will be the desired coset representatives for $\Gamma_H \backslash \Gamma_H \alpha \Gamma_H$.
+\end{enumerate}
+
+On the other hand, the Hecke operators act on points on the modular curves. Since we are expressing the Hecke images in terms of the chosen uniformiser, the Hecke images, which correspond to elliptic curves that are $p$-isogeneous to our point, arise as roots of modular polynomials. A table of small modular polynomials is available in \cite{MP1,MP2}.
+
+\section{Tiny integrals via complex number approximation}
+
+We present a method to compute tiny integrals. We first write the $1$-forms or cusp forms as a power series in a chosen uniformiser. We compute the Taylor coefficients of the cusp forms and uniformiser around a point and recover the power series coefficients as algebraic approximations of the complex solutions of a system of equations. The algebraic approximations can be done via an $LLL$-type algorithm from known implementations. We find the corresponding Hecke images of the points in the same residue disc as zeros of modular polynomials since they correspond to elliptic curves that are $p$-isogeneous to our point. Finally, we formally integrate and evaluate at these endpoints.
+
+\begin{algorithm}Computing $\sum_{i=0}^{p}\int^Q_{Q_i} \omega$\label{alg:tiny_integral}
+
+\textbf{Input:}
+\begin{itemize}
+    \item $\tau_0 \in \HH$ such that $\Gamma\tau_0$ corresponds to a rational point $Q$ on $X$, and $q_0 := e^{2\pi i \tau_0/h}$ where $h$ is the width of the cusp.
+    \item A good prime $p$ which does not divide $j(Q)$ or $j(Q)-1728$. 
+    \item A cusp form $f\in \mathcal{S}_2(\Gamma)$ given by its $q$-expansion where $q = e^{2\pi i \tau/h}$. We denote the corresponding $1-$form by $\omega$.
+
+
+\end{itemize}
+
+\textbf{Output:}
+\begin{itemize}
+    \item The sum of tiny Coleman integrals $\sum^p_{i=0}\int^Q_{Q_i} \omega \in \QQ_p$, where $T_p(Q) = \sum_{i=0}^p Q_i$.
+\end{itemize}
+
+\textbf{Steps:}
+\begin{enumerate}
+%\item Find $\tau_0\in \mathcal{H}^+$ such that the $\Gamma_0(N)\tau_0$ corresponds to the point $Q$, i.e., $(E,C)$. This $\tau_0$ can be found by first computing $\widetilde{\tau}_0$ such that $\slz\widetilde{\tau}_0$ corresponds to $E$ under \textcolor{red}{add later!!} and then iterate through coset representatives $\gamma_i$ of $\Gamma_0(N)/\slz$ to find $i$ such that $\gamma_i(\widetilde{\tau_0})$ satisfies: \[j(\gamma_i(\widetilde{\tau_0})) = j(N\gamma_i(\widetilde{\tau_0})) = j(E).\] We use $q_0$ to denote $e^{2\pi i\tau_0}$.
+\item[1.] \label{algstep:tiny_1} (Writing $\omega$ as a power series in terms of an uniformiser $u$) Fix a precision $n$. Find $x_i \in \QQ$ such that
+\begin{align} \label{eq:omega_j_exp}
+    \omega = (\sum_{i=0}^n x_i(u)^n + \mathcal{O}(u^{n+1}))d(u).
+\end{align}
+
+These $x_i$'s can be found using the following steps:
+\begin{enumerate}
+    \item[a.] Write $u$ and $\omega_i$ as power series expansions of $q-q_0$ by differentiating their $q$-expansions and evaluating at $q_0$:
+    \begin{align*}
+    & u = \sum_{i=1}^{C_1} a_i(q-q_0)^i + O((q-q_0)^{C_1+1}),\\
+    & \omega = \sum_{i=0}^{C_2} b_i(q-q_0)^i + O((q-q_0)^{C_2+1})dq,\\
+    & d(u) = (\sum_{i=1}^{C_1} ia_i(q-q_0)^{i-1} + O((q-q_0)^{C_1}))dq,
+\end{align*}
+    where $C_1,C_2$ are some fixed precision determined by $n$ and the norm of $q_0$. The coefficients $a_i,\,b_i$'s are in $\CC$.
+    \item[b.] Replace $\omega,\,u$ and $d(u)$ by their power series expansions in $q-q_0$ as in equation (\ref{eq:omega_j_exp}). Comparing the coefficients of $(q-q_0)^k$ on both sides gives us the following linear system:
+    \[
+\begin{pmatrix}
+    a_1       & 0 & 0 & \dots & 0 \\
+    2a_2       & a_1^2 & 0 & \dots & 0 \\
+    3a_3       & 3a_1a_2 & a_1^3 & \dots & 0\\
+    \vdots       & \vdots & \vdots & \ddots & \vdots    \\
+    (n+1)a_{n+1}      & \sum_{i=1}^{n}a_i(n+1-i)a_{n+1-i} &* & \dots & a_1^{n+1}
+\end{pmatrix} \cdot
+\begin{pmatrix}
+    x_0      \\
+    x_1      \\
+    x_2     \\
+    \vdots   \\
+    x_n
+\end{pmatrix} = 
+\begin{pmatrix}
+    b_0   \\
+    b_1     \\
+    b_2  \\
+    
+    \vdots   \\
+    b_n
+\end{pmatrix}
+\]
+\item[c.] Solve this system of equations and get complex solutions $x_i$'s. These $x_i$'s can be recovered as elements in $\QQ$ using \texttt{algdep} from \texttt{PARI/GP}. This is likely to succeed given sufficient complex precision.
+
+\end{enumerate}
+
+
+\item[2.] \label{algstep:tiny_2} Calculate $u(Q_i)$ as algebraic numbers. In practice, we use the $j$-invariant function as an uniformiser. We calculate $j(Q_i)$ transcendentally by evaluating the $q$-expansion of the $j$-function on $\beta_i(\tau_0)$ and then obtain the algebraic approximation. On the other hand, the roots of the modular polynomial $\Phi_p(x,j(Q)) = 0$ are the $j$-invariants of elliptic curves that are $p$-isogeneous to $Q$. This gives another (algebraic) method to compute $j(Q_i)$.
+
+\item[3.] \label{algstep:tiny_3} Compute the sum of tiny integrals $\sum\limits_{i=0}^p\int_{Q}^{Q_i}\omega \approx \sum\limits_{i=0}^p \int^{u(Q_i)}_0 (\sum_{j=0}^n x_j u^j du)$ with its $p$-adic expansion.
+\end{enumerate}
+\end{algorithm}

@@ -47,8 +47,6 @@ Following the Niederreiter framework, BIKE is defined in the following manner:
 \item ( Decapsulation) Solve the syndrome decoding problem on inputs $H,s$ using the Black-Grey-Flip (BGF) decoder \cite{bgf}.
 \end{itemize}
 
-\todo{include BGF decoder here}
-
 \section{Decoding failures, weak keys and near-codewords}
 
 We are interested in the decoding failure rate (DFR) for BIKE using the BGF decoder. In particular, we want to understand the factors causing the error floor phenomenon. In this subsection, we provide definitions of decoding failures and the factors causing them.
@@ -71,7 +69,7 @@ There are also some sets of vectors that are likely to cause decoding failures t
 Given a parity check matrix $\mathbf{H}$ of a linear code, we say an error vector $e \in \FF_2^{2r}$ is a \textit{$(u,v)$-near codeword} if $|e| = u$ and $|\mathbf{H}e^\perp|=v$.
 \end{defn}
 
-When $u, v$ are small, these near codewords can be likely to cause decoding failures \cite{Richardson03}. Based on the structure of BIKE, Vasseur defines three sets with small $u,v$ as follows: Given a parity check matrix $\mathbf{H} = [\mathbf{H}_0 | \mathbf{H}_1 ]$ with first rows defined by $\mathbf{h}_0, \mathbf{h}_1$ respectively,
+When $u, v$ are small, these $(u,v)$-near codewords correspond to low weight codewords which are known to cause decoding failures in LDPC codes \cite{Richardson03}. Based on the structure of BIKE, Vasseur defines three sets with small $u,v$ as follows: Given a parity check matrix $\mathbf{H} = [\mathbf{H}_0 | \mathbf{H}_1 ]$ with first rows defined by $\mathbf{h}_0, \mathbf{h}_1$ respectively,
 
 \begin{itemize}
 \item $\mathcal{C} := row(\mathbf{G})$ where $\mathbf{G} = [ \mathbf{H}_1^\perp | \mathbf{H}_0^\perp ]$ is the generator matrix. This is the set of rows of $\mathbf{G}$ consisting of $(2d,0)$-near codewords.
@@ -85,3 +83,4 @@ Furthermore, Vasseur identified and studied the proximity of error vectors to an
 \mathcal{A}_{t, \ell}(\mathcal{S}) := \{ v \in \FF_2^{2r} : |v \star c | = \ell \text{ for some } c \in \mathcal{S} \}
 \]
 
+Dually, one could also study the distance of an error vector from an element in $\mathcal{S}$ by the quantity $\delta := |v| + t - 2\ell$.

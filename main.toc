@@ -16,31 +16,31 @@
 \contentsline {subsection}{\numberline {1.2.4}Coleman integrals}{15}{subsection.1.2.4}%
 \contentsline {chapter}{\numberline {Chapter\nobreakspace {}2}Coleman Integration on Modular Curves}{17}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Breaking the Coleman integrals into tiny integrals}{18}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Computing a basis of cusp forms}{20}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Hecke operators as double coset operators}{21}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Tiny integrals via complex number approximation}{23}{section.2.4}%
-\contentsline {chapter}{\numberline {Chapter\nobreakspace {}3}Computations and examples}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}$X_0(N)$}{27}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Example: $X_0(37)$}{27}{subsection.3.1.1}%
-\contentsline {section}{\numberline {3.2}$X_0^+(N)$}{31}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Example: $X_0^+(67)$}{33}{subsection.3.2.1}%
-\contentsline {section}{\numberline {3.3}$X_{ns}^+(p)$}{37}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Example: $X_{ns}^+(13)$}{40}{subsection.3.3.1}%
-\contentsline {section}{\numberline {3.4}Conclusion and future work}{44}{section.3.4}%
-\contentsline {part}{II\hspace {1em}Decoding Failures of BIKE}{45}{part.2}%
-\contentsline {chapter}{\numberline {Chapter\nobreakspace {}4}Preliminaries}{46}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Introduction}{46}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Background on code-based cryptography}{49}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Coding theory}{49}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Code-based cryptography}{51}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}KEM's and Niederreiter cryptosystems}{53}{subsection.4.2.3}%
-\contentsline {chapter}{\numberline {Chapter\nobreakspace {}5}BIKE}{55}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Parameters and design}{55}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Decoding failures, weak keys and near-codewords}{57}{section.5.2}%
-\contentsline {chapter}{\numberline {Chapter\nobreakspace {}6}Experiments}{59}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Methods}{59}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Experimental results}{62}{section.6.2}%
-\contentsline {section}{\numberline {6.3}DFR on $\mathcal {A}_{t,\ell }(\mathcal {S})$}{64}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Syndrome weight as an indicator}{66}{section.6.4}%
-\contentsline {section}{\numberline {6.5}Conclusion and future work}{69}{section.6.5}%
-\contentsline {backmatter}{Bibliography}{70}{chapter*.21}%
+\contentsline {section}{\numberline {2.2}Computing a basis of cusp forms}{19}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Hecke operators as double coset operators}{20}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Tiny integrals via complex number approximation}{22}{section.2.4}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}3}Computations and examples}{25}{chapter.3}%
+\contentsline {section}{\numberline {3.1}$X_0(N)$}{26}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Example: $X_0(37)$}{26}{subsection.3.1.1}%
+\contentsline {section}{\numberline {3.2}$X_0^+(N)$}{30}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Example: $X_0^+(67)$}{32}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}$X_{ns}^+(p)$}{36}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Example: $X_{ns}^+(13)$}{38}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.4}Conclusion and future work}{43}{section.3.4}%
+\contentsline {part}{II\hspace {1em}Decoding Failures of BIKE}{44}{part.2}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}4}Preliminaries}{45}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction}{45}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Background on code-based cryptography}{48}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Coding theory}{48}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Code-based cryptography}{50}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}KEM's and Niederreiter cryptosystems}{52}{subsection.4.2.3}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}5}BIKE}{54}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Parameters and design}{54}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Decoding failures, weak keys and near-codewords}{56}{section.5.2}%
+\contentsline {chapter}{\numberline {Chapter\nobreakspace {}6}Experiments}{58}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Methods}{58}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Experimental results}{61}{section.6.2}%
+\contentsline {section}{\numberline {6.3}DFR on $\mathcal {A}_{t,\ell }(\mathcal {S})$}{63}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Syndrome weight as an indicator}{65}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Conclusion and future work}{68}{section.6.5}%
+\contentsline {backmatter}{Bibliography}{69}{chapter*.21}%

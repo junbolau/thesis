@@ -98,6 +98,11 @@ Anja Becker, Antoine Joux, Alexander May, and Alexander Meurer.
   Cryptology -- EUROCRYPT 2012}, pages 520--536, Berlin, Heidelberg, 2012.
   Springer Berlin Heidelberg.
 
+\bibitem[BLS10]{MP1}
+Reinier Br{\"o}ker, Kristin~E. Lauter, and Andrew~V. Sutherland.
+\newblock Modular polynomials via isogeny volcanoes.
+\newblock {\em Math. Comput.}, 81:1201--1231, 2010.
+
 \bibitem[BMvT78]{nphard}
 E.~Berlekamp, R.~McEliece, and H.~van Tilborg.
 \newblock On the inherent intractability of certain coding problems (corresp.).
@@ -119,6 +124,13 @@ Enrico Bombieri.
 \newblock
   \url{https://www.bu.edu/tech/support/research/computing-resources/scc/}.
 \newblock Accessed: 2022-02-18.
+
+\bibitem[BOS16]{MP2}
+Jan~Hendrik Bruinier, Ken Ono, and Andrew~V. Sutherland.
+\newblock Class polynomials for nonholomorphic modular functions.
+\newblock {\em Journal of Number Theory}, 161:204--229, 2016.
+\newblock Special Issue on Applications of Automorphic Forms in Number Theory
+  and Combinatorics.
 
 \bibitem[BP11]{BP2}
 Yuri Bilu and Pierre Parent.

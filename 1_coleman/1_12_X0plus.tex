@@ -1,6 +1,6 @@
 \section{$X_0^+(N)$}
 
-Consider the modular curve $X_0(N)$ from the previous example. There is an involution acting on the points of $X_0(N)$, called the Atkin-Lehner involution $w_N := \frac{1}{\sqrt{N}} \begin{psmallmatrix} 0 & -1 \\ N & 0 \end{psmallmatrix}$. One could verify that $w_N^2$ acts as the identity on the $\Gamma_0(N)$-orbits of $\HH$. Let $\Gamma_0^+(N) := \Gamma_0(N) \cup w_N \Gamma_0(N)$. The compactification of the quotient of the upper half plane by $\Gamma_0^+(N)$ gives rise to the modular curve $X:=X_0^+(N)$.
+Consider the modular curve $X_0(N)$ from the section. The Atkin-Lehner involution $w_N := \frac{1}{\sqrt{N}} \begin{psmallmatrix} 0 & -1 \\ N & 0 \end{psmallmatrix}$ acts on the points of $X_0(N)$. One could verify that $w_N^2$ acts as the identity on the $\Gamma_0(N)$-orbits of $\HH$. Let $\Gamma_0^+(N) := \Gamma_0(N) \cup w_N \Gamma_0(N)$. The compactification of the quotient of the upper half plane by $\Gamma_0^+(N)$ gives rise to the modular curve $X:=X_0^+(N)$.
 
 \begin{proposition}\label{moduli_Nplus}
 Suppose $\Gamma_0(N) \tau \in X_0(N)$ corresponds to the elliptic curve with torsion data $(E_1, \phi:E_1\rightarrow E_2)$, then $w_N(\Gamma_0(N) \tau )$  corresponds to $(E_2,\hat{\phi}:E_2\rightarrow E_1)$, where $\hat{\phi}$ is the dual isogeny.
@@ -10,7 +10,7 @@ Suppose $\Gamma_0(N) \tau \in X_0(N)$ corresponds to the elliptic curve with tor
 $\Gamma_0(N)\tau$ corresponds $(E_\tau,\langle\frac{1}{N},\tau \rangle)$ up to isomorphism. As $w_N \cdot \tau = \frac{-1}{N\tau}$, $w_N\cdot \Gamma_0(N)\tau$ corresponds to $[E_{\frac{1}{N\tau}}, \langle\frac{1}{N}, \frac{1}{N\tau} \rangle]$. Note that the relation between complex tori over $\Gamma_0(N)$ and elliptic curves with a cyclic subgroup of order $N$ are captured by the following isomorphism $E_\tau/\langle\frac{1}{N},\tau\rangle \cong \mathbb{C}/\langle\frac{1}{N},\tau\rangle$. It is clear that  $\langle\frac{1}{N},\tau\rangle = \tau \langle 1,\frac{1}{N\tau}\rangle$, hence $E_{\frac{1}{N\tau}}$ is isomorphic to $E_\tau/\langle\frac{1}{N},\tau\rangle$. It remains to check that the dual isogeny of $\phi:E \rightarrow E_\tau/\langle\frac{1}{N},\tau\rangle$ is indeed the isogeny induced by $E_{\frac{1}{N\tau}}$. This can be checked by first computing the dual isogeny and comparing kernels.
 \end{proof}
 
-The above proposition provides a moduli interpretation for $X_0^+(N)$, i.e., the $\QQ$-points correspond to unordered pairs of elliptic curves $(\phi_1: E_1 \rightarrow E_2, \phi_2: E_2 \rightarrow E_1)$ such that $\phi_1$ is an isogeny of degree $N$, and $\phi_2$ is the dual isogeny, with the additional requirement that they are $\Gal(\bar{\QQ}\backslash \QQ)$-invariant. Note that by complex multiplication theory, it is possible that the elliptic curves $E_1,E_2$ or the isogenies $\phi_1,\phi_2$ may not be defined over $\QQ$ but over a quadratic extension of $\QQ$, and in that case the elliptic curves or isogenies are fixed by nontrivial Galois element of the quadratic extension.
+The above proposition provides a moduli interpretation for $X_0^+(N)$, i.e., the $\QQ$-points correspond to unordered pairs of elliptic curves $\{\phi_1: E_1 \rightarrow E_2, \phi_2: E_2 \rightarrow E_1\}$ such that $\phi_1$ is an isogeny of degree $N$, and $\phi_2$ is the dual isogeny, with the additional requirement that they are $\Gal(\bar{\QQ}\backslash \QQ)$-invariant. Note that by complex multiplication theory, it is possible that the elliptic curves $E_1,E_2$ or the isogenies $\phi_1,\phi_2$ may not be defined over $\QQ$ but over a quadratic extension of $\QQ$, and in that case the elliptic curves or isogenies are fixed by nontrivial Galois element of the quadratic extension.
 
 The expected rational points on $X$ correspond to elliptic curves with complex multiplication. Following \cite{Mercuri_2018,stark_classnumber1}, we have a list of discriminants of imaginary quadratic number fields with class number one:
 
@@ -18,13 +18,13 @@ The expected rational points on $X$ correspond to elliptic curves with complex m
 \mathcal{D} = \{ -3,\,-4,\,-7,\,-8,\,-11,\,-12,\,-16,\,-19,\,-27,\,-28,\,-43,\,-67,\,-163\}.
 \]
 
-Let $E$ be a CM elliptic curve such that its endomorphism ring $\mathcal{O}_E$ has discriminant $\Delta_E \in \mathcal{D}$. Elliptic curves $E$ such that $N$ splits or ramifies in $\mathcal{O}_E$ give rise to rational points on $X$ \cite{Galbraith_1999}. Iterating through the class number one discriminants, we have list of candidates of expected rational points coming from CM elliptic curves. We denote the one of the rational points by $Q$ and find the upper half plane representative via the following steps.
+Let $E$ be a CM elliptic curve such that its endomorphism ring $\mathcal{O}_E$ has discriminant $\Delta_E \in \mathcal{D}$. Elliptic curves $E$ such that $N$ splits or ramifies in $\mathcal{O}_E$ give rise to rational points on $X$ \cite{Galbraith_1999}. Iterating through the class number one discriminants, we have list of candidates of expected rational points coming from CM elliptic curves. We denote the one of the rational points by $Q$.
 
-The endomorphism ring $\mathcal{O}_E$ is an order in an imaginary quadratic field and therefore has a generator $\tau_E$ and we factor the ideal $(N)$ into a product of principal ideals $\mathfrak{m}\bar{\mathfrak{m}}$ in $\mathcal{O}_E$. Write $\mathfrak{m} = (\alpha)$. Since $\alpha \in \mathcal{O}_E$, there exists integers such that $\alpha = c \tau_E + d$. Euclidean algoritm gives two integers $a,b$ such that $\gamma = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_2(\ZZ)$. In this case, the upper half representative is $\tau_Q = \gamma \cdot \tau_E$.
+The endomorphism ring $\mathcal{O}_E$ is an order in an imaginary quadratic field and therefore has a generator $\tau_E$ and we factor the ideal $(N)$ into a product of principal ideals $\mathfrak{m}\bar{\mathfrak{m}}$ in $\mathcal{O}_E$. Write $\mathfrak{m} = (\alpha)$. Since $\alpha \in \mathcal{O}_E$, there exists integers $c,d$ such that $\alpha = c \tau_E + d$. Euclidean algoritm gives two integers $a,b$ such that $\gamma = \begin{psmallmatrix} a & b \\ c & d \end{psmallmatrix} \in \SL_2(\ZZ)$. In this case, the upper half representative is $\tau_Q = \gamma \cdot \tau_E$.
 
-To compute the basis of cusp forms $\mathcal{S}_2(\Gamma_0^+(N))$, one observes that by the definition of $X_0^+(N)$, $\mathcal{S}_2(\Gamma_0^+(N)) = \{ f \in \mathcal{S}_2(\Gamma_0(N)) : f|_2 w_N = f\}$.
+To compute the basis of cusp forms $\mathcal{S}_2(\Gamma_0^+(N))$, one observes that by the definition of $X_0^+(N)$, $\mathcal{S}_2(\Gamma_0^+(N)) = \{ f \in \mathcal{S}_2(\Gamma_0(N)) : f|_2 w_N = f\}$, i.e., the weight $2$ cusp forms on this space are the ones from $\Gamma_0(N)$ that are fixed by the Atkin-Lehner involution.
 
-The Hecke operator action can be understood through its definition as a double coset operator:
+Now, we describe the action of Hecke operators:
 
 \begin{lemma}
 Let $\alpha \in \GL_2^+(\QQ)$. The coset representatives of $(\alpha^{-1}\Gamma_0^+(N) \alpha \cap \Gamma_0^+(N))\backslash \Gamma_0^+(N)$ is the same as that of  $(\alpha^{-1}\Gamma_0(N) \alpha \cap \Gamma_0(N))\backslash \Gamma_0(N)$.
@@ -41,13 +41,13 @@ Observe that
 Now, by Lemma \ref{lemma:coset_rep}, one has an explicit description of the double coset representatives of $\Gamma_0(N)\alpha \Gamma_(N)$ and one could show that the two sets of coset representatives above are equal.
 \end{proof}
 
-In particular, the above Lemma implies that, for a prime $p$, the Hecke operator $T_p$ on $X_0^+(N)$ and $X_0(N)$, as a double coset operator, has the same coset representatives:
+In particular, the above lemma implies that, for a prime $p$, the Hecke operator $T_p$ on $X_0^+(N)$ and $X_0(N)$, as a double coset operator, has the same coset representatives:
 
 \[
 ( \ \cdot \ ) |_k [ \Gamma_0^+(N) \alpha \Gamma_0^+(N)] = ( \ \cdot \ ) |_k [ \Gamma_0(N) \alpha \Gamma_0(N)]: f \mapsto \sum_i f |_k \beta_i = \sum_{i=0}^{p-1} f |_k \begin{psmallmatrix} 1 & i \\ 0 & p \end{psmallmatrix} + f|_k \begin{psmallmatrix} p & 0 \\ 0 & 1 \end{psmallmatrix}
 \]
 
-For the uniformiser, we require a combination of modular functions that is invariant under the Atkin-Lehner involution $w_N$. Since $j(w_N \cdot \tau) = j(-1/N\tau) = j(N\tau)$, we can choose $j + j_N$ as our uniformiser, where $j_N(\tau) := j(N\tau)$. For a given point $Q = (E_1 \leftrightarrow E_2)$ and the points $Q_i$ in the same residue disc, the endpoints of the sum of tiny integrals are $j(Q_i) + j(NQ_i)$ where $j(Q_i)$ and $j(NQ_i)$ can be computed as roots of the modular polynomials $\Phi_p(x,j(E_1)) = 0$ and $\Phi_p(x,j(E_2)) = 0$.
+For the uniformiser, we require a combination of modular functions that is invariant under the Atkin-Lehner involution $w_N$. Since $j(w_N \cdot \tau) = j(-1/N\tau) = j(N\tau)$, we can choose $j + j_N$ as our uniformiser, where $j_N(\tau) := j(N\tau)$. For a given point $Q = \{E_1 \leftrightarrow E_2\}$ and the points $Q_i$ in the same residue disc, the endpoints of the sum of tiny integrals are $j(Q_i) + j(NQ_i)$ where $j(Q_i)$ and $j(NQ_i)$ can be computed as roots of the modular polynomials $\Phi_p(x,j(E_1)) = 0$ and $\Phi_p(x,j(E_2)) = 0$.
 
 \subsection{Example: $X_0^+(67)$}
 
@@ -57,7 +57,6 @@ For the uniformiser, we require a combination of modular functions that is invar
 
 \item \textbf{Uniformisers:} We use $j + j_N$ as the uniformiser since it is a modular function invariant under the Atkin-Lehner involution.
 
-\todo{messy!check this part}
 \item \textbf{Rational points:}  For the rational points $R,S$, their upper half plane representatives can be found as follows. $R$ is the pair $\{\phi_1: E_1 \rightarrow E_1, \hat{\phi}_1: E_1 \rightarrow E_1\}$, with $j(E_1) =   -2^{18}3^35^3$. $E_1/\mathbb{Q}$ has CM by the ring of integers $\mathcal{O}_{K_1}$ where $K_1 = \mathbb{Q}(\sqrt{-43})$. $67$ splits in $\mathcal{O}_{K_1}$ implies that such pair of isogenies exists. Similarly, $S$ is the pair $\{\phi_2: E_2 \rightarrow E_2, \hat{\phi}_2: E_2 \rightarrow E_2\}$, with $j(E_2) =2^65^3$.  $E_2/\mathbb{Q}$ has CM by the ring of integers $\mathcal{O}_{K_2}$ with $K_2 (= \mathbb{Q}(\sqrt{-2}))$, $67$ splits in $\mathcal{O}_{K_2}$ as well. Note that both $R$ and $S$ are not fixed by the Atkin-Lehner involution, since that corresponds to the case when $67$ is ramified.
 
 We have $j(R) = 2^6 5^3, D(R) = -8$, hence $\tau_R = \sqrt{-2}$.
@@ -98,7 +97,7 @@ Therefore,
 
 \item \textbf{Hecke action:} Let $p=13$ be a good prime. The Hecke matrix on this subspace is $T_{13}= \begin{psmallmatrix}
     -7/2 & 15/2 \\ 3/2 & -7/2
-\end{psmallmatrix}$. 
+\end{psmallmatrix}$. As before, we find the Hecke images of points as roots of modular polynomials at level $13$.
 
 \item \textbf{Algorithm \ref{alg:tiny_integral} and results:} Step 1 of Algorithm \ref{alg:tiny_integral} gives a power series expansion of the differential forms for the uniformiser $j := j + j_N$ (for simplicity, we use this notation). For example, $\omega_0$ at $j=j(R)$ has the following power series expansion:\begin{align*}
     \omega_0 &= \frac{-1}{2^7 \cdot 5^2 \cdot 7^2

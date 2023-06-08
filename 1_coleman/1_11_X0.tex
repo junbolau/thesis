@@ -15,7 +15,7 @@ As a result, the point $Q$ corresponds to $\Gamma_0(N) \gamma \tau' \in \Gamma_0
 \subsection{Example: $X_0(37)$}
 
 \begin{itemize}
-\item \textbf{Curve data: } We consider the modular curve $X = X_0(37)$. $X$ is a hyperelliptic curve. Comparing relations between $q$-expansions of rational functions $x,\,y \in \CC(X)$, we obtain a plane model $y^2 = - x^6 - 9x^4 - 11x^2 + 37$ \cite{maswd}. There are four $\QQ$-rational points $Q = (1,-4),\,R = (-1,-4),\, S=(1,4),\,T = (-1,4)$, where $Q,R$ are noncuspidal rational points and $S,T$ are cuspidal rational points.
+\item \textbf{Curve data: } We consider the modular curve $X = X_0(37)$. $X$ is a hyperelliptic curve. Comparing relations between $q$-expansions of rational functions $x,\,y \in \CC(X)$, we obtain a plane model $y^2 = - x^6 - 9x^4 - 11x^2 + 37$. It known that there are four $\QQ$-rational points $Q = (1,-4),\,R = (-1,-4),\, S=(1,4),\,T = (-1,4)$, where $Q,R$ are noncuspidal rational points and $S,T$ are cuspidal rational points \cite{maswd}.
 
 \item \textbf{Rational points:}  Since the $j$-function is a
 modular function on $X_0(37)$ and that $X_0(37)$ is hyperelliptic, we could
@@ -32,33 +32,33 @@ The points $Q,R$ corresponds to the elliptic curve $E_Q,E_R$ with
 $j$-invariants $j(Q),j(R)$ containing a cyclic subgroup of order $37$ (or equivalently, with a degree $37$-isogeny). This information could be verified in LMFDB \cite{lmfdb}. Following the method in Section \ref{sec:X_0_N}, we obtain the upper half plane representatives of $Q,R$ as follows: \begin{align*} \tau_Q &\approx 0.5 + 0.17047019819380\cdot i \in \HH , \\ \tau_R &\approx 0.5 + 0.39635999889406\cdot i \in \HH. \end{align*} 
 
 
-\item \textbf{Basis of differential forms:} One could compute that $\mathcal{S}_2(\Gamma_0(N))$ has $\CC$-dimension $2$ and a basis of the space of weight $2$ cusp forms using $\SageMath$. Furthermore, the action of Hecke operators on the basis of cusp forms is available on $\SageMath$. Linear algebra leads to an eigenbasis $\{f_0,\,f_1\}$ of the $\CC$-vector space $\mathcal{S}_2(\Gamma_0(37))$ with the following $q$-expansions:
+\item \textbf{Basis of differential forms:} One could compute that $\mathcal{S}_2(\Gamma_0(N))$ has $\CC$-dimension $2$ and a basis of the space of weight $2$ cusp forms using $\SageMath$. Furthermore, the action of Hecke operators on the basis of cusp forms is available on $\SageMath$. Linear algebra yields an eigenbasis $\{f_0,\,f_1\}$ of the $\CC$-vector space $\mathcal{S}_2(\Gamma_0(37))$ with the following $q$-expansions:
 \begin{align*} f_0 &= q+q^3-2q^4+O(q^6), \\ f_1 &= q-2q^2-3q^3+2q^4-2q^5+O(q^6) .\end{align*}
 
 \item \textbf{Hecke action:} We choose $p=3$, and $T_3(f_0) = f_0,\,T_3(f_1) = -3f_1$. Therefore the Hecke operator matrix $T_3$ is $\begin{psmallmatrix}
 1&0\\
 0&-3
-\end{psmallmatrix}$. 
+\end{psmallmatrix}$. Furthermore, we find $j(Q_i), j(R_i)$ as roots of the modular polynomials $\Phi_3(j(Q),X) = 0$, $\Phi_3(j(R),X) = 0$ where $\Phi_3(X,Y)$ is the modular polynomial of level $3$. 
 
-\item \textbf{Algorithm \ref{alg:tiny_integral} and results:} Let $\omega_0,\omega_1$ be 1-forms that corresponds to cusp forms $-\frac{1}{2}f_0,\,-\frac{1}{2}f_1$ respectively in order to obtain $\omega_0 = \frac{dx}{y}$ and $\omega_1 = \frac{xdx}{y}$. This way, we can get a direct comparison with $\Magma$'s hyperelliptic curve implementation. Now, we proceed with computing the Coleman integrals on $\omega_0,\,\omega_1$. 
+\item \textbf{Algorithm \ref{alg:tiny_integral} and results:} Let $\omega_0,\omega_1$ be 1-forms that corresponds to cusp forms $-\frac{1}{2}f_0,\,-\frac{1}{2}f_1$ respectively in order to obtain $\omega_0 = \frac{dx}{y}$ and $\omega_1 = \frac{xdx}{y}$. This way, we can get a direct comparison with $\Magma$'s implementation of computing Coleman integrals on hyperelliptic curves. Now, we proceed with computing the Coleman integrals on $\omega_0,\,\omega_1$. 
 
 
 %We start by fixing various numerical precisions, i.e., complex number precision, number of terms in the $q$-expansion, and $p$-adic precision. 
 
 
 %Our point $Q$ corresponds to $\tau \approx 0.500000000000000 + 0.170470198193806 \cdot i \in \mathcal{H}$.  
-We explain how to calculate $\sum_{i=0}^{p}\int^Q_{Q_i} \omega_1$ using Algorithm \ref{alg:tiny_integral}. By comparing complex coefficients and using $\texttt{algdep}$ to algebraically approximate complex numbers, we first obtain rational coefficients $x_i$ in the expansion of $\omega_1$ about $j=j(Q)$:
+By comparing complex coefficients and using $\texttt{algdep}$ to algebraically approximate complex numbers, we obtain rational coefficients $x_i$ in the expansion of $\omega_1$ about $j=j(Q)$:
 \begin{align*} \omega_1  = &(-9317) + \frac{717409}{2 \cdot 37 \cdot 47}(j-j(Q))
                              + \frac{253086749261192}{37^2 \cdot 47^3}(j-j(Q))^2
   \\ &+ \frac{176804544077038351043955}{37^3 \cdot 47^5}(j-j(Q))^3 +
        O((j-j(Q))^4) \ \ d(j-j(Q)). \end{align*}
-     After that, the $j$-invariants $j(Q_i)$ of $Q_i$'s for $i = 0,\ldots,3$ can be realised as the roots of the modular polynomial $\Phi_3(j(Q),X) =0 $. In the last step, we substitute the roots into a sum of local power series: 
+     After that, we substitute the roots into a sum of local power series: 
 \begin{align*}
     \sum_{i=0}^3 \int_{Q_i}^Q \omega_1 = &\sum_{i=0}^3 \int_{j(Q_i)-j(Q)}^{0} (-9317) + \frac{717409}{2 \cdot 37 \cdot 47}t + \frac{253086749261192}{37^2 \cdot 47^3}t^2 \\&+ \frac{176804544077038351043955}{37^3 \cdot 47^5}t^3 +  \cdots  dt 
 \end{align*}
 
 
-Our results are listed in the table below. One can verify the results by comparing with the hyperelliptic model of this curve or with the $\Magma$'s hyperelliptic curves implementation of \cite{balatuit}.
+Our results are listed in the table below. One can verify the results by comparing with the hyperelliptic model of this curve or with the $\Magma$ hyperelliptic curves implementation from \cite{balatuit}.
 \end{itemize}
 
 \begin{center}

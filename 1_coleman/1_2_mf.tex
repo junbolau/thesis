@@ -184,24 +184,26 @@ Let $\Gamma_1, \Gamma_2$ be congruence subgroups of $SL_2(\ZZ)$ and $\alpha \in 
 \]
 \item This gives rise to the \textit{double coset operators}:
 
-\begin{align*}
+\begin{align} \label{eq:hecke_formula}
 (\ \cdot \ )|_k [\Gamma_1 \alpha \Gamma_2] : \mathcal{M}_k(\Gamma_1) &\rightarrow \mathcal{M}_k(\Gamma_2) \\
 f(\tau) &\mapsto f|_k \Gamma_1 \alpha \Gamma_2 := \sum_i f|_k \beta_i
-\end{align*}
+\end{align}
 
 where $\Gamma_1 \alpha \Gamma_2 = \bigcup_i \Gamma_1 \beta_i$ is a (finite) disjoint coset decomposition that does not depend on the choice of decomposition. This map restricts to an operator on the space of cusp forms $(\ \cdot \ )|_k [\Gamma_1 \alpha \Gamma_2] : \mathcal{S}_k(\Gamma_1) \rightarrow \mathcal{S}_k(\Gamma_2)$.
 \end{itemize}
 \end{defn}
 
-We follow the approach \cite{Assaf2020} to define Hecke operators.
+Hecke operators are a special instance of double coset operators.
 
-\begin{defn}
-Fix a congruence subgroup $\Gamma$ with $\bar{\Gamma} \leq SL_2(\ZZ/N\ZZ)$.
-Let $\alpha \in M_2(\ZZ)$ such that $\det (\alpha) \in \det (\bar{\Gamma})$ and $\alpha \pmod{N} \in \bar{\Gamma}$. We define the Hecke operator as
+\begin{defn} (\cite{Assaf2020})
+Fix a congruence subgroup $\Gamma_H \leq \SL_2(\ZZ)$ with $H \leq \GL_2(\ZZ/N\ZZ)$.
+Let $\alpha \in M_2(\ZZ)$ such that $\det (\alpha) = p$ and $\alpha \pmod{N} \in H$. We define the Hecke operator as
 
 \[
 T_p = T_\alpha = ( \ \cdot \ )|_k [\Gamma \alpha \Gamma]
 \]
+
+Assume $p \not | N$. Then $T_p = T_\alpha$ is independent of the choice of $\alpha$.
 \end{defn}
 
 \begin{example} (\cite{Shurman} Prop. 5.2.1)

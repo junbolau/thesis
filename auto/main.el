@@ -5,12 +5,12 @@
                      '(("ucsd" "12pt" "chapterheads")))
    (TeX-add-to-alist 'LaTeX-provided-package-options
                      '(("xy" "all") ("ulem" "normalem") ("caption" "font=small" "width=0.9\\textwidth") ("floatrow" "capposition=bottom") ("fontenc" "T1")))
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
-   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
    (add-to-list 'LaTeX-verbatim-macros-with-braces-local "href")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperimage")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "hyperbaseurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "nolinkurl")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "url")
+   (add-to-list 'LaTeX-verbatim-macros-with-braces-local "path")
    (add-to-list 'LaTeX-verbatim-macros-with-delims-local "path")
    (TeX-run-style-hooks
     "latex2e"
@@ -18,9 +18,6 @@
     "1_coleman/1_1_intro"
     "1_coleman/1_2_mf"
     "1_coleman/1_6_algorithm"
-    "1_coleman/1_7_basis"
-    "1_coleman/1_8_heckedouble"
-    "1_coleman/1_9_tinyintegrals"
     "1_coleman/1_10_examples"
     "1_coleman/1_11_X0"
     "1_coleman/1_12_X0plus"

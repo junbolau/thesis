@@ -1,6 +1,6 @@
 \section{Background on code-based cryptography}
 
-In this chapter, we recall the main definitions from coding theory and what will be needed to construct QC-MDPC codes in cryptography. Throughout this chapter, $q$ is a prime power. In our case, we will study codes when $q=2$, over the binary field $\FF_2$.
+In this chapter, we recall the main definitions from coding theory and what will be needed to construct QC-MDPC codes in cryptography. Throughout this chapter, $q$ is a prime power. In our case, we will study codes when $q=2$, that is, codes over the binary field $\FF_2$.
 
 \subsection{Coding theory}
 We start with the basic definitions from coding theory.
@@ -25,7 +25,7 @@ Let $\mathcal{C}$ be a $[n,k]$-code. A \textit{generator matrix} $\mathbf{G} \in
 Given a $[n,k]$-code $\mathcal{C}$, the \textit{dual code} $\mathcal{C}^\perp$ is defined to be
 
 \[
-\mathcal{C}^\perp := \{ v \in \FF_q^n | \forall w \in \mathcal{C} w \cdot v = 0 \}   
+\mathcal{C}^\perp := \{ v \in \FF_q^n | \forall w \in \mathcal{C} \ \ , \ w \cdot v = 0 \}   
 \]
 
 where $ w \cdot v $ is the usual dot product. The generator matrix of $\mathcal{C}^\perp$ is called the \textit{parity check matrix}.
@@ -163,4 +163,4 @@ The decapsulation method takes a private key and ciphertext pair as inputs then 
 \end{itemize}
 \end{defn}
 
-The McEliece cryptosystem works as follows. One generates a code such that an efficient decoder is known then scrambles the generator matrix by changing the basis or permuting the coordinates. The resulting scrambled matrix is the public generator matrix of the code. Furthermore, the decoder must be able to detect and correct up to a certain number $t$ of errors. In the NIST PQC submission, the McEliece candidate uses Goppa codes which are known to have a good decoder \cite{mceliece,nistmceliece,mceliecedecoder}. BIKE and Classic McEliece use the Niederreiter cryptosystem \cite{niederreiter}, in which parity check matrices are used instead of the generator matrices. In this sense, they are dual to McEliece cryptosystems and share the same advantages (fast encryption and decryption) and disadvantages (large key sizes). The block size of Niederreiter cryptosystems is smaller than McEliece's.
+The McEliece cryptosystem works as follows. One generates a code such that an efficient decoder is known and then scrambles the generator matrix by changing the basis or permuting the coordinates. The resulting scrambled matrix is the public generator matrix of the code. Furthermore, the decoder must be able to detect and correct up to a certain number $t$ of errors. In the NIST PQC submission, the McEliece candidate uses Goppa codes which are known to have a good decoder \cite{mceliece,nistmceliece,mceliecedecoder}. BIKE and Classic McEliece use the Niederreiter cryptosystem \cite{niederreiter}, in which parity check matrices are used instead of the generator matrices. In this sense, they are dual to McEliece cryptosystems and share the same advantages (fast encryption and decryption) and disadvantages (large key sizes). The block size of Niederreiter cryptosystems is smaller than McEliece's.
