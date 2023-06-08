@@ -1,0 +1,118 @@
+\subsection{BIKE and QC-MDPC codes}
+
+\begin{frame}{Binary linear codes and QC-MDPC codes}
+
+\begin{itemize}
+    \item A \textbf{binary linear code} $C = C(n,k)$ is a $k$-dimensional subspace of $\FF_2^n$. Elements are called \textbf{codewords}.
+\pause    \item A \textbf{generator matrix} $G$ of $C$, is a $k \times n$ matrix such that the rows are a basis of $C$. The nullspace of $G$, represented as a $(n-k)  \times n$ matrix $H$ ,is called \textbf{parity check matrix}. Note that $v \in C \iff Hv^T=0$.
+\pause    \item For any $x \in \FF_2^n$, we call $Hx^T =: s$ the \textbf{syndrome} of $x$.
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}{Binary linear codes and QC-MDPC codes}
+
+\begin{itemize}
+    \item A MDPC (\textbf{M}oderate \textbf{D}ensity \textbf{P}arity \textbf{C}heck) code is a binary linear code $C(n,k)$ that has a parity check matrix with row weight $w \approx \sqrt{n}$.
+\pause    \item A \textbf{circulant} matrix is a matrix such that each row is a cyclic shift of its previous row. For example:
+    \[
+    \begin{bmatrix}
+    1 & 0 & 0 & 1 \\
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 0 \\
+    0 & 0 & 1 & 1
+    \end{bmatrix}
+    \]
+\pause    \item A \textbf{quasi-cyclic} (or \textbf{quasi-circulant}) is a block sum of circulant matrices.
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Binary linear codes and QC-MDPC codes}
+
+BIKE:
+
+\begin{itemize}
+    \item binary linear QC-MDPC code $C(2r,r)$, i.e., $H = $ block sum of two circulant matrices of size $r$.
+    \item $r$ is a prime such that $x^r -1 \in \FF_2[x]$ has two irreducible factors.
+    \item row weight $w \approx \sqrt{n}$ and column weight $w/2$.
+\end{itemize}
+
+For example, $r = 3, w = 2$:
+
+\[
+G = \begin{bmatrix}
+0 & 1 & 0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 & 0 \\
+1 & 0 & 0 & 0 & 0 & 1
+\end{bmatrix}, \ \ 
+H = \begin{bmatrix}
+1 & 0 & 0 & 0 & 0 & 1 \\
+0 & 1 & 0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & 1 & 0
+\end{bmatrix}
+\]
+
+\end{frame}
+
+\begin{frame}{Syndrome decoding}
+
+\begin{block}{Syndrome decoding problem}
+    Given a parity check matrix $H$ and syndrome $s = He^T$, find $e$.
+\end{block}
+
+\pause \begin{itemize}
+    \item Syndrome decoding for a general linear code is NP-hard.
+    \item We decode syndromes using a bit-flipping decoder; only depends on $H$.
+    \begin{itemize}
+        \item In practice, use different public $\bar{H}$ to encode that makes decoding hard.
+        \item Decoder has to run in constant time to be secure.
+        \item Not always successful, even with many iterations, but failures are quite rare.
+    \end{itemize}
+\end{itemize}
+    
+\end{frame}
+
+\begin{frame}{Basic bit-flipping decoder}
+
+
+\begin{algorithm}[H]
+\textbf{input:} A QC-MDPC matrix $H \in \FF_2^{(n-k) \times n}$, a syndrome $s = He^T \in \FF_2^{n-k}$.\\
+\textbf{output:} An error pattern $e' \in \FF_2^n$ such that $He'^T = s$. \\
+$e' \leftarrow 0$;\\
+$s' \leftarrow s$;\\
+$T \leftarrow \texttt{threshold}(context)$;\\
+\While{$s' \ne 0$}
+{
+\For{$j \in \{ 0,\ldots, n-1\}$}
+{
+\If{ $|h_j \star s | \geq T$}
+{
+$e'_j \leftarrow 1- e'_j$
+}
+$s' \leftarrow s - He'^T$
+}
+}
+
+\caption{Bit-flipping decoder}
+\label{alg:seq}
+\end{algorithm}
+
+    
+\end{frame}
+
+\begin{frame}{Black-Gray-Flip and BIKE}
+    \begin{itemize}
+        \item BIKE uses the Black-Gray-Flip decoder.
+        \item In addition to the threshold $T$, we introduce an uncertainty $\tau$.
+        \begin{itemize}
+            \item Run $1$ iteration of the previous bit-flip decoder. Record flipped positions in the "black" list and positions with counters at least $T - \tau$ in the "gray" list.
+            \item Using the updated $e$, check black positions. Flip if counter $> T$.
+            \item Using the updated $e$, check gray positions. Flip if counter $> T$.
+            \item Run several more iterations of the bit-flip decoder.
+            \end{itemize}
+            \item Threshold $T$ is selected using a pre-determined method.
+    \end{itemize}
+\end{frame}
+
+
