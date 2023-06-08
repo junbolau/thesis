@@ -13,14 +13,13 @@ For the experiment, for each suitable $r$, we generate $10^3$ instances of non-w
   \label{fig:syndrome-weights}
 \end{figure}
 
-The simulations suggest that syndrome weights of generic vectors tend to follow a normal distribution while the error vectors causing decoding failures have syndrome weights that are more concentrated around the mean, which we hypothesise to be lower than that of the generic vectors; see Figure \ref{fig:r87_comparison} for the case $r=587$, where we compare the syndrome weights of the \todo{check} 128 vectors which caused decoding failures with the syndrome weights of the $10^5$ randomly generated vectors of the same weight $t = 18$.
+The simulations suggest that syndrome weights of generic vectors tend to follow a normal distribution while the error vectors causing decoding failures have syndrome weights that are more concentrated around the mean, which we hypothesise to be lower than that of the generic vectors; see Figure \ref{fig:r87_comparison} for the case $r=587$, where we compare the syndrome weights of the 557 vectors which caused decoding failures with the syndrome weights of the $10^5$ randomly generated vectors of the same weight $t = 18$.
 
-\todo{might need to generate r587df again}
 \begin{figure}[ht]
 \centering
 \begin{subfigure}[b]{.45\textwidth}
   \centering
-  \includegraphics[scale=.45]{2_bike/r587df.png}
+  \includegraphics[scale=.45]{2_bike/r587df_new.png}
   \caption{Decoding failure vectors}
   \label{fig:r587df}
 \end{subfigure}
@@ -38,35 +37,36 @@ Using this data, we explore whether or not there is convincing evidence that the
 
 $$SE = \sqrt{\frac{\sigma_{\text{generic}}^2}{N_{\text{generic}} } +\frac{\sigma_{\text{DF}}^2}{N_{\text{DF}} } }.$$
 
-With this information, one could compute the test statistic for this (one-tailed) test by the formula $T = \frac{\mu - 0}{SE}$. Using either a $t$-table or statistics software, we can find appropriate degrees of freedom and from there, the $p$-value, for each $r$. Our conclusion is that for the sixteen $r$-values in the range $509 \leq r \leq 827$, the $p$-value is less than the significance value $\alpha = 0.01$, and therefore we reject the null hypothesis, i.e., syndrome weights of error vectors causing decoding failures are lower than those of generic vectors.
+With this information, one could compute the test statistic for this (one-tailed) test by the formula $T = \frac{\mu - 0}{SE}$. Using either a $t$-table or statistics software, we can find appropriate degrees of freedom and from there, the $p$-value, for each $r$. Our conclusion is that for the sixteen $r$-values in the range $491 \leq r \leq 827$, the $p$-value is less than the significance value $\alpha = 0.01$, and therefore we reject the null hypothesis, i.e., syndrome weights of error vectors causing decoding failures are lower than those of generic vectors.
 
-A general summary of the test statistic values $m_{\text{generic}} - m_{\text{DF}}$ and the corresponding $p$-values can be found in Table~\ref{table:hyp_test_ts_and_ps}.\todo{check calculations}
+A general summary of the test statistic values $m_{\text{generic}} - m_{\text{DF}}$ and the corresponding $p$-values can be found in Table 6.2.
 
 
 \begin{flushleft}
-\textbf{Table 6.2}: Hypothesis test results for $509 \leq r \leq 827$, with the corresponding test statistic values and $p$-values, indicating the vectors causing decoding failures do have lower syndrome weights than generic vectors for $509 \leq r \leq 701$, notably a selection of $r$-values where the waterfall region meets the error floor in the DFR graph of Figure~\ref{fig:DFR}.
+\textbf{Table 6.2}: Hypothesis test results for $491 \leq r \leq 827$, with the corresponding test statistic values and $p$-values, indicating the vectors causing decoding failures do have lower syndrome weights than generic vectors for $491 \leq r \leq 701$, notably a selection of $r$-values where the waterfall region meets the error floor in the DFR graph of Figure~\ref{fig:DFR}.
 \end{flushleft}
 \begin{table}[ht]\label{table:hyp_test_ts_and_ps}
 \centering
 \begin{tabular}{c|c|c}
 $r$   & $m_{\text{generic}} - m_{\text{DF}}$ & $p$                \\
 \hline
-509 & 9.29                          & $< 0.00001$ \\
-523 & 8.60                          & $< 0.00001$ \\
-541 & 9.79                          & $< 0.00001$ \\
-547 & 9.29                          & $< 0.00001$ \\
-557 & 6.20                          & $< 0.00001$ \\
-563 & 8.61                          & $< 0.00001$ \\
-587 & 6.56                          & $< 0.00001$ \\
-613 & 10.92                         & $< 0.00001$ \\
-619 & 8.86                          & $< 0.00001$ \\
-653 & 15.99                          & $< 0.00001$ \\
-659 & 11.49                          & $< 0.00001$ \\
-661 & 9.40                          & $< 0.00001$ \\
-677 & 14.45                          & $< 0.00001$ \\
-701 & 17.58                          & $< 0.00001$ \\
-757 & 16.25                          & $ 0.00278$ \\
-827 & 17.53                          & $ 0.00002$ \\
+491 & 10.31			     & $< 0.00001$ \\
+509 & 12.45                          & $< 0.00001$ \\
+523 & 14.14                          & $< 0.00001$ \\
+541 & 16.90                          & $< 0.00001$ \\
+547 & 18.23                          & $< 0.00001$ \\
+557 & 15.65                          & $< 0.00001$ \\
+563 & 15.69                          & $< 0.00001$ \\
+587 & 12.63                          & $< 0.00001$ \\
+613 & 12.95                          & $< 0.00001$ \\
+619 & 11.63                          & $< 0.00001$ \\
+653 & 10.29                          & $< 0.00001$ \\
+659 & 11.88                          & $< 0.00001$ \\
+661 & 11.47                          & $< 0.00001$ \\
+677 & 11.07                          & $< 0.00001$ \\
+701 & 13.34                          & $< 0.00001$ \\
+757 & 14.28                          & $< 0.00001$ \\
+827 & 13.99                          & $< 0.00001$ \\
 
 \end{tabular}
 
